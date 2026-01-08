@@ -93,7 +93,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <a 
-            href="/Yvonne_Zhang_CV.pdf"
+            href="/portfolio/Yvonne_Zhang_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
@@ -148,7 +148,7 @@ export default function Portfolio() {
         {/* Full-width image with text overlay */}
         <div className="relative w-full h-96 md:h-[600px] mb-12">
           <img 
-            src="/Banff_lakelouise.jpg" 
+            src="/portfolio/Banff_lakelouise.jpg" 
             alt="Lake Louise"
             className="w-full h-full object-cover"
           />
@@ -204,7 +204,7 @@ export default function Portfolio() {
             <div className="flex justify-center">
               <div className="w-full max-w-md aspect-square rounded-2xl overflow-hidden border-4 border-gray-100 shadow-xl">
                 <img 
-                  src="YvonneZhang_Profile.jpg" 
+                  src="/portfolio/YvonneZhang_Profile.jpg" 
                   alt="Yvonne Zhang"
                   className="w-full h-full object-cover"
                 />
