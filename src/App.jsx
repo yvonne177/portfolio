@@ -167,7 +167,7 @@ export default function Portfolio() {
         
         <div className="text-center max-w-4xl mx-auto px-4">
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed text-justify -mt-8">
-            I am a robotics and mechanical engineer, passionate about haptic interfaces, and computer-integrated surgery. I design and build intelligent systems that bridge the physical and digital worlds.
+            I am inspired to design and build intelligent systems that bridge the physical and digital worlds.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a 
