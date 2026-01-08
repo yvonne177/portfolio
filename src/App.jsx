@@ -214,10 +214,53 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Education */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Education</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-3xl">🎓</span>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">Johns Hopkins University</h3>
+              <p className="text-center text-gray-600 mb-2">Master of Science in Robotics</p>
+              <p className="text-center text-sm text-blue-600 font-semibold">Expected June 2027</p>
+              <div className="mt-4 text-center">
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-3xl">🔬</span>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">ETH Zurich Research</h3>
+              <p className="text-center text-gray-600 mb-2">Undergraduate Student Researcher</p>
+              <p className="text-center text-sm text-blue-600 font-semibold">Summer 2024</p>
+              <div className="mt-4 text-center">
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <span className="text-3xl">🎓</span>
+              </div>
+              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">University of Toronto</h3>
+              <p className="text-center text-gray-600 mb-2">B.A.Sc. in Mechanical Engineering</p>
+              <p className="text-center text-sm text-blue-600 font-semibold">Graduated June 2025</p>
+              <div className="mt-4 text-center">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Experience Section with Carousel */}
       <section id="experience" className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Johns Hopkins University</h2>
+          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Notable Projects</h2>
           <p className="text-center text-gray-600 mb-12 text-lg">2025 to Present</p>
           
           {/* Carousel */}
@@ -265,48 +308,6 @@ export default function Portfolio() {
           <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
             At Johns Hopkins University, I work on haptic interface design for accessibility, developing tactile displays that convert visual art into interactive textured surfaces. At ETH Zurich, I integrated computer vision systems with robotic arms using ROS2. With University of Toronto Formula Racing, I optimized aerodynamics through CFD analysis and manufactured carbon fiber components for high-performance racing.
           </p>
-        </div>
-      </section>
-
-      {/* Education */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Education</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-3xl">🎓</span>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">Johns Hopkins University</h3>
-              <p className="text-center text-gray-600 mb-2">Master of Science in Robotics</p>
-              <p className="text-center text-sm text-blue-600 font-semibold">Expected June 2027</p>
-              <div className="mt-4 text-center">
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-3xl">🔬</span>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">ETH Zurich Research</h3>
-              <p className="text-center text-gray-600 mb-2">Undergraduate Student Researcher</p>
-              <p className="text-center text-sm text-blue-600 font-semibold">Summer 2024</p>
-              <div className="mt-4 text-center">
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 hover:shadow-lg transition-shadow cursor-pointer">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <span className="text-3xl">🎓</span>
-              </div>
-              <h3 className="text-xl font-bold text-center mb-2 text-gray-900">University of Toronto</h3>
-              <p className="text-center text-gray-600 mb-2">B.A.Sc. in Mechanical Engineering</p>
-              <p className="text-center text-sm text-blue-600 font-semibold">Graduated June 2025</p>
-              <div className="mt-4 text-center">
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
