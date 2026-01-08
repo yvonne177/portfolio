@@ -21,14 +21,9 @@ export default function Portfolio() {
   ];
 
   const projectSlides = [
-    { title: "Haptic Display Device", icon: "👆", description: "Tactile display for visually impaired" },
-    { title: "Arduino Integration", icon: "🔌", description: "Real-time haptic control systems" },
-    { title: "3D Printing & Molding", icon: "🖨️", description: "Pin-array mechanism prototyping" },
-    { title: "Computer Vision System", icon: "📷", description: "Dual RealSense camera integration" },
-    { title: "ROS2 Development", icon: "🤖", description: "Image processing & gesture recognition" },
-    { title: "Research Publication", icon: "📄", description: "Foundational thesis work" },
-    { title: "CFD Analysis", icon: "💨", description: "Aerodynamic optimization" },
-    { title: "Carbon Fiber Fabrication", icon: "🏎️", description: "Vacuum infusion process" },
+    { title: "Visual Information through Sensory Tactile Array (VISTA)", icon: "👆", description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color" },
+    { title: "Programming Assignments", icon: "🔌", description: "Computer-Integrated Surgery applications" },
+    { title: "Autonomous Rover Design Challenge", icon: "🖨️", description: "Orientation, localization, object pick-up and drop-off to designated spot" },
   ];
 
   useEffect(() => {
@@ -143,32 +138,35 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative">
-        {/* Full-width image */}
-        <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[600px]">
+      <section className="relative">
+        {/* Full-width image - taller on mobile */}
+        <div className="relative w-full h-96 sm:h-[500px] md:h-[600px]">
           <img
             src="/portfolio/Banff_lakelouise.jpg"
             alt="Lake Louise"
             className="w-full h-full object-cover"
           />
 
-        {/* Overlay content */}
-            <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-end px-4 pb-10 md:pb-10">
-            <div className="text-center pt-20 md:pt-40">
-                <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">
-                Hi, I'm <span className="text-blue-600">Yvonne Zhang</span>
-                </h1>
+          {/* Overlay content */}
+          <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-end px-4 pb-8 sm:pb-12 md:pb-16">
+            <div className="text-center">
+              {/* Main heading */}
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-4 sm:mb-6 md:mb-8 leading-tight">
+                Hi, I'm <span className="text-blue-500">Yvonne Zhang</span>
+              </h1>
 
-                <p className="text-2xl md:text-4xl text-white font-semibold drop-shadow-lg mb-3 md:mb-6">
-                I am a <span className="text-blue-300">{typedText}</span>
+              {/* Subtitle */}
+              <p className="text-2xl sm:text-2xl md:text-3xl text-white font-semibold drop-shadow-lg mb-4 sm:mb-6 md:mb-8">
+                I am a <span className="text-blue-200">{typedText}</span>
                 <span className="animate-pulse">|</span>
-                </p>
+              </p>
 
-                <h1 className="text-lg md:text-xl text-white drop-shadow-lg">
+              {/* Tagline */}
+              <h2 className="text-sm sm:text-base md:text-lg text-white drop-shadow-lg">
                 Curiosity-driven engineering through design, testing, and iteration.
-                </h1>
+              </h2>
             </div>
-            </div>
+          </div>
         </div>
 
         {/* Scroll Down Arrow - part of hero section */}
@@ -187,8 +185,8 @@ export default function Portfolio() {
       <section id="about" className="pt-4 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">About</h2>
-          <div className="flex gap-12 items-start">
-            <div className="flex flex-col items-center flex-shrink-0">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
+            <div className="flex flex-col items-center flex-shrink-0 order-first lg:order-none w-full lg:w-auto">
             <div className="w-56 aspect-square rounded-2xl overflow-hidden border-4 border-gray-100 shadow-xl">
                 <img 
                 src="/portfolio/YvonneZhang_Profile.jpg" 
@@ -205,7 +203,7 @@ export default function Portfolio() {
                 Connect with me!
             </a>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 w-full order-last lg:order-none">
               <p className="text-gray-700 leading-relaxed text-lg">
                 <strong>Welcome to my portfolio!</strong> I am a robotics and mechanical engineer passionate about interdisciplinary design challenges at the intersection of autonomous systems development and mechanically robust solutions. My portfolio showcases projects spanning mechatronics, robotics, and medical device engineering.
               </p>
@@ -213,7 +211,7 @@ export default function Portfolio() {
                 As a Robotics Master's student at Johns Hopkins University, I engage in cutting-edge projects through the Laboratory for Computational Sensing and Robotics (LCSR), applying engineering, scientific, and approaches to areas including haptic device development and surgical robotics. 
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
-                I hold an honors degree in Mechanical Engineering from the University of Toronto, with minors in Robotics & Mechatronics and Engineering Business. My foundation lies in rigorous mechanical design, leveraging Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and advanced manufacturing (AM) techniques across the rail and transit, aerospace, electronics and biomedical sectors. I also conducted research at ETH Zurich’s Product Development Group, designing surgical-assistance robotic end-effector mounts that interface with depth-sensing cameras to interpret hand gestures and translate them into coordinated robotic actions.              </p>
+                I hold an honors degree in Mechanical Engineering from the University of Toronto, with minors in Robotics & Mechatronics and Engineering Business. My foundation lies in rigorous mechanical design, leveraging Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD) and advanced manufacturing (AM) techniques across the rail and transit, aerospace, electronics and biomedical sectors. I also conducted research at ETH Zurich's Product Development Group, designing surgical-assistance robotic end-effector mounts that interface with depth-sensing cameras to interpret hand gestures and translate them into coordinated robotic actions.              </p>
               <p className="text-gray-700 leading-relaxed text-lg">
                 Curiosity guides me in everything I do: iterating on designs in the lab, tackling new projects, or seeking adventure outdoors through skiing and rock climbing or in the arts through photography and painting.
               </p>
@@ -279,8 +277,10 @@ export default function Portfolio() {
       {/* Projects Section with Carousel */}
       <section id="projects" className="py-24 px-4 bg-blue-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Notable Projects</h2>
-          <p className="text-center text-gray-600 mb-12 text-lg">2025 to Present</p>
+          <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Recent Projects</h2>
+          <p className="text-center text-gray-600 mb-12 text-base">
+            Explore my projects to learn more about what I do.
+          </p>
           
           {/* Carousel */}
           <div className="relative mb-20">
@@ -323,10 +323,6 @@ export default function Portfolio() {
               ))}
             </div>
           </div>
-
-          <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
-            At Johns Hopkins University, I work on haptic interface design for accessibility, developing tactile displays that convert visual art into interactive textured surfaces. At ETH Zurich, I integrated computer vision systems with robotic arms using ROS2. With University of Toronto Formula Racing, I optimized aerodynamics through CFD analysis and manufactured carbon fiber components for high-performance racing.
-          </p>
         </div>
       </section>
 
