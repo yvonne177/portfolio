@@ -205,7 +205,7 @@ export default function Portfolio() {
             </div>
             <div className="space-y-6 w-full order-last lg:order-none">
               <p className="text-gray-700 leading-relaxed text-lg">
-                <strong>Welcome to my portfolio!</strong> I am a robotics and mechanical engineer passionate about interdisciplinary design challenges at the intersection of autonomous systems development and mechanically robust solutions. My portfolio showcases projects spanning mechatronics, robotics, and medical device engineering.
+                <strong>Welcome to my portfolio!</strong> I am a Robotics and Mechanical Engineer passionate about the interdisciplinary intersection of autonomous systems development and mechanically robust solutions. My portfolio showcases projects spanning mechatronics, robotics, and medical device engineering.
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
                 As a Robotics Master's student at Johns Hopkins University, I engage in cutting-edge projects through the Laboratory for Computational Sensing and Robotics (LCSR), applying engineering, scientific, and approaches to areas including haptic device development and surgical robotics. 
