@@ -1,28 +1,81 @@
 // projects/VistaTactileDisplay.jsx
 import React from 'react'
 import { ArrowLeft } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function VistaTactileDisplay() {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+  const handleBackToProjects = () => {
+    navigate('/portfolio');
+    // Scroll to projects section after navigation
+    setTimeout(() => {
+      const element = document.getElementById('projects');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
+  const handleHome = () => {
+    navigate('/portfolio');
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Navigation Back */}
-      <nav className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center h-16">
-            <Link 
-              to="/portfolio" 
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <button
+              onClick={handleBackToProjects}
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors cursor-pointer"
             >
               <ArrowLeft size={20} />
-              Back to Portfolio
-            </Link>
+              Back to All Projects
+            </button>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <button
+                onClick={handleHome}
+                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
+              >
+                Home
+              </button>
+              <button
+                onClick={handleHome}
+                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
+              >
+                About
+              </button>
+              <button
+                onClick={handleBackToProjects}
+                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
+              >
+                Projects
+              </button>
+              <button
+                onClick={handleHome}
+                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
+              >
+                Contact
+              </button>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-pink-50 to-pink-100">
+      <section className="pt-12 pb-12 px-4 bg-gradient-to-br from-blue-50 to-blue-100 mt-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-4 text-gray-900">
             Visual Information through Sensory Tactile Array (VISTA)
@@ -31,15 +84,15 @@ export default function VistaTactileDisplay() {
             Tactile museum display for accessibility
           </p>
           <div className="flex flex-wrap gap-3">
-            <span className="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-medium">Mechatronics</span>
-            <span className="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-medium">Hardware Design</span>
-            <span className="bg-pink-200 text-pink-800 px-4 py-2 rounded-full font-medium">Haptic Feedback</span>
+            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Mechatronics</span>
+            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Hardware Design</span>
+            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Haptic Feedback</span>
           </div>
         </div>
       </section>
 
       {/* Content Section */}
-      <section className="py-16 px-4">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Overview */}
           <div>
@@ -54,21 +107,21 @@ export default function VistaTactileDisplay() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Key Features</h2>
             <ul className="space-y-4">
               <li className="flex gap-4">
-                <span className="text-pink-600 text-2xl flex-shrink-0">•</span>
+                <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Refreshable Tactile Display</h3>
                   <p className="text-gray-700">Pin array mechanism that dynamically changes to create different tactile patterns and shapes for museum visitors</p>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="text-pink-600 text-2xl flex-shrink-0">•</span>
+                <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Accessibility Focused</h3>
                   <p className="text-gray-700">Designed specifically for visually impaired and blind visitors to experience artwork through touch</p>
                 </div>
               </li>
               <li className="flex gap-4">
-                <span className="text-pink-600 text-2xl flex-shrink-0">•</span>
+                <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Haptic-Visual Correlation</h3>
                   <p className="text-gray-700">Explores the relationship between tactile sensations and visual concepts like shape and color</p>

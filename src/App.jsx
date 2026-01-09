@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, ChevronDown, Menu, X, ExternalLink, Download, C
 import { Link } from 'react-router-dom'
 
 export default function Portfolio() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -114,6 +115,32 @@ export default function Portfolio() {
   ];
 
   useEffect(() => {
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
+    
+    // Track active section
+    const sections = ['about', 'projects', 'contact'];
+    for (let section of sections) {
+      const element = document.getElementById(section);
+      if (element) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 200) {
+          setActiveSection(section);
+        }
+      }
+    }
+    
+    // Reset to home if at top
+    if (window.scrollY < 100) {
+      setActiveSection('home');
+    }
+  };
+  
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -175,18 +202,24 @@ export default function Portfolio() {
             Resume
           </a>
             
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`hover:text-blue-600 transition-colors font-medium ${activeSection === item.toLowerCase() ? 'text-blue-600' : 'text-gray-700'}`}
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            {['Home', 'About', 'Projects', 'Contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => {
+                  if (item === 'Home') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  } else {
+                    scrollToSection(item.toLowerCase());
+                  }
+                }}
+                className={`hover:text-blue-600 transition-colors font-medium ${activeSection === item.toLowerCase() ? 'text-blue-600' : 'text-gray-700'}`}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
 
             {/* Mobile Menu Button */}
             <button 
@@ -197,7 +230,7 @@ export default function Portfolio() {
             </button>
           </div>
         </div>
-
+        
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
@@ -205,7 +238,13 @@ export default function Portfolio() {
               {['Home', 'About', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
+                  onClick={() => {
+                    if (item === 'Home') {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    } else {
+                      scrollToSection(item.toLowerCase());
+                    }
+                  }}
                   className="block w-full text-left px-3 py-2 hover:bg-gray-50 rounded-md text-gray-700"
                 >
                   {item}
