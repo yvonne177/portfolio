@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, ChevronDown, Menu, X, ExternalLink, Download, Code, Cpu, Wrench, Camera, Car, Hand, Bot, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom'
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,78 +22,94 @@ export default function Portfolio() {
     "Outdoors Enthusiast"
   ];
 
-  const projectSlides = [
-    { title: "Visual Information through Sensory Tactile Array (VISTA)", icon: "👆", description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color" },
-    { title: "Programming Assignments", icon: "🔌", description: "Computer-Integrated Surgery applications" },
-    { title: "Autonomous Rover Design Challenge", icon: "🖨️", description: "Orientation, localization, object pick-up and drop-off to designated spot" },
-  ];
-
   const projects = [
     { 
       id: 1,
-      title: "Autonomous Rover Navigation", 
-      subtitle: "Complete maze navigation in 5 minutes", 
+      title: "Visual Information through Sensory Tactile Array (VISTA)", 
+      subtitle: "Tactile museum display for accessibility", 
+      icon: "👆",
+      color: "from-pink-400 to-pink-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["Mechatronics", "Hardware Design", "Haptic Feedback"],
+      description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color.",
+      slug: "vista-tactile-display",
+    },
+    { 
+      id: 2,
+      title: "Programming Assignments for Computer-Integrated Surgery", 
+      subtitle: "CIS robotic applications", 
+      icon: "🔌",
+      color: "from-blue-400 to-blue-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["C++", "ROS2", "Surgical Robotics"],
+      description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
+      slug: "cis-programming"
+    },
+    { 
+      id: 3,
+      title: "Autonomous Rover Design Challenge", 
+      subtitle: "Complete maze navigation", 
       icon: "🤖",
       color: "from-blue-400 to-blue-600",
       image: "/portfolio/Banff_lakelouise.jpg",
       skills: ["ROS2", "Python", "Autonomous Systems"],
-      description: "A fully autonomous rover capable of navigating complex mazes using sensor fusion and real-time path planning.",
+      description: "Orientation, localization, object pick-up and drop-off to designated spot with full maze navigation in 5 minutes.",
       slug: "autonomous-rover"
     },
     { 
-      id: 2,
+      id: 4,
+      title: "UR5e Robotic Arm Controls", 
+      subtitle: "Inverse kinematics and RTDE in ROS", 
+      icon: "🦾",
+      color: "from-purple-400 to-purple-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["ROS2", "Inverse Kinematics", "RTDE", "Python"],
+      description: "Developed advanced control algorithms for UR5e robotic arm using inverse kinematics and real-time data exchange in ROS environment.",
+      slug: "ur5e-controls"
+    },
+    { 
+      id: 5,
+      title: "Hand Tracking System", 
+      subtitle: "ROS2 + MediaPipe integration", 
+      icon: "👁️",
+      color: "from-purple-400 to-purple-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
+      description: "Developed a real-time hand gesture recognition and tracking system using computer vision for robotic control.",
+      slug: "hand-tracking"
+    },
+    { 
+      id: 6,
       title: "Window Cable Tensioner", 
       subtitle: "Magna International collaboration", 
       icon: "🚗",
       color: "from-blue-400 to-blue-600",
       image: "/portfolio/Banff_lakelouise.jpg",
       skills: ["SolidWorks", "FEA", "Manufacturing"],
-      description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications.",
+      description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.",
       slug: "window-cable-tensioner"
     },
     { 
-      id: 3,
-      title: "Hand Tracking System", 
-      subtitle: "ROS2 + MediaPipe integration", 
-      icon: "👁️",
-      color: "from-purple-400 to-purple-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["MediaPipe", "ROS2", "Python"],
-      description: "Developed a real-time hand gesture recognition and tracking system using computer vision.",
-      slug: "hand-tracking"
-    },
-    { 
-      id: 4,
-      title: "Formula Racing Aero", 
-      subtitle: "CFD optimization & carbon fiber", 
-      icon: "🏎️",
-      color: "from-green-400 to-green-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["ANSYS CFD", "Carbon Fiber", "SolidWorks"],
-      description: "Optimized aerodynamic performance for a formula racing vehicle using computational fluid dynamics.",
-      slug: "formula-racing-aero"
-    },
-    { 
-      id: 5,
-      title: "Haptic Display Device", 
-      subtitle: "Tactile art for accessibility", 
-      icon: "👆",
-      color: "from-pink-400 to-pink-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["Mechatronics", "Arduino", "Hardware Design"],
-      description: "Created an innovative tactile display using pin arrays to render images through haptic feedback.",
-      slug: "haptic-display"
-    },
-    { 
-      id: 6,
-      title: "ROS2 Vision Pipeline", 
-      subtitle: "Real-time depth & gesture recognition", 
-      icon: "📷",
+      id: 7,
+      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+      subtitle: "Laser Powder Bed Fusion with Al-Graphene composite", 
+      icon: "🔬",
       color: "from-orange-400 to-orange-600",
       image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["OpenCV", "ROS2", "C++"],
-      description: "Built a comprehensive computer vision pipeline for real-time processing and analysis.",
-      slug: "ros2-vision-pipeline"
+      skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
+      description: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
+      slug: "microchannel-heat-sinks"
+    },
+    { 
+      id: 8,
+      title: "Train Fire Spread Thermal Characterization", 
+      subtitle: "Material testing methodology for CFD boundary conditions", 
+      icon: "🚂",
+      color: "from-red-400 to-red-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["Material Testing", "CFD Modeling", "ANSYS", "Data Analysis"],
+      description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
+      slug: "train-fire-characterization"
     },
   ];
 
@@ -160,7 +177,7 @@ export default function Portfolio() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -185,7 +202,7 @@ export default function Portfolio() {
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item) => (
+              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -341,24 +358,27 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Projects</h2>
           <p className="text-center text-gray-600 mb-8 text-base">
-            Explore my work across robotics, mechanical engineering, and innovation.
+            Explore my work across robotics, mechanical engineering, and design.
           </p>
           
           {/* Projects Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {projects.map((project) => (
-              <a 
-                key={project.id}
-                href={`/portfolio/${project.slug}`}
+              <Link 
+                key={project.slug}  // ← Use slug as key instead
+                to={`/portfolio/${project.slug}`}
                 className="group cursor-pointer overflow-hidden rounded-xl border border-gray-200 hover:shadow-xl transition-all duration-300 block"
               >
                 {/* Image Container */}
-                <div className="relative h-24 overflow-hidden bg-gray-100">
+                {/*<div className="relative h-24 overflow-hidden bg-gray-100">
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                </div> */}
+                <div className="relative h-24 overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                  <span className="text-6xl">{project.icon}</span>
                 </div>
                 
                 {/* Content Container */}
@@ -380,36 +400,7 @@ export default function Portfolio() {
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
-      {/* Skills */}
-      <section id="skills" className="py-24 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Skills</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: <Code size={32} />, title: "Python, C, C++", subtitle: "Programming Languages" },
-              { icon: "📊", title: "MATLAB, Excel", subtitle: "Data Analysis" },
-              { icon: <Cpu size={32} />, title: "Arduino, ROS2", subtitle: "Embedded Systems" },
-              { icon: <Wrench size={32} />, title: "SolidWorks, OnShape", subtitle: "Design & CAD" },
-              { icon: <Camera size={32} />, title: "MediaPipe, OpenCV", subtitle: "Computer Vision" },
-              { icon: "🔬", title: "ANSYS CFD & FEA", subtitle: "Simulation" },
-              { icon: "🖨️", title: "3D Printing, Manual Machining Skills", subtitle: "Rapid Prototyping" },
-              { icon: "🎨", title: "FIGMA", subtitle: "UI/UX Design" },
-            ].map((skill, idx) => (
-              <div key={idx} className="bg-blue-100 rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow text-center">
-                <div className="flex justify-center mb-3 text-blue-600">
-                  {typeof skill.icon === 'string' ? <span className="text-4xl">{skill.icon}</span> : skill.icon}
-                </div>
-                <h3 className="font-bold text-gray-900 mb-1">{skill.title}</h3>
-                <p className="text-xs text-gray-500">{skill.subtitle}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
