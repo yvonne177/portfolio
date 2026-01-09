@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ChevronDown, Menu, X, ExternalLink, Download, Code, Cpu, Wrench, Camera, Car, Hand, Bot } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, Menu, X, ExternalLink, Download, Code, Cpu, Wrench, Camera, Car, Hand, Bot, ArrowRight } from 'lucide-react';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [typedText, setTypedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(70);
 
+
   const roles = [
     "Student",
     "Robotics Engineer",
-    "Mechatronics Engineer",
     "CAD Prototyper",
+    "Machine Shop Enthusiast",
+    "Mechatronics Engineer",
     "Haptic Interface Designer",
     "Outdoors Enthusiast"
   ];
@@ -24,6 +25,75 @@ export default function Portfolio() {
     { title: "Visual Information through Sensory Tactile Array (VISTA)", icon: "👆", description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color" },
     { title: "Programming Assignments", icon: "🔌", description: "Computer-Integrated Surgery applications" },
     { title: "Autonomous Rover Design Challenge", icon: "🖨️", description: "Orientation, localization, object pick-up and drop-off to designated spot" },
+  ];
+
+  const projects = [
+    { 
+      id: 1,
+      title: "Autonomous Rover Navigation", 
+      subtitle: "Complete maze navigation in 5 minutes", 
+      icon: "🤖",
+      color: "from-blue-400 to-blue-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["ROS2", "Python", "Autonomous Systems"],
+      description: "A fully autonomous rover capable of navigating complex mazes using sensor fusion and real-time path planning.",
+      slug: "autonomous-rover"
+    },
+    { 
+      id: 2,
+      title: "Window Cable Tensioner", 
+      subtitle: "Magna International collaboration", 
+      icon: "🚗",
+      color: "from-blue-400 to-blue-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["SolidWorks", "FEA", "Manufacturing"],
+      description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications.",
+      slug: "window-cable-tensioner"
+    },
+    { 
+      id: 3,
+      title: "Hand Tracking System", 
+      subtitle: "ROS2 + MediaPipe integration", 
+      icon: "👁️",
+      color: "from-purple-400 to-purple-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["MediaPipe", "ROS2", "Python"],
+      description: "Developed a real-time hand gesture recognition and tracking system using computer vision.",
+      slug: "hand-tracking"
+    },
+    { 
+      id: 4,
+      title: "Formula Racing Aero", 
+      subtitle: "CFD optimization & carbon fiber", 
+      icon: "🏎️",
+      color: "from-green-400 to-green-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["ANSYS CFD", "Carbon Fiber", "SolidWorks"],
+      description: "Optimized aerodynamic performance for a formula racing vehicle using computational fluid dynamics.",
+      slug: "formula-racing-aero"
+    },
+    { 
+      id: 5,
+      title: "Haptic Display Device", 
+      subtitle: "Tactile art for accessibility", 
+      icon: "👆",
+      color: "from-pink-400 to-pink-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["Mechatronics", "Arduino", "Hardware Design"],
+      description: "Created an innovative tactile display using pin arrays to render images through haptic feedback.",
+      slug: "haptic-display"
+    },
+    { 
+      id: 6,
+      title: "ROS2 Vision Pipeline", 
+      subtitle: "Real-time depth & gesture recognition", 
+      icon: "📷",
+      color: "from-orange-400 to-orange-600",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["OpenCV", "ROS2", "C++"],
+      description: "Built a comprehensive computer vision pipeline for real-time processing and analysis.",
+      slug: "ros2-vision-pipeline"
+    },
   ];
 
   useEffect(() => {
@@ -71,14 +141,6 @@ export default function Portfolio() {
       setIsMenuOpen(false);
       setActiveSection(id);
     }
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projectSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projectSlides.length) % projectSlides.length);
   };
 
   return (
@@ -274,87 +336,57 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section with Carousel */}
-      <section id="projects" className="py-24 px-4 bg-blue-50">
+      {/* Projects Section */}
+      <section id="projects" className="py-24 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-center text-gray-800">Recent Projects</h2>
-          <p className="text-center text-gray-600 mb-12 text-base">
-            Explore my projects to learn more about what I do.
+          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Projects</h2>
+          <p className="text-center text-gray-600 mb-8 text-base">
+            Explore my work across robotics, mechanical engineering, and innovation.
           </p>
           
-          {/* Carousel */}
-          <div className="relative mb-20">
-            <div className="overflow-hidden rounded-xl">
-              <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                {projectSlides.map((slide, idx) => (
-                  <div key={idx} className="min-w-full">
-                    <div className="bg-white rounded-xl p-12 mx-2 border border-gray-200 flex flex-col items-center justify-center" style={{ minHeight: '400px' }}>
-                      <div className="text-8xl mb-6">{slide.icon}</div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{slide.title}</h3>
-                      <p className="text-gray-600 text-center text-lg">{slide.description}</p>
-                    </div>
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {projects.map((project) => (
+              <a 
+                key={project.id}
+                href={`/portfolio/${project.slug}`}
+                className="group cursor-pointer overflow-hidden rounded-xl border border-gray-200 hover:shadow-xl transition-all duration-300 block"
+              >
+                {/* Image Container */}
+                <div className="relative h-24 overflow-hidden bg-gray-100">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                {/* Content Container */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4">{project.subtitle}</p>
+                  
+                  {/* Skills Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.skills.map((skill, idx) => (
+                      <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Navigation Buttons */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
-            >
-              <ChevronDown size={24} className="rotate-90 text-gray-700" />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors border border-gray-200"
-            >
-              <ChevronDown size={24} className="-rotate-90 text-gray-700" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-6">
-              {projectSlides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`w-2 h-2 rounded-full transition-all ${idx === currentSlide ? 'bg-blue-600 w-8' : 'bg-gray-300'}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* All Projects */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">All Projects</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Autonomous Rover Navigation", subtitle: "Complete maze navigation in 5 minutes", icon: "🤖", color: "from-blue-400 to-blue-600" },
-              { title: "Window Cable Tensioner", subtitle: "Magna International collaboration", icon: "🚗", color: "from-blue-400 to-blue-600" },
-              { title: "Hand Tracking System", subtitle: "ROS2 + MediaPipe integration", icon: "👁️", color: "from-purple-400 to-purple-600" },
-              { title: "Formula Racing Aero", subtitle: "CFD optimization & carbon fiber", icon: "🏎️", color: "from-green-400 to-green-600" },
-              { title: "Haptic Display Device", subtitle: "Tactile art for accessibility", icon: "👆", color: "from-pink-400 to-pink-600" },
-              { title: "ROS2 Vision Pipeline", subtitle: "Real-time depth & gesture recognition", icon: "📷", color: "from-orange-400 to-orange-600" },
-            ].map((project, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all hover:transform hover:-translate-y-1 cursor-pointer">
-                <div className={`h-40 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                  <span className="text-5xl">{project.icon}</span>
+                  
+                  <span className="text-blue-600 text-sm font-medium flex items-center gap-2 group-hover:text-blue-700 transition-colors">
+                    View Project
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold mb-1 text-gray-900">{project.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{project.subtitle}</p>
-                  <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    Read More
-                  </button>
-                </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
+
+
 
       {/* Skills */}
       <section id="skills" className="py-24 px-4 bg-gray-50">
@@ -396,7 +428,7 @@ export default function Portfolio() {
               </a>
             </div>
             <div className="flex gap-6 justify-center">
-              <a href="www.linkedin.com/in/yvonnezhang177" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors text-gray-700">
+              <a href="https://www.linkedin.com/in/yvonnezhang177" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors text-gray-700">
                 <Linkedin size={32} />
               </a>
               <a href="https://github.com/yvonne177" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors text-gray-700">
