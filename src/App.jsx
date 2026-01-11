@@ -28,29 +28,16 @@ export default function Portfolio() {
       id: 1,
       title: "Visual Information through Sensory Tactile Array (VISTA)", 
       subtitle: "Tactile museum display for accessibility", 
-      icon: "👆",
       color: "from-pink-400 to-pink-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
+      image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Mechatronics", "Hardware Design", "Haptic Feedback"],
       description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color.",
       slug: "vista-tactile-display",
     },
     { 
       id: 2,
-      title: "Programming Assignments for Computer-Integrated Surgery", 
-      subtitle: "CIS robotic applications", 
-      icon: "🔌",
-      color: "from-blue-400 to-blue-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["C++", "ROS2", "Surgical Robotics"],
-      description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
-      slug: "cis-programming"
-    },
-    { 
-      id: 3,
       title: "Autonomous Rover Design Challenge", 
       subtitle: "Complete maze navigation", 
-      icon: "🤖",
       color: "from-blue-400 to-blue-600",
       image: "/portfolio/Banff_lakelouise.jpg",
       skills: ["ROS2", "Python", "Autonomous Systems"],
@@ -58,60 +45,65 @@ export default function Portfolio() {
       slug: "autonomous-rover"
     },
     { 
-      id: 4,
-      title: "UR5e Robotic Arm Controls", 
-      subtitle: "Inverse kinematics and RTDE in ROS", 
-      icon: "🦾",
-      color: "from-purple-400 to-purple-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["ROS2", "Inverse Kinematics", "RTDE", "Python"],
-      description: "Developed advanced control algorithms for UR5e robotic arm using inverse kinematics and real-time data exchange in ROS environment.",
-      slug: "ur5e-controls"
-    },
-    { 
-      id: 5,
-      title: "Hand Tracking System", 
-      subtitle: "ROS2 + MediaPipe integration", 
-      icon: "👁️",
-      color: "from-purple-400 to-purple-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
-      description: "Developed a real-time hand gesture recognition and tracking system using computer vision for robotic control.",
-      slug: "hand-tracking"
-    },
-    { 
-      id: 6,
-      title: "Window Cable Tensioner", 
-      subtitle: "Magna International collaboration", 
-      icon: "🚗",
+      id: 3,
+      title: "Stereotactic Navigation System", 
+      subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
       color: "from-blue-400 to-blue-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["SolidWorks", "FEA", "Manufacturing"],
-      description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.",
-      slug: "window-cable-tensioner"
+      image: "/portfolio/pa3-icp.jpg",
+      skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
+      description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
+      slug: "stereotactic-navigation-system"
     },
-    { 
-      id: 7,
-      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
-      subtitle: "Laser Powder Bed Fusion with Al-Graphene composite", 
-      icon: "🔬",
-      color: "from-orange-400 to-orange-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
-      description: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
-      slug: "microchannel-heat-sinks"
-    },
-    { 
-      id: 8,
-      title: "Train Fire Spread Thermal Characterization", 
-      subtitle: "Material testing methodology for CFD boundary conditions", 
-      icon: "🚂",
-      color: "from-red-400 to-red-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["Material Testing", "CFD Modeling", "ANSYS", "Data Analysis"],
-      description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
-      slug: "train-fire-characterization"
-    },
+    // { 
+    //   id: 4,
+    //   title: "UR5e Robotic Arm Controls", 
+    //   subtitle: "Inverse kinematics and RTDE in ROS", 
+    //   color: "from-purple-400 to-purple-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["ROS2", "Inverse Kinematics", "RTDE", "Python"],
+    //   description: "Developed advanced control algorithms for UR5e robotic arm using inverse kinematics and real-time data exchange in ROS environment.",
+    //   slug: "ur5e-controls"
+    // },
+    // { 
+    //   id: 5,
+    //   title: "Hand Tracking System", 
+    //   subtitle: "ROS2 + MediaPipe integration", 
+    //   color: "from-purple-400 to-purple-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
+    //   description: "Developed a real-time hand gesture recognition and tracking system using computer vision for robotic control.",
+    //   slug: "hand-tracking"
+    // },
+    // { 
+    //   id: 6,
+    //   title: "Window Cable Tensioner", 
+    //   subtitle: "Magna International collaboration", 
+    //   color: "from-blue-400 to-blue-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "FEA", "Manufacturing"],
+    //   description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.",
+    //   slug: "window-cable-tensioner"
+    // },
+    // { 
+    //   id: 7,
+    //   title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+    //   subtitle: "Laser Powder Bed Fusion with Al-Graphene composite", 
+    //   color: "from-orange-400 to-orange-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
+    //   description: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
+    //   slug: "microchannel-heat-sinks"
+    // },
+    // { 
+    //   id: 8,
+    //   title: "Train Fire Spread Thermal Characterization", 
+    //   subtitle: "Material testing methodology for CFD boundary conditions", 
+    //   color: "from-red-400 to-red-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["Material Testing", "CFD Modeling", "ANSYS", "Data Analysis"],
+    //   description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
+    //   slug: "train-fire-characterization"
+    // },
   ];
 
   useEffect(() => {
@@ -194,7 +186,7 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <a 
-            href="/portfolio/Yvonne_Zhang_CV.pdf"
+            href="/portfolio/Yvonne_Zhang_CV_Jan_2026_ver_.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
@@ -404,34 +396,33 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {projects.map((project) => (
               <Link 
-                key={project.slug}  // ← Use slug as key instead
+                key={project.slug}
                 to={`/portfolio/${project.slug}`}
-                className="group cursor-pointer overflow-hidden rounded-xl border border-gray-200 hover:shadow-xl transition-all duration-300 block"
+                className="group cursor-pointer overflow-hidden rounded-xl border border-gray-200 hover:shadow-xl transition-all duration-300 block flex flex-col"
               >
                 {/* Image Container */}
-                {/*<div className="relative h-24 overflow-hidden bg-gray-100">
+                <div className="relative h-48 overflow-hidden bg-gray-200 flex items-center justify-center flex-shrink-0">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
-                </div> */}
-                <div className="relative h-24 overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                  <span className="text-6xl">{project.icon}</span>
                 </div>
                 
                 {/* Content Container */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{project.subtitle}</p>
-                  
-                  {/* Skills Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.skills.map((skill, idx) => (
-                      <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
-                        {skill}
-                      </span>
-                    ))}
+                <div className="p-6 flex flex-col justify-between flex-grow">
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
+                    <p className="text-sm text-gray-600 mb-4">{project.subtitle}</p>
+                    
+                    {/* Skills Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.skills.map((skill, idx) => (
+                        <span key={idx} className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   
                   <span className="text-blue-600 text-sm font-medium flex items-center gap-2 group-hover:text-blue-700 transition-colors">
@@ -448,9 +439,7 @@ export default function Portfolio() {
       {/* Contact */}
       <section id="contact" className="py-24 px-4 bg-blue-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6 text-gray-900">Contact</h2>
-          <p className="text-2xl text-gray-900 font-semibold mb-12">Let's chat about robots!</p>
-          
+          <h2 className="text-4xl font-bold mb-6 text-gray-900">Contact Me</h2>          
           <div className="bg-gray-50 rounded-xl p-8 border border-gray-200 inline-block">
             <div className="mb-6">
               <a href="mailto:yzhan874@jh.edu" className="text-lg text-gray-900 hover:text-blue-600 font-medium">

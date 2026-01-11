@@ -98,7 +98,10 @@ export default function VistaTactileDisplay() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Overview</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              VISTA is a tactile pin-based museum display designed to create refreshable tactile images, allowing visitors to explore the relationship between haptic feedback and visual information. This project bridges accessibility and interactive design.
+              VISTA (Visual Information through Sensory Tactile Array) is a handheld tactile display designed to make visual art accessible to blind and visually-impaired museum visitors. The device uses a 7×5 actuated pin array contained by a soft silicone interface to render both shape and color through touch.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              Each pin’s height encodes visual information, allowing users to feel contours, regions, and color boundaries of paintings or flags using their palm. The system bridges human haptic perception, mechanical actuation, and image processing to create a scalable, refreshable tactile interface for museum exhibits.
             </p>
           </div>
 
@@ -109,22 +112,22 @@ export default function VistaTactileDisplay() {
               <li className="flex gap-4">
                 <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Refreshable Tactile Display</h3>
-                  <p className="text-gray-700">Pin array mechanism that dynamically changes to create different tactile patterns and shapes for museum visitors</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Refreshable 7×5 Tactile Pin Array</h3>
+                  <p className="text-gray-700">A grid of 35 independently actuated pins driven by servo-controlled cam mechanisms produces continuously variable pin heights. This enables the display to render low-resolution tactile “images” that users explore by sweeping their hand across the surface.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Accessibility Focused</h3>
-                  <p className="text-gray-700">Designed specifically for visually impaired and blind visitors to experience artwork through touch</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Shape & Color Encoding via Height</h3>
+                  <p className="text-gray-700">The visual features of each image are split into geometry (shape) and chromatic regions (color). Shape emerges from spatial grouping and slopes of raised pins, while color is encoded as discrete height levels, allowing users to distinguish colored regions through touch.</p>
                 </div>
               </li>
               <li className="flex gap-4">
                 <span className="text-blue-600 text-2xl flex-shrink-0">•</span>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Haptic-Visual Correlation</h3>
-                  <p className="text-gray-700">Explores the relationship between tactile sensations and visual concepts like shape and color</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Soft, Safe Human Interface</h3>
+                  <p className="text-gray-700">A custom-molded Ecoflex™ silicone overlay stretches over the pin array to provide a compliant, skin-safe surface. Adjustable tensioning improves spatial clarity while preserving comfort for palm-based exploration.</p>
                 </div>
               </li>
             </ul>
@@ -134,11 +137,75 @@ export default function VistaTactileDisplay() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Gallery</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-gray-300">
-                <p className="text-gray-500">Project Image 1</p>
+              <img 
+                src="/portfolio/vista-cad.jpeg" 
+                alt="VISTA CAD"
+                className="w-full h-full object-contain"
+              />
+              <div className="bg-white overflow-hidden aspect-video">
+                <img
+                  src="/portfolio/vista-key.jpeg"
+                  alt="VISTA Key System"
+                  className="w-full h-full object-contain"
+              />
               </div>
-              <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center border-2 border-dashed border-gray-300">
-                <p className="text-gray-500">Project Image 2</p>
+              <div className="bg-white overflow-hidden aspect-video">
+                <img
+                  src="/portfolio/vista-electronics.jpeg"
+                  alt="VISTA Electronics System"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <img 
+                src="/portfolio/vista-controls.jpeg" 
+                alt="VISTA Controls System"
+                className="w-full h-full object-contain"
+              />
+              <img 
+                src="/portfolio/VISTA Cam System.jpeg" 
+                alt="VISTA Cam System"
+                className="w-full h-full object-contain"
+              />
+              <img 
+                src="/portfolio/VISTA Silicone Overlay.jpeg" 
+                alt="VISTA Silicon Overlay"
+                className="w-full h-full object-contain"
+              />
+
+              <div className="bg-white rounded-xl shadow border overflow-hidden">
+                <video
+                  className="w-full h-80 object-contain"
+                  controls
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="public/vista-japan.mp4" type="video/mp4" />
+                </video>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900">Japan Flag</h3>
+                  <p className="text-gray-600 text-sm">
+                    Shape-based tactile rendering (circle vs background)
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow border overflow-hidden">
+                <video
+                  className="w-full h-80 object-contain"
+                  controls
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="public/vista-cam.mp4" type="video/mp4" />
+                </video>
+                <div className="p-4">
+                  <h3 className="font-semibold text-gray-900">Cam and Pin System</h3>
+                  <p className="text-gray-600 text-sm">
+                    Demonstration of cam and pin system
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -149,15 +216,15 @@ export default function VistaTactileDisplay() {
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-2">Hardware</h3>
-                <p className="text-gray-700">Pneumatic actuators, microcontroller, solenoid valves</p>
+                <p className="text-gray-700">35 servo motors, cam-driven pin actuators, laser-cut MDF housing, 3D-printed PLA cams & pins, Ecoflex™ silicone overlay</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-2">Software</h3>
-                <p className="text-gray-700">Python, Arduino firmware, image processing</p>
+                <p className="text-gray-700">Arduino firmware, Python image processing pipeline, real-time motor control</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <h3 className="font-semibold text-gray-900 mb-2">Tools</h3>
-                <p className="text-gray-700">SolidWorks, MATLAB, CAD design</p>
+                <p className="text-gray-700">SolidWorks CAD, MATLAB, 3D printing, laser cutting, haptic prototyping</p>
               </div>
             </div>
           </div>
@@ -166,7 +233,16 @@ export default function VistaTactileDisplay() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900">Results & Impact</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Describe the outcomes and impact of your project.
+              The VISTA prototype successfully demonstrated the ability to convey both shape and color through touch using a low-resolution tactile display.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              In a preliminary user study, 20 participants were asked to identify tactile renderings of national flags (Japan, Sweden, and Denmark) using the device alone. All participants correctly distinguished flags that differed in both shape and color while consulting a tactile legend.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              When distinguishing between flags that shared the same shape but differed only in color (Sweden vs. Denmark), 65% of participants were able to identify them correctly without assistance, demonstrating that height-based color encoding is perceptible but still cognitively demanding.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              These results validate the core premise of VISTA: that mechanically actuated pin heights can transmit meaningful visual structure through haptics, enabling accessible museum interactions. The project establishes a foundation for higher-resolution tactile displays capable of representing more complex artworks in future iterations.
             </p>
           </div>
         </div>
