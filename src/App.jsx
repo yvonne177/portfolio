@@ -39,7 +39,7 @@ export default function Portfolio() {
       title: "Autonomous Rover Design Challenge", 
       subtitle: "Complete maze navigation", 
       color: "from-blue-400 to-blue-600",
-      image: "/portfolio/Banff_lakelouise.jpg",
+      image: "/portfolio/autonomous-rover-cad.jpeg",
       skills: ["ROS2", "Python", "Autonomous Systems"],
       description: "Orientation, localization, object pick-up and drop-off to designated spot with full maze navigation in 5 minutes.",
       slug: "autonomous-rover"
