@@ -55,7 +55,7 @@ export default function VistaTactileDisplay() {
                 onClick={handleHome}
                 className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
               >
-                About
+                Abouthttps://yvonne177.github.io/portfolio/vista-tactile-display
               </button>
               <button
                 onClick={handleBackToProjects}
@@ -180,7 +180,7 @@ export default function VistaTactileDisplay() {
                   loop
                   playsInline
                 >
-                  <source src="public/vista-japan.mp4" type="video/mp4" />
+                  <source src="portfolio/vista-japan.mp4" type="video/mp4" />
                 </video>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900">Japan Flag</h3>
@@ -198,7 +198,7 @@ export default function VistaTactileDisplay() {
                   loop
                   playsInline
                 >
-                  <source src="public/vista-cam.mp4" type="video/mp4" />
+                  <source src="portfolio/vista-cam.mp4" type="video/mp4" />
                 </video>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900">Cam and Pin System</h3>
