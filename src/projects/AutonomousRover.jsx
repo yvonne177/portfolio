@@ -64,20 +64,24 @@ export default function AutonomousRover() {
                 className="w-full h-full object-contain"
               />
               <div className="bg-white rounded-xl shadow border overflow-hidden">
-                <video
-                  className="w-50 h-80 object-contain"
-                  controls
-                  muted
-                  loop
-                  playsInline
-                >
-                  <source src="/portfolio/autonomous-rover-video.mp4" type="video/mp4" />
-                </video>
+                {/* Video */}
+                <div className="w-full aspect-video bg-black">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://youtu.be/L4viNf_tiTk"
+                    title="Autonomous Rover – Final Project"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+
+                {/* Caption */}
                 <div className="p-4">
-                <h3 className="font-semibold text-gray-900 mb-1">About the Project</h3>
-                <p className="text-gray-600 text-sm mb-0">
+                  <h3 className="font-semibold text-gray-900 mb-1">About the Project</h3>
+                  <p className="text-gray-600 text-sm mb-0">
                     Final project video essay
-                </p>
+                  </p>
                 </div>
               </div>
             </div>
