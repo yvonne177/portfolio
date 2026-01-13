@@ -72,7 +72,7 @@ export default function AutonomousRover() {
                     title="Autonomous Rover – Final Project"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    loading="lazy"
+                    loading="lazy" 
                   />
                 </div>
 
