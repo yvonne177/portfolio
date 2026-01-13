@@ -68,7 +68,7 @@ export default function AutonomousRover() {
                 <div className="w-full aspect-video bg-black">
                   <iframe
                     className="w-full h-full"
-                    src="https://youtu.be/L4viNf_tiTk"
+                    src="https://www.youtube.com/embed/L4viNf_tiTk"
                     title="Autonomous Rover – Final Project"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -80,7 +80,7 @@ export default function AutonomousRover() {
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900 mb-1">About the Project</h3>
                   <p className="text-gray-600 text-sm mb-0">
-                    Final project video essay
+                    This video summarizes the design process for mechanical and electronics components and the overall systems integration. 
                   </p>
                 </div>
               </div>
@@ -127,7 +127,7 @@ export default function AutonomousRover() {
             </div>
 
             <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-gray-700"><strong>Key Features:</strong> Histogram convergence eliminates need for compass/gyroscope • Continuous 6-inch sensor polling enables online localization • Dual side sensors maintain centering • No backtracking prevents death loops • Adaptive turning selects longest available path</p>
+              <p className="text-gray-700"><strong>Key Features:</strong> Histogram convergence eliminates need for compass/gyroscope • Continuous 6-inch sensor polling enables online localization • Dual side sensors maintain centering • Adaptive turning selects longest available path</p>
             </div>
           </div>
 
