@@ -80,7 +80,7 @@ export default function AutonomousRover() {
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-900 mb-1">About the Project</h3>
                   <p className="text-gray-600 text-sm mb-0">
-                    This video summarizes the design process for mechanical and electronics components and the overall systems integration. 
+                    This video summarizes the design process for mechanical and electronics components, and the overall mechatronics systems integration. The team was successful in finishing as a top 10 design for all three design milestones.
                   </p>
                 </div>
               </div>
