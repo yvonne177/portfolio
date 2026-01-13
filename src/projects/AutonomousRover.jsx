@@ -136,7 +136,7 @@ export default function AutonomousRover() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-gray-500 border-t border-gray-200 bg-gray-50">
-        <p>© 2025 Yvonne Zhang. MIE444 Project.</p>
+        <p>© 2025 Yvonne Zhang.</p>
       </footer>
     </div>
   )
