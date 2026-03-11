@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ChevronDown, Menu, X, ExternalLink, Download, Code, Cpu, Wrench, Camera, Car, Hand, Bot, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom'
 
 export default function Portfolio() {
@@ -26,11 +26,11 @@ export default function Portfolio() {
   const projects = [
     { 
       id: 1,
-      title: "Visual Information through Sensory Tactile Array (VISTA)", 
-      subtitle: "Tactile museum display for accessibility", 
+      title: "VISTA - Haptic Museum Display", 
+      subtitle: "Visual Information through Sensory Tactile Array (VISTA) aims for museum display accessibility and the exploration of the correlation between tactile senses to colors and shape", 
       color: "from-pink-400 to-pink-600",
       image: "/portfolio/vista-cad-v1.jpeg",
-      skills: ["Mechatronics", "Hardware Design", "Haptic Feedback"],
+      skills: ["Fusion 360", "Arduino", "Python", "Haptic Research"],
       description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color.",
       slug: "vista-tactile-display",
     },
@@ -40,20 +40,30 @@ export default function Portfolio() {
       subtitle: "Real-time localization and autonomous block retrieval in constrained environments", 
       color: "from-blue-400 to-blue-600",
       image: "/portfolio/autonomous-rover-cad.jpeg",
-      skills: ["ROS2", "Python", "Autonomous Systems"],
+      skills: ["SolidWorks", "Arduino", "Python", "Autonomous Systems"],
       description: "Orientation, localization, object pick-up and drop-off to designated spot with full maze navigation in 5 minutes.",
       slug: "autonomous-rover"
     },
-    { 
+    {
       id: 3,
-      title: "Stereotactic Navigation System", 
-      subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
-      color: "from-blue-400 to-blue-600",
-      image: "/portfolio/pa3-icp.jpg",
-      skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
-      description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
-      slug: "stereotactic-navigation-system"
+      title: "Capstone Tailgate System",
+      subtitle: "2-in-1 multifunction tailgate design for Ford F-150",
+      color: "from-green-400 to-green-600",
+      image: "/portfolio/tailgate-cad.png",
+      skills: ["SolidWorks", "ANSYS FEA", "Machine Shop", "Mechanical Design"],
+      description: "Design and prototyping of a 2-in-1 multifunction tailgate system.",
+      slug: "capstone-tailgate", // must match route
     },
+    // { 
+    //   id: 4,
+    //   title: "Stereotactic Navigation System", 
+    //   subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
+    //   color: "from-blue-400 to-blue-600",
+    //   image: "/portfolio/pa3-icp.jpg",
+    //   skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
+    //   description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
+    //   slug: "stereotactic-navigation-system"
+    // },
     // { 
     //   id: 4,
     //   title: "UR5e Robotic Arm Controls", 
@@ -111,7 +121,7 @@ export default function Portfolio() {
     setIsScrolled(window.scrollY > 50);
     
     // Track active section
-    const sections = ['about', 'projects', 'contact'];
+    const sections = ['about me', 'projects', 'contact'];
     for (let section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -196,7 +206,7 @@ export default function Portfolio() {
             
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'About', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => {
@@ -227,7 +237,7 @@ export default function Portfolio() {
         {isMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About Me', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => {
@@ -282,19 +292,19 @@ export default function Portfolio() {
         {/* Scroll Down Arrow - part of hero section */}
         <div className="flex justify-center pt-12 pb-9 bg-white">
           <button
-            onClick={() => scrollToSection('about')}
+            onClick={() => scrollToSection('about me')}
             className="animate-bounce cursor-pointer"
-            aria-label="Scroll to About section"
+            aria-label="Scroll to About Me section"
           >
             <ChevronDown size={32} className="text-gray-400 hover:text-gray-600 transition-colors" />
           </button>
         </div>
       </section>
 
-    {/* About Section */}
-      <section id="about" className="pt-4 px-4 bg-white scroll-mt-20">
+    {/* About Me Section */}
+      <section id="about me" className="pt-4 px-4 bg-white scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">About</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">About Me</h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex flex-col items-center flex-shrink-0 order-first lg:order-none w-full lg:w-auto">
             <div className="w-56 aspect-square rounded-2xl overflow-hidden border-4 border-gray-100 shadow-xl">
@@ -463,7 +473,7 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-gray-500 border-t border-gray-200 bg-gray-50">
-        <p>© 2025 Yvonne Zhang.</p>
+        <p>© 2026 Yvonne Zhang.</p>
       </footer>
     </div>
   );

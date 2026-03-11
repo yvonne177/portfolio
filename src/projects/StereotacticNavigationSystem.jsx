@@ -1,74 +1,71 @@
+// projects/StereotacticNavigationSystem.jsx
 import React from 'react'
-import { ArrowLeft } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 export default function StereotacticNavigationSystem() {
+
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
+    window.scrollTo(0,0);
+  },[])
+
+  const goToMainSection = (section) => {
+    navigate(`/portfolio#${section}`);
+
+    setTimeout(() => {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },100);
+  };
 
   const handleBackToProjects = () => {
-    navigate('/portfolio');
-    // Scroll to projects section after navigation
-    setTimeout(() => {
-      const element = document.getElementById('projects');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+    goToMainSection("projects");
   };
 
   const handleHome = () => {
     navigate('/portfolio');
-    // Scroll to top after navigation
+
     setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+      window.scrollTo({top:0,behavior:"smooth"});
+    },100);
   };
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <button
-              onClick={handleBackToProjects}
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors cursor-pointer"
-            >
-              <ArrowLeft size={20} />
-              Back to All Projects
-            </button>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              <button
-                onClick={handleHome}
-                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
-              >
-                Home
-              </button>
-              <button
-                onClick={handleHome}
-                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
-              >
-                About
-              </button>
-              <button
-                onClick={handleBackToProjects}
-                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
-              >
-                Projects
-              </button>
-              <button
-                onClick={handleHome}
-                className="hover:text-blue-600 transition-colors font-medium text-gray-700 cursor-pointer"
-              >
-                Contact
-              </button>
+
+            {/* Left: Name */}
+            <div className="flex-shrink-0 text-2xl font-bold text-gray-900">
+              Yvonne Zhang
             </div>
+
+            {/* Center: Menu */}
+            <div className="hidden md:flex space-x-8 mx-auto">
+              <button onClick={handleHome} className="hover:text-blue-600 font-medium text-gray-700">Home</button>
+              <button onClick={() => goToMainSection("about me")} className="hover:text-blue-600 font-medium text-gray-700">About Me</button>
+              <button onClick={() => goToMainSection("projects")} className="hover:text-blue-600 font-medium text-gray-700">Projects</button>
+              <button onClick={() => goToMainSection("contact")} className="hover:text-blue-600 font-medium text-gray-700">Contact</button>
+            </div>
+
+            {/* Right: Resume */}
+            <div>
+              <a
+                href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
+              >
+                Resume
+              </a>
+            </div>
+
           </div>
         </div>
       </nav>
@@ -398,7 +395,7 @@ export default function StereotacticNavigationSystem() {
 
       {/* Footer */}
       <footer className="py-8 text-center text-gray-500 border-t border-gray-200 bg-gray-50">
-        <p>© 2025 Yvonne Zhang.</p>
+        <p>© 2026 Yvonne Zhang.</p>
       </footer>
     </div>
   )
