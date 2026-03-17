@@ -77,7 +77,7 @@ export default function VistaTactileDisplay() {
             VISTA - Haptic Museum Display
           </h1>
           <p className="text-xl text-gray-700 mb-6">
-            Visual Information through Sensory Tactile Array (VISTA) aims for museum display accessibility and the exploration of the correlation between tactile senses to colors and shape
+            Visual Information through Sensory Tactile Array (VISTA) for museum display accessibility and exploring the correlation between haptic feedback to colors and shape
           </p>
           <div className="flex flex-wrap gap-3">
             <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Fusion 360</span>

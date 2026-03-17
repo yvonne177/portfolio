@@ -27,7 +27,7 @@ export default function Portfolio() {
     { 
       id: 1,
       title: "VISTA - Haptic Museum Display", 
-      subtitle: "Visual Information through Sensory Tactile Array (VISTA) aims for museum display accessibility and the exploration of the correlation between tactile senses to colors and shape", 
+      subtitle: "Visual Information through Sensory Tactile Array (VISTA) for museum display accessibility and exploring the correlation between haptic feedback to colors and shape", 
       color: "from-pink-400 to-pink-600",
       image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Fusion 360", "Arduino", "Python", "Haptic Research"],
