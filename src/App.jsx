@@ -114,81 +114,57 @@ export default function Portfolio() {
   useEffect(() => {
 
     const handleScroll = () => {
-
       setIsScrolled(window.scrollY > 50);
-
       const sections = ['about me', 'projects', 'contact'];
-
       for (let section of sections) {
-
         const element = document.getElementById(section);
-
         if (element) {
-
           const rect = element.getBoundingClientRect();
-
           if (rect.top <= 200) {
             setActiveSection(section);
           }
         }
       }
-
       if (window.scrollY < 100) {
         setActiveSection('home');
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
-
   }, []);
 
   useEffect(() => {
-
     const handleTyping = () => {
-
       const currentRole = roles[loopNum % roles.length];
       const isComplete = typedText === currentRole;
-
       if (!isDeleting && isComplete) {
-
         setTimeout(() => setIsDeleting(true), 2000);
         return;
       }
-
       if (isDeleting && typedText === '') {
-
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
         setTypingSpeed(70);
         return;
       }
-
       if (isDeleting) {
-
         setTypedText(currentRole.substring(0, typedText.length - 1));
         setTypingSpeed(50);
-
       } else {
-
         setTypedText(currentRole.substring(0, typedText.length + 1));
         setTypingSpeed(70);
       }
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
-
     return () => clearTimeout(timer);
 
   }, [typedText, isDeleting, loopNum, typingSpeed]);
 
   const scrollToSection = (id) => {
-
     const element = document.getElementById(id);
-
     if (element) {
-
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
       setActiveSection(id);
@@ -196,25 +172,17 @@ export default function Portfolio() {
   };
 
   return (
-
     <div className="min-h-screen bg-[#F5F3EE] text-gray-900 font-sans overflow-x-hidden">
-
       {/* NAVIGATION */}
       {isScrolled && (
-
         <>
           <nav className="fixed top-0 w-full z-50 bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#D9D3C7]">
-
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
               <div className="flex justify-between items-center h-16">
-
                 <div className="text-2xl font-bold tracking-tight font-['Cormorant_Garamond'] text-[#18342E]">
                   Yvonne Zhang
                 </div>
-
                 <div className="hidden md:flex space-x-10">
-
                   <button
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
@@ -242,9 +210,7 @@ export default function Portfolio() {
                   >
                     Contact
                   </button>
-
                 </div>
-
                 <a
                   href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
                   target="_blank"
@@ -253,24 +219,19 @@ export default function Portfolio() {
                 >
                   Resume
                 </a>
-
                 <button
                   className="md:hidden text-[#18342E]"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                   {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-
               </div>
             </div>
           </nav>
 
           {isMenuOpen && (
-
             <div className="fixed top-16 left-0 w-full bg-[#F5F3EE] border-b border-[#D9D3C7] shadow-lg z-40 md:hidden">
-
               <div className="flex flex-col p-6 space-y-6">
-
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-left uppercase tracking-[0.2em] text-gray-700"
@@ -307,9 +268,7 @@ export default function Portfolio() {
 
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
-
         <div className="absolute inset-0 bg-[#2A5C52]">
-
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -320,70 +279,53 @@ export default function Portfolio() {
               backgroundSize: '32px 32px'
             }}
           />
-
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]" />
-
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center px-6 sm:px-10 lg:px-20">
-
           <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
-
             {/* LEFT */}
             <div className="text-white">
-
               <p className="uppercase tracking-[0.35em] text-sm mb-6 text-blue-100 font-medium">
                 Robotics • Mechanical Design • Research
               </p>
-
               <h1 className="text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-8 font-['Cormorant_Garamond']">
                 Yvonne
                 <br />
                 Zhang
               </h1>
-
               <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-xl mb-8 font-light">
                 Designing autonomous systems and human-centered engineering experiences through robotics, prototyping, and research.
               </p>
-
               <div className="text-2xl sm:text-3xl mb-10 font-semibold">
-
                 <span className="text-white/90">
                   I am a
                 </span>
-
                 <span className="text-blue-200 ml-3">
                   {typedText}
                 </span>
-
                 <span className="animate-pulse">
                   |
                 </span>
-
               </div>
 
               <button
                 onClick={() => scrollToSection('about me')}
                 className="group flex items-center gap-5 text-blue-100 hover:text-white transition-colors"
               >
-
                 <span className="uppercase tracking-[0.3em] text-sm">
                   See More
                 </span>
-
                 <div className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center group-hover:translate-y-1 transition-transform">
                   <ChevronDown size={20} />
                 </div>
 
               </button>
-
             </div>
 
             {/* RIGHT */}
             <div className="relative hidden lg:flex justify-center items-center min-h-[620px]">
-
               <div className="relative w-[620px] h-[620px]">
-
                 {/* ABOUT */}
                 <button
                   onClick={() => scrollToSection('about me')}
@@ -459,35 +401,25 @@ export default function Portfolio() {
 
       {/* ABOUT */}
       <section id="about me" className="py-24 px-6 lg:px-10 bg-[#F5F3EE]">
-
         <div className="max-w-6xl mx-auto">
-
           <div className="mb-14">
-
             <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               About
             </p>
-
             <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E] leading-tight">
               Engineering Through Curiosity & Iteration
             </h2>
-
           </div>
 
           <div className="grid lg:grid-cols-[300px_1fr] gap-14 items-start">
-
             <div className="flex flex-col items-center">
-
               <div className="w-64 aspect-square overflow-hidden shadow-2xl border-[10px] border-white rotate-[-3deg]">
-
                 <img 
                   src="/portfolio/YvonneZhang_Profile.jpg" 
                   alt="Yvonne Zhang"
                   className="w-full h-full object-cover"
                 />
-
               </div>
-
               <a 
                 href="https://www.linkedin.com/in/yvonnezhang177" 
                 target="_blank" 
@@ -496,52 +428,38 @@ export default function Portfolio() {
               >
                 Connect on LinkedIn
               </a>
-
             </div>
-
             <div className="space-y-6 text-lg leading-relaxed text-gray-700 max-w-3xl">
-
               <p>
                 <strong>Welcome to my portfolio.</strong> I’m a Robotics and Mechanical Engineer drawn to systems that move, sense, and interact with the physical world in intelligent ways.
               </p>
-
               <p>
                 My work sits at the intersection of mechanical design and autonomy — where CAD, control systems, and real-world constraints meet. I’m especially interested in building machines that do not just function, but respond: haptic interfaces, assistive robotics, and systems that extend human capability.
               </p>
-
               <p>
                 I am currently focused on computational sensing and robotics research, with an emphasis on human-centered interaction and surgical applications. I enjoy working across the full stack of physical systems from early-stage design and simulation to embedded implementation and iterative prototyping.
               </p>
-
               <p>
                 My hoddies include bouldering, running, painting, traveling, and getting lost in a good book.
               </p>
-
             </div>
-
           </div>
         </div>
       </section>
 
       {/* EDUCATION */}
       <section className="py-20 px-6 lg:px-10 bg-[#EFEAE0]">
-
         <div className="max-w-6xl mx-auto">
-
           <div className="mb-14">
-
             <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               Education
             </p>
-
             <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
               Academic Background
             </h2>
-
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-
             {[
               {
                 image: "/portfolio/JHU_logo.png",
@@ -549,50 +467,41 @@ export default function Portfolio() {
                 subtitle: "Master of Science in Robotics",
                 date: "Expected June 2027"
               },
-
               {
                 image: "/portfolio/UofT_logo.jpg",
                 title: "University of Toronto",
                 subtitle: "B.A.Sc. in Mechanical Engineering",
                 date: "Graduated June 2025"
               },
-
               {
                 image: "/portfolio/ETH_logo.png",
                 title: "ETH Zurich Research",
                 subtitle: "Undergraduate Student Researcher",
                 date: "Summer 2024"
               }
-
             ].map((school, idx) => (
 
               <div
                 key={idx}
                 className="bg-white p-8 shadow-lg hover:-translate-y-2 transition-all duration-300"
               >
-
                 <div className="flex justify-center mb-6">
-
                   <img
                     src={school.image}
                     alt=""
                     className="w-20 h-20 object-contain"
                   />
-
                 </div>
 
                 <h3 className="text-2xl text-center font-['Cormorant_Garamond'] text-[#18342E] mb-3">
                   {school.title}
                 </h3>
-
                 <p className="text-center text-gray-600 mb-3 leading-relaxed">
                   {school.subtitle}
                 </p>
-
                 <p className="text-center uppercase tracking-[0.15em] text-sm text-[#2A5C52]">
                   {school.date}
                 </p>
-
               </div>
             ))}
           </div>
@@ -601,55 +510,40 @@ export default function Portfolio() {
 
       {/* PROJECTS */}
       <section id="projects" className="py-20 px-6 lg:px-10 bg-[#F5F3EE]">
-
         <div className="max-w-7xl mx-auto">
-
           <div className="mb-14">
-
             <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               Selected Work
             </p>
-
             <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
               Projects & Research
             </h2>
-
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-
             {projects.map((project) => (
-
               <Link 
                 key={project.slug}
                 to={`/portfolio/${project.slug}`}
                 className="group bg-white overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300 h-full"
               >
-
                 <div className="h-56 overflow-hidden bg-[#E7E1D5]">
-
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-
                 </div>
 
                 <div className="p-7 flex flex-col">
-
                   <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-3 leading-tight">
                     {project.title}
                   </h3>
-
                   <p className="text-gray-600 mb-5 leading-relaxed text-[15px]">
                     {project.subtitle}
                   </p>
-
                   <div className="flex flex-wrap gap-2">
-
                     {project.skills.map((skill, idx) => (
-
                       <span
                         key={idx}
                         className="text-[10px] uppercase tracking-[0.15em] border border-[#2A5C52]/30 text-[#2A5C52] px-3 py-1"
@@ -671,7 +565,6 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 lg:px-10 bg-[#18342E] text-white">
 
         <div className="max-w-4xl mx-auto text-center">
-
           <p className="uppercase tracking-[0.35em] text-sm text-blue-100 mb-4">
             Contact
           </p>
@@ -692,7 +585,6 @@ export default function Portfolio() {
           </a>
 
           <div className="flex justify-center gap-8">
-
             <a
               href="https://www.linkedin.com/in/yvonnezhang177"
               target="_blank"
@@ -724,9 +616,7 @@ export default function Portfolio() {
 
       {/* FOOTER */}
       <footer className="py-6 bg-[#102521] text-center text-gray-400 text-sm tracking-wide">
-
         © 2026 Yvonne Zhang
-
       </footer>
 
     </div>
