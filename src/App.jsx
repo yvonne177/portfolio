@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ChevronDown, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Portfolio() {
@@ -29,7 +29,6 @@ export default function Portfolio() {
       subtitle: "Visual Information through Sensory Tactile Array (VISTA) designed for museum display accessibility", 
       image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Fusion 360", "Arduino", "Python", "Haptic Research"],
-      description: "Tactile pin-based museum display to create refreshable images, and explore the relationship between haptic feedback to shape and color.",
       slug: "vista-tactile-display",
     },
 
@@ -39,7 +38,6 @@ export default function Portfolio() {
       subtitle: "Autonomous localization and block retrieval in predefined maze environment", 
       image: "/portfolio/autonomous-rover-cad.jpeg",
       skills: ["SolidWorks", "Arduino", "Python", "Autonomous Systems"],
-      description: "Orientation, localization, object pick-up and drop-off to designated spot with full maze navigation in 5 minutes.",
       slug: "autonomous-rover"
     },
 
@@ -49,11 +47,68 @@ export default function Portfolio() {
       subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150",
       image: "/portfolio/tailgate-cad.png",
       skills: ["SolidWorks", "ANSYS FEA", "Machine Shop", "Mechanical Design"],
-      description: "Design and prototyping of a 2-in-1 multifunction tailgate system.",
       slug: "capstone-tailgate",
     },
-
-    // KEEP ALL YOUR COMMENTED OUT PROJECTS HERE
+    // { 
+    //   id: 4,
+    //   title: "Stereotactic Navigation System", 
+    //   subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
+    //   color: "from-blue-400 to-blue-600",
+    //   image: "/portfolio/pa3-icp.jpg",
+    //   skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
+    //   description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
+    //   slug: "stereotactic-navigation-system"
+    // },
+    // { 
+    //   id: 4,
+    //   title: "UR5e Robotic Arm Controls", 
+    //   subtitle: "Inverse kinematics and RTDE in ROS", 
+    //   color: "from-purple-400 to-purple-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["ROS2", "Inverse Kinematics", "RTDE", "Python"],
+    //   description: "Developed advanced control algorithms for UR5e robotic arm using inverse kinematics and real-time data exchange in ROS environment.",
+    //   slug: "ur5e-controls"
+    // },
+    // { 
+    //   id: 5,
+    //   title: "Hand Tracking System", 
+    //   subtitle: "ROS2 + MediaPipe integration", 
+    //   color: "from-purple-400 to-purple-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
+    //   description: "Developed a real-time hand gesture recognition and tracking system using computer vision for robotic control.",
+    //   slug: "hand-tracking"
+    // },
+    // { 
+    //   id: 6,
+    //   title: "Window Cable Tensioner", 
+    //   subtitle: "Magna International collaboration", 
+    //   color: "from-blue-400 to-blue-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "FEA", "Manufacturing"],
+    //   description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.",
+    //   slug: "window-cable-tensioner"
+    // },
+    // { 
+    //   id: 7,
+    //   title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+    //   subtitle: "Laser Powder Bed Fusion with Al-Graphene composite", 
+    //   color: "from-orange-400 to-orange-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
+    //   description: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
+    //   slug: "microchannel-heat-sinks"
+    // },
+    // { 
+    //   id: 8,
+    //   title: "Train Fire Spread Thermal Characterization", 
+    //   subtitle: "Material testing methodology for CFD boundary conditions", 
+    //   color: "from-red-400 to-red-600",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["Material Testing", "CFD Modeling", "ANSYS", "Data Analysis"],
+    //   description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
+    //   slug: "train-fire-characterization"
+    // },
   ];
 
   useEffect(() => {
@@ -154,12 +209,10 @@ export default function Portfolio() {
 
               <div className="flex justify-between items-center h-16">
 
-                {/* LEFT */}
                 <div className="text-2xl font-bold tracking-tight font-['Cormorant_Garamond'] text-[#18342E]">
                   Yvonne Zhang
                 </div>
 
-                {/* CENTER */}
                 <div className="hidden md:flex space-x-10">
 
                   <button
@@ -192,7 +245,6 @@ export default function Portfolio() {
 
                 </div>
 
-                {/* RIGHT */}
                 <a
                   href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
                   target="_blank"
@@ -202,7 +254,6 @@ export default function Portfolio() {
                   Resume
                 </a>
 
-                {/* MOBILE */}
                 <button
                   className="md:hidden text-[#18342E]"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -214,7 +265,6 @@ export default function Portfolio() {
             </div>
           </nav>
 
-          {/* MOBILE MENU */}
           {isMenuOpen && (
 
             <div className="fixed top-16 left-0 w-full bg-[#F5F3EE] border-b border-[#D9D3C7] shadow-lg z-40 md:hidden">
@@ -258,7 +308,6 @@ export default function Portfolio() {
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
 
-        {/* BACKGROUND */}
         <div className="absolute inset-0 bg-[#2A5C52]">
 
           <div
@@ -276,29 +325,28 @@ export default function Portfolio() {
 
         </div>
 
-        {/* CONTENT */}
         <div className="relative z-10 min-h-screen flex items-center px-6 sm:px-10 lg:px-20">
 
-          <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-20 items-center">
+          <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center">
 
             {/* LEFT */}
             <div className="text-white">
 
-              <p className="uppercase tracking-[0.35em] text-sm mb-8 text-blue-100 font-medium">
+              <p className="uppercase tracking-[0.35em] text-sm mb-6 text-blue-100 font-medium">
                 Robotics • Mechanical Design • Research
               </p>
 
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-10 font-['Cormorant_Garamond']">
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-8 font-['Cormorant_Garamond']">
                 Yvonne
                 <br />
                 Zhang
               </h1>
 
-              <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-xl mb-10 font-light">
+              <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-xl mb-8 font-light">
                 Designing autonomous systems and human-centered engineering experiences through robotics, prototyping, and research.
               </p>
 
-              <div className="text-2xl sm:text-3xl mb-12 font-semibold">
+              <div className="text-2xl sm:text-3xl mb-10 font-semibold">
 
                 <span className="text-white/90">
                   I am a
@@ -332,23 +380,23 @@ export default function Portfolio() {
             </div>
 
             {/* RIGHT */}
-            <div className="relative hidden lg:flex justify-center items-center min-h-[620px]">
+            <div className="relative hidden lg:flex justify-center items-center min-h-[520px]">
 
-              <div className="relative w-[520px] h-[520px]">
+              <div className="relative w-[500px] h-[500px]">
 
                 {/* ABOUT */}
                 <button
                   onClick={() => scrollToSection('about me')}
-                  className="absolute top-0 left-10 bg-white p-3 shadow-2xl rotate-[-8deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute top-0 left-0 bg-white p-3 shadow-2xl rotate-[-8deg] w-44 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
 
                   <img
                     src="/portfolio/Banff_lakelouise.jpg"
                     alt=""
-                    className="w-full h-52 object-cover"
+                    className="w-full h-48 object-cover"
                   />
 
-                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
+                  <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     About Me
                   </p>
 
@@ -357,52 +405,54 @@ export default function Portfolio() {
                 {/* PROJECTS */}
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="absolute top-20 right-0 bg-white p-3 shadow-2xl rotate-[6deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute top-8 right-0 bg-white p-3 shadow-2xl rotate-[6deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
 
                   <img
                     src="/portfolio/vista-cad-v1.jpeg"
                     alt=""
-                    className="w-full h-56 object-cover"
+                    className="w-full h-52 object-cover"
                   />
 
-                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
+                  <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     Projects
                   </p>
 
                 </button>
 
-                {/* ROBOTICS */}
-                <button
-                  onClick={() => scrollToSection('projects')}
-                  className="absolute bottom-12 left-0 bg-white p-3 shadow-2xl rotate-[4deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer"
+                {/* RESUME */}
+                <a
+                  href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-10 left-4 bg-white p-3 shadow-2xl rotate-[4deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer block"
                 >
 
                   <img
                     src="/portfolio/autonomous-rover-cad.jpeg"
                     alt=""
-                    className="w-full h-56 object-cover"
+                    className="w-full h-52 object-cover"
                   />
 
-                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
-                    Robotics
+                  <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
+                    Resume
                   </p>
 
-                </button>
+                </a>
 
                 {/* CONTACT */}
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="absolute bottom-0 right-8 bg-white p-3 shadow-2xl rotate-[-5deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute bottom-0 right-6 bg-white p-3 shadow-2xl rotate-[-5deg] w-44 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
 
                   <img
                     src="/portfolio/tailgate-cad.png"
                     alt=""
-                    className="w-full h-52 object-cover"
+                    className="w-full h-48 object-cover"
                   />
 
-                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
+                  <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     Contact
                   </p>
 
@@ -416,29 +466,27 @@ export default function Portfolio() {
       </section>
 
       {/* ABOUT */}
-      <section id="about me" className="py-32 px-6 lg:px-10 bg-[#F5F3EE]">
+      <section id="about me" className="py-24 px-6 lg:px-10 bg-[#F5F3EE]">
 
         <div className="max-w-6xl mx-auto">
 
-          <div className="mb-20">
+          <div className="mb-14">
 
-            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-4">
+            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               About
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
-              Engineering Through
-              <br />
-              Curiosity & Iteration
+            <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E] leading-tight">
+              Engineering Through Curiosity & Iteration
             </h2>
 
           </div>
 
-          <div className="grid lg:grid-cols-[320px_1fr] gap-20 items-start">
+          <div className="grid lg:grid-cols-[300px_1fr] gap-14 items-start">
 
             <div className="flex flex-col items-center">
 
-              <div className="w-72 aspect-square overflow-hidden shadow-2xl border-[10px] border-white rotate-[-3deg]">
+              <div className="w-64 aspect-square overflow-hidden shadow-2xl border-[10px] border-white rotate-[-3deg]">
 
                 <img 
                   src="/portfolio/YvonneZhang_Profile.jpg" 
@@ -452,33 +500,29 @@ export default function Portfolio() {
                 href="https://www.linkedin.com/in/yvonnezhang177" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="mt-10 border border-[#2A5C52] px-8 py-3 uppercase tracking-[0.2em] text-sm hover:bg-[#2A5C52] hover:text-white transition-all duration-300"
+                className="mt-8 border border-[#2A5C52] px-8 py-3 uppercase tracking-[0.2em] text-sm hover:bg-[#2A5C52] hover:text-white transition-all duration-300"
               >
-                Connect
+                Connect on LinkedIn
               </a>
 
             </div>
 
-            <div className="space-y-8 text-lg leading-relaxed text-gray-700">
+            <div className="space-y-6 text-lg leading-relaxed text-gray-700 max-w-3xl">
 
               <p>
-                <strong>Welcome to my portfolio.</strong> I am a Robotics and Mechanical Engineer passionate about the interdisciplinary intersection of autonomous systems development and mechanically robust solutions.
+                <strong>Welcome to my portfolio.</strong> I’m a Robotics and Mechanical Engineer drawn to systems that move, sense, and interact with the physical world in intelligent ways.
               </p>
 
               <p>
-                As a Robotics Master's student at Johns Hopkins University, I engage in cutting-edge projects through the Laboratory for Computational Sensing and Robotics (LCSR), applying engineering approaches to haptic device development and surgical robotics.
+                My work sits at the intersection of mechanical design and autonomy — where CAD, control systems, and real-world constraints meet. I’m especially interested in building machines that do not just function, but respond: haptic interfaces, assistive robotics, and systems that extend human capability.
               </p>
 
               <p>
-                I hold an honors degree in Mechanical Engineering from the University of Toronto, with minors in Robotics & Mechatronics and Engineering Business.
+                I am currently focused on computational sensing and robotics research, with an emphasis on human-centered interaction and surgical applications. I enjoy working across the full stack of physical systems from early-stage design and simulation to embedded implementation and iterative prototyping.
               </p>
 
               <p>
-                My work spans advanced manufacturing, finite element analysis, prototyping, robotics, and human-centered engineering systems.
-              </p>
-
-              <p>
-                Curiosity guides me in everything I do — from engineering design and laboratory iteration to skiing, photography, climbing, and painting.
+                Outside of engineering, I enjoy outdoor sports, painting, traveling, and getting lost in a good book.
               </p>
 
             </div>
@@ -488,13 +532,13 @@ export default function Portfolio() {
       </section>
 
       {/* EDUCATION */}
-      <section className="py-32 px-6 lg:px-10 bg-[#EFEAE0]">
+      <section className="py-20 px-6 lg:px-10 bg-[#EFEAE0]">
 
         <div className="max-w-6xl mx-auto">
 
-          <div className="mb-20">
+          <div className="mb-14">
 
-            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-4">
+            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               Education
             </p>
 
@@ -504,7 +548,7 @@ export default function Portfolio() {
 
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
 
             {[
               {
@@ -532,10 +576,10 @@ export default function Portfolio() {
 
               <div
                 key={idx}
-                className="bg-white p-10 shadow-lg hover:-translate-y-2 transition-all duration-300"
+                className="bg-white p-8 shadow-lg hover:-translate-y-2 transition-all duration-300"
               >
 
-                <div className="flex justify-center mb-8">
+                <div className="flex justify-center mb-6">
 
                   <img
                     src={school.image}
@@ -549,7 +593,7 @@ export default function Portfolio() {
                   {school.title}
                 </h3>
 
-                <p className="text-center text-gray-600 mb-3">
+                <p className="text-center text-gray-600 mb-3 leading-relaxed">
                   {school.subtitle}
                 </p>
 
@@ -564,13 +608,13 @@ export default function Portfolio() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className="py-32 px-6 lg:px-10 bg-[#F5F3EE]">
+      <section id="projects" className="py-20 px-6 lg:px-10 bg-[#F5F3EE]">
 
         <div className="max-w-7xl mx-auto">
 
-          <div className="mb-20">
+          <div className="mb-14">
 
-            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-4">
+            <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
               Selected Work
             </p>
 
@@ -580,17 +624,17 @@ export default function Portfolio() {
 
           </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
 
             {projects.map((project) => (
 
               <Link 
                 key={project.slug}
                 to={`/portfolio/${project.slug}`}
-                className="group bg-white overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300"
+                className="group bg-white overflow-hidden shadow-lg hover:-translate-y-2 transition-all duration-300 h-full"
               >
 
-                <div className="h-64 overflow-hidden bg-[#E7E1D5]">
+                <div className="h-56 overflow-hidden bg-[#E7E1D5]">
 
                   <img 
                     src={project.image} 
@@ -600,38 +644,27 @@ export default function Portfolio() {
 
                 </div>
 
-                <div className="p-8">
+                <div className="p-7 flex flex-col">
 
-                  <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
+                  <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-3 leading-tight">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-5 leading-relaxed text-[15px]">
                     {project.subtitle}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2">
 
                     {project.skills.map((skill, idx) => (
 
                       <span
                         key={idx}
-                        className="text-xs uppercase tracking-wide border border-[#2A5C52]/30 text-[#2A5C52] px-3 py-1"
+                        className="text-[10px] uppercase tracking-[0.15em] border border-[#2A5C52]/30 text-[#2A5C52] px-3 py-1"
                       >
                         {skill}
                       </span>
                     ))}
-
-                  </div>
-
-                  <div className="flex items-center gap-2 uppercase tracking-[0.2em] text-sm text-[#2A5C52]">
-
-                    View Project
-
-                    <ArrowRight
-                      size={16}
-                      className="group-hover:translate-x-1 transition-transform"
-                    />
 
                   </div>
 
@@ -643,7 +676,7 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-32 px-6 lg:px-10 bg-[#18342E] text-white">
+      <section id="contact" className="py-24 px-6 lg:px-10 bg-[#18342E] text-white">
 
         <div className="max-w-4xl mx-auto text-center">
 
@@ -651,17 +684,17 @@ export default function Portfolio() {
             Contact
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] mb-10">
-            Let's Connect!
+          <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] mb-8">
+            Let's Connect
           </h2>
 
-          <p className="text-xl text-blue-100 mb-12">
-            Interested in talking about robotics, engineering collaboration, or research opportunities?
+          <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+            Interested in robotics, engineering collaboration, or research opportunities?
           </p>
 
           <a
             href="mailto:yzhan874@jh.edu"
-            className="inline-block border border-white px-10 py-4 uppercase tracking-[0.25em] text-sm hover:bg-white hover:text-[#18342E] transition-all duration-300 mb-14"
+            className="inline-block border border-white px-10 py-4 uppercase tracking-[0.25em] text-sm hover:bg-white hover:text-[#18342E] transition-all duration-300 mb-12"
           >
             yzhan874@jh.edu
           </a>
@@ -698,7 +731,7 @@ export default function Portfolio() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 bg-[#102521] text-center text-gray-400 text-sm tracking-wide">
+      <footer className="py-6 bg-[#102521] text-center text-gray-400 text-sm tracking-wide">
 
         © 2026 Yvonne Zhang
 
