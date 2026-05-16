@@ -74,7 +74,7 @@ export default function AutonomousRover() {
       <section className="pt-12 pb-12 px-4 bg-gradient-to-br from-blue-50 to-blue-100 mt-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl font-bold mb-4 text-gray-900">Autonomous Maze-Solving Rover</h1>
-          <p className="text-xl text-gray-700 mb-6">Real-time localization and autonomous block retrieval in constrained environments</p>
+          <p className="text-xl text-gray-700 mb-6">Autonomous localization and block retrieval in predefined maze environment</p>
           <div className="flex flex-wrap gap-3">
             <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">SolidWorks</span>
             <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Arduino</span>

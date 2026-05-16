@@ -27,7 +27,7 @@ export default function Portfolio() {
     { 
       id: 1,
       title: "VISTA - Haptic Museum Display", 
-      subtitle: "Visual Information through Sensory Tactile Array (VISTA) for museum display accessibility and exploring the correlation between haptic feedback to colors and shape", 
+      subtitle: "Visual Information through Sensory Tactile Array (VISTA) designed for museum display accessibility and exploring the correlation between haptic feedback to colors and shape", 
       color: "from-pink-400 to-pink-600",
       image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Fusion 360", "Arduino", "Python", "Haptic Research"],
@@ -37,7 +37,7 @@ export default function Portfolio() {
     { 
       id: 2,
       title: "Autonomous Maze-Solving Rover", 
-      subtitle: "Real-time localization and autonomous block retrieval in constrained environments", 
+      subtitle: "Autonomous localization and block retrieval in predefined maze environment", 
       color: "from-blue-400 to-blue-600",
       image: "/portfolio/autonomous-rover-cad.jpeg",
       skills: ["SolidWorks", "Arduino", "Python", "Autonomous Systems"],
@@ -47,7 +47,7 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Capstone Tailgate System",
-      subtitle: "2-in-1 multifunction tailgate design for Ford F-150",
+      subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150",
       color: "from-green-400 to-green-600",
       image: "/portfolio/tailgate-cad.png",
       skills: ["SolidWorks", "ANSYS FEA", "Machine Shop", "Mechanical Design"],
