@@ -21,10 +21,6 @@ export default function AutonomousRover() {
     },100);
   };
 
-  const handleBackToProjects = () => {
-    goToMainSection("projects");
-  };
-
   const handleHome = () => {
     navigate('/portfolio');
 
@@ -34,356 +30,775 @@ export default function AutonomousRover() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
 
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#F5F3EE] text-gray-900 overflow-x-hidden">
+
+      {/* NAVIGATION */}
+      <nav className="fixed top-0 w-full z-50 bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#D9D3C7]">
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
           <div className="flex justify-between items-center h-16">
 
-            {/* Left: Name */}
-            <div className="flex-shrink-0 text-2xl font-bold text-gray-900">
+            <div className="text-2xl font-bold tracking-tight font-['Cormorant_Garamond'] text-[#18342E]">
               Yvonne Zhang
             </div>
 
-            {/* Center: Menu */}
-            <div className="hidden md:flex space-x-8 mx-auto">
-              <button onClick={handleHome} className="hover:text-blue-600 font-medium text-gray-700">Home</button>
-              <button onClick={() => goToMainSection("about me")} className="hover:text-blue-600 font-medium text-gray-700">About Me</button>
-              <button onClick={() => goToMainSection("projects")} className="hover:text-blue-600 font-medium text-gray-700">Projects</button>
-              <button onClick={() => goToMainSection("contact")} className="hover:text-blue-600 font-medium text-gray-700">Contact</button>
+            <div className="hidden md:flex space-x-10">
+
+              <button
+                onClick={handleHome}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                Home
+              </button>
+
+              <button
+                onClick={() => goToMainSection('about me')}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                About
+              </button>
+
+              <button
+                onClick={() => goToMainSection('projects')}
+                className="text-sm uppercase tracking-[0.2em] text-[#2A5C52] transition-colors"
+              >
+                Projects
+              </button>
+
+              <button
+                onClick={() => goToMainSection('contact')}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                Contact
+              </button>
+
             </div>
 
-            {/* Right: Resume */}
-            <div>
-              <a
-                href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
-              >
-                Resume
-              </a>
-            </div>
+            <a
+              href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+            >
+              Resume
+            </a>
 
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-12 pb-12 px-4 bg-gradient-to-br from-blue-50 to-blue-100 mt-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4 text-gray-900">Autonomous Maze-Solving Rover</h1>
-          <p className="text-xl text-gray-700 mb-6">Autonomous localization and block retrieval in predefined maze environment</p>
-          <div className="flex flex-wrap gap-3">
-            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">SolidWorks</span>
-            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Arduino</span>
-            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Python</span>
-            <span className="bg-blue-200 text-blue-800 px-4 py-2 rounded-full font-medium">Autonomous Systems</span>
-          </div>
-          <div className="mt-4 mb-4 text-gray-600 text-lg">
-            <span className="font-semibold">Project Duration:</span> September 2024 – December 2024
+      {/* HERO */}
+      <section className="relative overflow-hidden pt-28 pb-24">
+
+        <div className="absolute inset-0 bg-[#2A5C52]">
+
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px)
+              `,
+              backgroundSize: '32px 32px'
+            }}
+          />
+
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]" />
+
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
+
+            {/* LEFT */}
+            <div className="text-white">
+
+              <p className="uppercase tracking-[0.35em] text-sm mb-5 text-blue-100 font-medium">
+                Autonomous Systems • Robotics • Embedded Controls
+              </p>
+
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-8 font-['Cormorant_Garamond']">
+                Autonomous
+                <br />
+                Maze-Solving
+                <br />
+                Rover
+              </h1>
+
+              <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mb-10 font-light">
+                Fully autonomous rover capable of maze navigation, probabilistic localization, obstacle avoidance, and block retrieval using real-time sensor fusion and adaptive navigation strategies.
+              </p>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+
+                {[
+                  "SolidWorks",
+                  "Arduino",
+                  "Python"
+                ].map((skill, idx) => (
+
+                  <span
+                    key={idx}
+                    className="text-[11px] uppercase tracking-[0.18em] border border-white/30 text-blue-100 px-4 py-2"
+                  >
+                    {skill}
+                  </span>
+
+                ))}
+
+              </div>
+
+              <div className="text-blue-100 text-lg">
+                <span className="font-semibold text-white">
+                  Project Duration:
+                </span>{" "}
+                September 2024 – December 2024
+              </div>
+
+            </div>
+
+            {/* RIGHT */}
+            <div className="relative flex justify-center">
+
+              <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
+
+                <img
+                  src="/portfolio/Rover_FullBody.png"
+                  alt="Autonomous Rover"
+                  className="w-full h-[420px] object-contain"
+                />
+
+                <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
+                  Autonomous Rover Prototype
+                </p>
+
+              </div>
+
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-0 px-4">
-        <div className="max-w-4xl mx-auto space-y-12">
+      {/* CONTENT */}
+      <section className="py-24 px-6 lg:px-10">
 
-          {/* Summary */}
-          <section className="flex justify-center mb-16">
-            <div className="max-w-4xl w-full bg-gradient-to-br from-blue-50 to-blue-50 p-8 rounded-lg border-2 border-blue-200">
-              <h2 className="text-3xl font-bold mb-4 text-gray-900">Project Summary</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Designed a fully autonomous rover capable of navigating mazes, localizing its position, detecting target blocks, and delivering them to a specified location using real-time sensor fusion and adaptive navigation strategies.
+        <div className="max-w-6xl mx-auto space-y-28">
+
+          {/* SUMMARY */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Overview
               </p>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Key Features</h3>
-                <li>✓ Histogram-based probabilistic localization</li>
-                <li>✓ 360° wall detection via ultrasonic sensors</li>
-                <li>✓ Adaptive wall-following and path selection</li>
-                <li>✓ Dual Arduino boards for sensor processing and motor control</li>
-              </ul>
-              <ul className="space-y-2 text-gray-700 mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Takeaways</h3>
-                <li>✓ Successfully completed maze missions under 5 minutes</li>
-                <li>✓ Demonstrated integration of sensors, control algorithms, and mechanical design</li>
-                <li>✓ Ranked top 10 across all design milestones</li>
-              </ul>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Project Summary
+              </h2>
+
             </div>
+
+            <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-10 lg:p-12">
+
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Designed and built a fully autonomous rover capable of navigating a predefined maze, localizing its position, detecting target blocks, and retrieving them using distributed electronics, real-time sensing, and adaptive control algorithms.
+              </p>
+
+              <div className="grid lg:grid-cols-2 gap-12">
+
+                <div>
+
+                  <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-5">
+                    Key Features
+                  </h3>
+
+                  <ul className="space-y-4 text-gray-700 leading-relaxed">
+
+                    <li>✓ Histogram-based probabilistic localization</li>
+
+                    <li>✓ 360° wall detection using ultrasonic and ToF sensors</li>
+
+                    <li>✓ Adaptive wall-following and navigation correction algorithms</li>
+
+                    <li>✓ Dual Arduino architecture for distributed sensing and motor control</li>
+
+                  </ul>
+
+                </div>
+
+                <div>
+
+                  <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-5">
+                    Takeaways
+                  </h3>
+
+                  <ul className="space-y-4 text-gray-700 leading-relaxed">
+
+                    <li>✓ Successfully completed autonomous maze missions under 5 minutes</li>
+
+                    <li>✓ Integrated sensing, controls, and mechanical systems into a reliable robotics platform</li>
+
+                    <li>✓ Ranked top 10 across all design milestones</li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </section>
 
-          {/* Context & Overview */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Context and Overview</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Autonomous navigation in constrained environments is critical for robotics applications, from warehouse automation to search and rescue. This project focuses on combining mechanical design, sensor fusion, and algorithmic navigation to create a compact and reliable rover capable of completing defined missions autonomously.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The rover’s compact 12"×12"×12" footprint and 5 lb weight, coupled with a tricycle drive configuration and servo-actuated mechanisms, allowed reliable operation and accurate block retrieval within complex maze layouts.
-            </p>
-          </div>
+          {/* CONTEXT */}
+          <section>
 
-          {/* System Architecture */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">System Architecture</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The design integrates modular mechanical platforms, distributed electronics, and navigation algorithms to enable reliable autonomous performance.
-            </p>
-          </div>
+            <div className="mb-10">
 
-          {/* Workflow Diagram */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <div className="p-6 border rounded-xl shadow bg-white w-56">
-                <h3 className="font-semibold text-lg">Sensor Inputs</h3>
-                <p className="text-sm text-gray-600 mt-2">Ultrasonic & Time-of-Flight Sensors</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:rotate-0 rotate-90">→</span>
-              <p className="text-sm text-gray-500 mt-1">Localization Algorithm</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-6 border rounded-xl shadow bg-white w-56">
-                <h3 className="font-semibold text-lg">Histogram Localization</h3>
-                <p className="text-sm text-gray-600 mt-2">Position & Heading Estimation</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:rotate-0 rotate-90">→</span>
-              <p className="text-sm text-gray-500 mt-1">Motion Control</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="p-6 border rounded-xl shadow bg-white w-56">
-                <h3 className="font-semibold text-lg">Actuation & Mechanics</h3>
-                <p className="text-sm text-gray-600 mt-2">Motors, Servo Arm & Ramp</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Mechanical Design (Expanded) */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Mechanical Design</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The rover features a modular three-platform architecture designed for quick assembly and maintenance. Threaded rods and laser-cut plywood plates create a lightweight yet sturdy chassis, while a tricycle drive configuration ensures smooth turns in narrow corridors.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              A servo-driven sweeper arm and ramp mechanism enable reliable block collection with minimal motor usage. CAD iterations optimized weight distribution, clearance for obstacles, and ease of component replacement.
-            </p>
-            <div className="grid grid-cols-2 gap-6">
-              <img 
-                src="/portfolio/autonomous-rover-cad.jpeg" 
-                alt="Rover CAD"
-                className="w-full h-full object-contain"
-              />
-              <img 
-                src="/portfolio/Rover_FullBody.png" 
-                alt="Rover Mechanical System"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Electronics (Expanded) */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Electronics Architecture</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Two Arduino boards handle distributed tasks: one processes sensor data, including ultrasonic and Time-of-Flight sensors, while the other manages motor actuation and servo control. The electronics are modular, with separate power rails for motors and sensors to reduce noise.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Custom wiring harnesses and a compact PCB layout streamline connections, while status LEDs provide debugging visibility. Continuous polling of sensor arrays feeds the histogram localization algorithm for real-time position estimation. The figures below show the top (left) and bottom (right) tiers of Arduinos and the power distribution through the breadboard.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <img
-                src="/portfolio/TopPower.png"
-                alt="Top Electronics Layout"
-                className="w-full h-full object-contain"
-              />
-              <img
-                src="/portfolio/BottomPower.png"
-                alt="Bottom Electronics Layout"
-                className="w-full h-full object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Control System */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Control System and Algorithms</h2>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The rover control system consists of three modular components:
-              <strong> obstacle avoidance</strong>, <strong> localization</strong>, and
-              <strong> block detection and pickup</strong>. These subsystems work together
-              to enable autonomous navigation, block retrieval, and delivery.
-            </p>
-
-            <img
-              src="/portfolio/control_architecture.png"
-              alt="Rover control system architecture"
-              className="w-full max-w-2xl mx-auto my-8"
-            />
-
-            {/* Obstacle Avoidance */}
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Obstacle Avoidance</h3>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Ultrasonic sensors mounted on the front and sides of the rover detect nearby
-              walls and obstacles. Differences between side sensor readings indicate when
-              the rover is angled relative to the wall.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              When a slant is detected, the rover calculates a correction angle and performs
-              incremental rotations until it is parallel again. The front sensor then
-              determines whether the rover should take a large or small forward step.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-6 max-w-xl mx-auto my-8">
-              <img
-                src="/portfolio/side_sensor_angle.png"
-                alt="Side sensor angle detection"
-                className="w-full object-contain"
-              />
-              <img
-                src="/portfolio/ultrasoundsensor_setup.png"
-                alt="Ultrasonic sensor setup"
-                className="w-full object-contain"
-              />
-
-            </div>
-
-            {/* Localization */}
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Localization (2D Histogram)</h3>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Localization is performed using a probabilistic histogram filter. The maze
-              is represented as a grid where each cell corresponds to a possible rover
-              position with a unique wall configuration.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 max-w-lg mx-auto my-8">
-              <img
-                src="/portfolio/maze_index_map.png"
-                alt="Maze index map"
-                className="w-full max-w-xl mx-auto my-6"
-              />
-              <img
-                src="/portfolio/wall_blocking_pattern.png"
-                alt="Wall blocking patterns"
-                className="w-full max-w-xl mx-auto my-6"
-              />
-            </div>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Sensor readings update a probability matrix representing the likelihood of
-              the rover being in each cell. After each movement, the matrix shifts to
-              reflect the rover’s displacement and the probabilities are updated again.
-            </p>
-
-            <img
-              src="/portfolio/Histogram.png"
-              alt="Histogram localization matrix"
-              className="w-full max-w-xl mx-auto my-6"
-            />
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Since the rover begins with an unknown orientation, four probability matrices
-              are tracked simultaneously. The system converges once a single orientation
-              produces a dominant probability.
-            </p>
-
-            {/* Block Detection */}
-            <h3 className="text-2xl font-semibold mb-4 text-gray-900">Block Detection and Pick-Up</h3>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Two Time-of-Flight sensors mounted at different heights detect the presence
-              of a block. The top sensor measures wall distance while the lower sensor
-              detects the block when a shorter distance reading occurs.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              The rover scans the loading zone by rotating in small increments and
-              comparing both sensor readings. A significant difference indicates the
-              presence of the block.
-            </p>
-
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Once detected, the rover aligns its ramp with the block and activates a
-              wire-winding pickup mechanism to pull the block onto the ramp.
-            </p>
-            <img
-              src="/portfolio/tof_sensor_setup.png"
-              alt="TOF sensor configuration"
-              className="w-full max-w-xl mx-auto my-6"
-            />
-            <img
-              src="/portfolio/scanning_area.png"
-              alt="Block scanning coverage"
-              className="w-full max-w-xl mx-auto my-6"
-            />
-          </div>
-
-          {/* Results (Expanded) */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Results & Impact</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Across multiple test mazes, the rover consistently completed missions in under 5 minutes. The system demonstrated strong reliability, with less than 1 grid cell deviation in localization across all runs.
-            </p>
-            <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-4">
-              <li>
-                <span className="font-semibold text-gray-900">Navigation Accuracy:</span> Histogram localization achieved less than 1 grid cell error across all runs.
-              </li>              
-              <li>
-                <span className="font-semibold text-gray-900">Mission Completion:</span> Autonomous retrieval of target blocks in complex maze layouts.
-              </li>
-              <li>
-                <span className="font-semibold text-gray-900">Design Robustness:</span> Tricycle drive and modular architecture simplified assembly and improved maneuverability.
-              </li>
-              <li>
-                <span className="font-semibold text-gray-900">Electronics Reliability:</span> Continuous operation of distributed Arduino boards without sensor failures or motor stalls.
-              </li>
-              <li>
-                <span className="font-semibold text-gray-900">Control Performance:</span> Smooth adaptive wall-following and block retrieval with minimal oscillation and precise actuation.
-              </li>
-            </ul>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Lessons learned include the importance of modular design for rapid iteration, careful power separation for electronics reliability, and rigorous testing of localization algorithms in constrained environments.
-            </p>
-          </div>
-
-          {/* Demo Video */}
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Demo Video</h2>
-          <div className="bg-white rounded-xl shadow border overflow-hidden mb-16">
-              {/* Video */}
-            <div className="w-full aspect-video bg-black">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/L4viNf_tiTk"
-                title="Autonomous Rover – Final Project"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-              />
-            </div>
-
-            {/* Caption */}
-            <div className="p-4">
-              <h3 className="font-semibold text-gray-900">Maze Navigation & Retrieval</h3>
-              <p className="text-gray-600 text-sm">
-                Demonstration of the rover autonomously navigating and collecting blocks.
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Background
               </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Context & Overview
+              </h2>
+
             </div>
-          </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700">
+
+              <p>
+                Autonomous navigation in constrained environments is critical for robotics applications ranging from warehouse automation to search-and-rescue systems. This project focused on integrating mechanical design, distributed electronics, and probabilistic algorithms into a compact autonomous rover platform.
+              </p>
+
+              <p>
+                The rover was designed to navigate a predefined maze, identify its location using real-time sensor measurements, detect target blocks, and retrieve them autonomously. The final system combined adaptive wall-following, histogram localization, and embedded motor control into a lightweight modular architecture.
+              </p>
+
+            </div>
+
+          </section>
+
+          {/* SYSTEM */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Pipeline
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                System Architecture
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-14">
+
+              <p>
+                The rover combines distributed sensing, localization algorithms, and mechanical actuation to autonomously navigate the maze and retrieve target blocks.
+              </p>
+
+              <p>
+                The following pipeline summarizes the flow of information from environmental sensing to autonomous actuation.
+              </p>
+
+            </div>
+
+            {/* Block Diagram */}
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 text-center">
+
+              {/* INPUT */}
+              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
+
+                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
+                  Sensor Inputs
+                </h3>
+
+                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
+                  Ultrasonic + ToF
+                </p>
+
+              </div>
+
+              {/* ARROW */}
+              <span className="text-3xl text-[#2A5C52] -mt-2">
+                →
+              </span>
+
+              {/* LOCALIZATION */}
+              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
+
+                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
+                  Localization
+                </h3>
+
+                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
+                  Histogram Filter
+                </p>
+
+              </div>
+
+              {/* ARROW */}
+              <span className="text-3xl text-[#2A5C52] -mt-2">
+                →
+              </span>
+
+              {/* NAVIGATION */}
+              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
+
+                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
+                  Navigation Logic
+                </h3>
+
+                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
+                  Path Planning
+                </p>
+
+              </div>
+
+              {/* ARROW */}
+              <span className="text-3xl text-[#2A5C52] -mt-2">
+                →
+              </span>
+
+              {/* ACTUATION */}
+              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
+
+                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
+                  Motor Control
+                </h3>
+
+                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
+                  Dual Arduino System
+                </p>
+
+              </div>
+
+              {/* ARROW */}
+              <span className="text-3xl text-[#2A5C52] -mt-2">
+                →
+              </span>
+
+              {/* OUTPUT */}
+              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
+
+                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
+                  Autonomous Rover
+                </h3>
+
+                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
+                  Navigation + Retrieval
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+          {/* MECHANICAL */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Design
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Mechanical Design
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-10">
+
+              <p>
+                The rover uses a modular three-platform architecture built from laser-cut plywood and threaded rods to create a lightweight yet rigid chassis optimized for maze navigation and rapid iteration.
+              </p>
+
+            </div>
+
+            <ul className="space-y-6 text-gray-700 leading-relaxed mb-14 text-lg">
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Tricycle Drive Configuration:
+                </span>{" "}
+                The rover uses a differential drive with a rear caster wheel to minimize turning radius and improve maneuverability in narrow maze corridors while maintaining stable forward motion.
+              </li>
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Servo-Driven Pickup Mechanism:
+                </span>{" "}
+                A servo-actuated sweeper arm and ramp system was developed to reliably collect blocks with minimal motor complexity while maintaining a compact chassis footprint.
+              </li>
+
+            </ul>
+
+            <div className="grid md:grid-cols-2 gap-8">
+
+              {[
+                "/portfolio/autonomous-rover-cad.jpeg",
+                "/portfolio/Rover_FullBody.png"
+              ].map((image, idx) => (
+
+                <div
+                  key={idx}
+                  className="bg-white p-4 shadow-xl"
+                >
+
+                  <img
+                    src={image}
+                    alt=""
+                    className="w-full h-[320px] object-contain"
+                  />
+
+                </div>
+
+              ))}
+
+            </div>
+
+          </section>
+
+          {/* ELECTRONICS */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Controls
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Electronics & Algorithms
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-10">
+
+              <p>
+                The rover electronics architecture distributes sensing, localization, and actuation tasks across two Arduino boards to improve reliability and maintain real-time performance during navigation.
+              </p>
+
+            </div>
+
+            <ul className="space-y-6 text-gray-700 leading-relaxed mb-14 text-lg">
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Histogram Localization:
+                </span>{" "}
+                A probabilistic histogram filter continuously updates rover position estimates using wall configuration measurements from ultrasonic sensors and movement updates from motor commands.
+              </li>
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Distributed Electronics:
+                </span>{" "}
+                Separate Arduino boards were dedicated to sensing and motor actuation to reduce timing bottlenecks and improve modularity between localization and control systems.
+              </li>
+
+            </ul>
+
+            <div className="grid md:grid-cols-2 gap-8">
+
+              <div className="bg-white p-4 shadow-xl">
+
+                <img
+                  src="/portfolio/TopPower.png"
+                  alt="Top Electronics Layout"
+                  className="w-full h-[320px] object-contain"
+                />
+
+              </div>
+
+              <div className="bg-white p-4 shadow-xl">
+
+                <img
+                  src="/portfolio/BottomPower.png"
+                  alt="Bottom Electronics Layout"
+                  className="w-full h-[320px] object-contain"
+                />
+
+              </div>
+
+            </div>
+
+          </section>
+
+          {/* CONTROL SYSTEM */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Autonomy
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Control System
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-10">
+
+              <p>
+                The rover control stack integrates obstacle avoidance, localization, and block retrieval into a unified autonomous system capable of completing full maze missions without human intervention.
+              </p>
+
+            </div>
+
+            <div className="bg-white p-6 shadow-xl mb-12">
+
+              <img
+                src="/portfolio/control_architecture.png"
+                alt="Rover control architecture"
+                className="w-full max-w-4xl mx-auto object-contain"
+              />
+
+            </div>
+
+            <div className="space-y-14">
+
+              {/* Obstacle Avoidance */}
+              <div>
+
+                <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-5">
+                  Obstacle Avoidance
+                </h3>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Ultrasonic sensors mounted around the rover continuously measure wall distances and detect angular misalignment relative to surrounding maze geometry.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-8">
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/side_sensor_angle.png"
+                      alt="Side sensor angle detection"
+                      className="w-full h-[300px] object-contain"
+                    />
+                  </div>
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/ultrasoundsensor_setup.png"
+                      alt="Ultrasonic sensor setup"
+                      className="w-full h-[300px] object-contain"
+                    />
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* Localization */}
+              <div>
+
+                <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-5">
+                  Localization
+                </h3>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  A histogram filter tracks rover position probabilities across the maze grid using sensor observations and movement updates to estimate the most likely rover location and orientation.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-8 mb-8">
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/maze_index_map.png"
+                      alt="Maze map"
+                      className="w-full h-[280px] object-contain"
+                    />
+                  </div>
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/wall_blocking_pattern.png"
+                      alt="Wall patterns"
+                      className="w-full h-[280px] object-contain"
+                    />
+                  </div>
+
+                </div>
+
+                <div className="bg-white p-4 shadow-xl max-w-2xl mx-auto">
+
+                  <img
+                    src="/portfolio/Histogram.png"
+                    alt="Histogram localization"
+                    className="w-full h-[320px] object-contain"
+                  />
+
+                </div>
+
+              </div>
+
+              {/* Block Detection */}
+              <div>
+
+                <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-5">
+                  Block Detection & Retrieval
+                </h3>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                  Dual Time-of-Flight sensors mounted at different heights detect target blocks by comparing wall distance measurements during rotational scanning maneuvers.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-8">
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/tof_sensor_setup.png"
+                      alt="TOF sensor setup"
+                      className="w-full h-[300px] object-contain"
+                    />
+                  </div>
+
+                  <div className="bg-white p-4 shadow-xl">
+                    <img
+                      src="/portfolio/scanning_area.png"
+                      alt="Scanning area"
+                      className="w-full h-[300px] object-contain"
+                    />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+          {/* RESULTS */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Validation
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Results & Impact
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700">
+
+              <p>
+                Across multiple maze trials, the rover consistently completed autonomous retrieval missions while maintaining accurate localization and stable wall-following performance.
+              </p>
+
+            </div>
+
+            <ul className="space-y-6 text-gray-700 leading-relaxed mt-10 text-lg">
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Navigation Accuracy:
+                </span>{" "}
+                Histogram localization maintained less than one grid-cell deviation throughout all test runs.
+              </li>
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Mission Completion:
+                </span>{" "}
+                Successfully completed autonomous maze navigation and target block retrieval in under five minutes.
+              </li>
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  Electronics Reliability:
+                </span>{" "}
+                Distributed Arduino architecture enabled stable sensing and motor actuation without sensor dropouts or motor stalls.
+              </li>
+
+              <li>
+                <span className="font-semibold text-[#18342E]">
+                  System Integration:
+                </span>{" "}
+                Demonstrated successful integration of sensing, controls, localization, and mechanical systems into a cohesive robotics platform.
+              </li>
+
+            </ul>
+
+          </section>
+
+          {/* VIDEO */}
+          <section>
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Media
+              </p>
+
+              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Demo Video
+              </h2>
+
+            </div>
+
+            <div className="bg-white shadow-xl overflow-hidden">
+
+              <div className="w-full aspect-video bg-black">
+
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/L4viNf_tiTk"
+                  title="Autonomous Rover Demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+
+              </div>
+
+              <div className="p-6">
+
+                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-2">
+                  Maze Navigation & Retrieval
+                </h3>
+
+                <p className="text-gray-600">
+                  Demonstration of autonomous localization, navigation, and block retrieval.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
 
         </div>
+
       </section>
 
-      {/* Footer */}
-      <footer className="py-8 text-center text-gray-500 border-t border-gray-200 bg-gray-50">
-        <p>© 2026 Yvonne Zhang.</p>
+      {/* FOOTER */}
+      <footer className="py-6 bg-[#102521] text-center text-gray-400 text-sm tracking-wide">
+
+        © 2026 Yvonne Zhang
+
       </footer>
+
     </div>
   )
 }

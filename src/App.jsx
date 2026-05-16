@@ -26,9 +26,9 @@ export default function Portfolio() {
     { 
       id: 1,
       title: "VISTA - Haptic Museum Display", 
-      subtitle: "Visual Information through Sensory Tactile Array (VISTA) designed for museum display accessibility", 
+      subtitle: "Visual Information through Sensory Tactile Array for museum display accessibility", 
       image: "/portfolio/vista-cad-v1.jpeg",
-      skills: ["Fusion 360", "Arduino", "Python", "Haptic Research"],
+      skills: ["Fusion 360", "Arduino", "Python"],
       slug: "vista-tactile-display",
     },
 
@@ -37,7 +37,7 @@ export default function Portfolio() {
       title: "Autonomous Maze-Solving Rover", 
       subtitle: "Autonomous localization and block retrieval in predefined maze environment", 
       image: "/portfolio/autonomous-rover-cad.jpeg",
-      skills: ["SolidWorks", "Arduino", "Python", "Autonomous Systems"],
+      skills: ["SolidWorks", "Arduino", "Python"],
       slug: "autonomous-rover"
     },
 
@@ -46,7 +46,7 @@ export default function Portfolio() {
       title: "Capstone Tailgate System",
       subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150",
       image: "/portfolio/tailgate-cad.png",
-      skills: ["SolidWorks", "ANSYS FEA", "Machine Shop", "Mechanical Design"],
+      skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
       slug: "capstone-tailgate",
     },
     // { 
@@ -380,40 +380,35 @@ export default function Portfolio() {
             </div>
 
             {/* RIGHT */}
-            <div className="relative hidden lg:flex justify-center items-center min-h-[520px]">
+            <div className="relative hidden lg:flex justify-center items-center min-h-[620px]">
 
-              <div className="relative w-[500px] h-[500px]">
+              <div className="relative w-[620px] h-[620px]">
 
                 {/* ABOUT */}
                 <button
                   onClick={() => scrollToSection('about me')}
-                  className="absolute top-0 left-0 bg-white p-3 shadow-2xl rotate-[-8deg] w-44 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute top-0 left-6 bg-white p-3 shadow-2xl rotate-[-8deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
-
                   <img
-                    src="/portfolio/Banff_lakelouise.jpg"
+                    src="/portfolio/Banff_lakelouise.png"
                     alt=""
-                    className="w-full h-48 object-cover"
+                    className="w-full h-52 object-cover"
                   />
-
                   <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     About Me
                   </p>
-
                 </button>
 
                 {/* PROJECTS */}
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="absolute top-8 right-0 bg-white p-3 shadow-2xl rotate-[6deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute top-10 right-6 bg-white p-3 shadow-2xl rotate-[6deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
-
                   <img
                     src="/portfolio/vista-cad-v1.jpeg"
                     alt=""
-                    className="w-full h-52 object-cover"
+                    className="w-full h-56 object-cover"
                   />
-
                   <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     Projects
                   </p>
@@ -425,31 +420,28 @@ export default function Portfolio() {
                   href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-10 left-4 bg-white p-3 shadow-2xl rotate-[4deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer block"
+                  className="absolute bottom-16 left-0 bg-white p-3 shadow-2xl rotate-[4deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer block"
                 >
-
                   <img
                     src="/portfolio/autonomous-rover-cad.jpeg"
                     alt=""
-                    className="w-full h-52 object-cover"
+                    className="w-full h-56 object-cover"
                   />
-
                   <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
                     Resume
                   </p>
-
                 </a>
 
                 {/* CONTACT */}
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="absolute bottom-0 right-6 bg-white p-3 shadow-2xl rotate-[-5deg] w-44 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="absolute bottom-0 right-0 bg-white p-3 shadow-2xl rotate-[-5deg] w-48 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
 
                   <img
                     src="/portfolio/tailgate-cad.png"
                     alt=""
-                    className="w-full h-48 object-cover"
+                    className="w-full h-52 object-cover"
                   />
 
                   <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
@@ -522,7 +514,7 @@ export default function Portfolio() {
               </p>
 
               <p>
-                Outside of engineering, I enjoy outdoor sports, painting, traveling, and getting lost in a good book.
+                My hoddies include bouldering, running, painting, traveling, and getting lost in a good book.
               </p>
 
             </div>
