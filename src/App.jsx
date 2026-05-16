@@ -652,11 +652,11 @@ export default function Portfolio() {
           </p>
 
           <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] mb-10">
-            Let's Build Something
+            Let's Connect!
           </h2>
 
           <p className="text-xl text-blue-100 mb-12">
-            Interested in robotics, engineering collaboration, or research opportunities?
+            Interested in talking about robotics, engineering collaboration, or research opportunities?
           </p>
 
           <a
