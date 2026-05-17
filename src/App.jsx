@@ -49,16 +49,16 @@ export default function Portfolio() {
       skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
       slug: "capstone-tailgate",
     },
-    // { 
-    //   id: 4,
-    //   title: "Stereotactic Navigation System", 
-    //   subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
-    //   color: "from-blue-400 to-blue-600",
-    //   image: "/portfolio/pa3-icp.jpg",
-    //   skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
-    //   description: "Computer-Integrated Surgery applications exploring robotic control and surgical workflow integration.",
-    //   slug: "stereotactic-navigation-system"
-    // },
+    { 
+      id: 4,
+      title: "Computer Integrated Surgery", 
+      subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
+      color: "from-blue-400 to-blue-600",
+      image: "/portfolio/pa3-icp.jpg",
+      skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
+      description: "Exploring robotic control and surgical workflow integration.",
+      slug: "computer-integrated-surgery"
+    },
     // { 
     //   id: 4,
     //   title: "UR5e Robotic Arm Controls", 
@@ -431,10 +431,10 @@ export default function Portfolio() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-gray-700 max-w-3xl">
               <p>
-                <strong>Welcome to my portfolio.</strong> I’m a Robotics and Mechanical Engineer drawn to systems that move, sense, and interact with the physical world in intelligent ways.
+                <strong>Welcome to my portfolio!</strong> I’m a Robotics and Mechanical Engineer focused on building systems that move, sense, and interact with the physical world.
               </p>
               <p>
-                My work sits at the intersection of mechanical design and autonomy — where CAD, control systems, and real-world constraints meet. I’m especially interested in building machines that do not just function, but respond: haptic interfaces, assistive robotics, and systems that extend human capability.
+                My work sits at the intersection of mechanical design and autonomy, where CAD, control systems, and real-world constraints meet. I’m especially interested in building machines that do not just function, but respond: haptic interfaces, assistive robotics, and systems that extend human capability.
               </p>
               <p>
                 I am currently focused on computational sensing and robotics research, with an emphasis on human-centered interaction and surgical applications. I enjoy working across the full stack of physical systems from early-stage design and simulation to embedded implementation and iterative prototyping.
@@ -536,7 +536,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-7 flex flex-col">
-                  <h3 className="text-3xl font-['Cormorant_Garamond'] text-[#18342E] mb-3 leading-tight">
+                  <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3 leading-tight">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 mb-5 leading-relaxed text-[15px]">
@@ -546,7 +546,7 @@ export default function Portfolio() {
                     {project.skills.map((skill, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] uppercase tracking-[0.15em] border border-[#2A5C52]/30 text-[#2A5C52] px-3 py-1"
+                        className="text-[9px] uppercase tracking-[0.15em] border border-[#2A5C52]/30 text-[#2A5C52] px-3 py-1"
                       >
                         {skill}
                       </span>

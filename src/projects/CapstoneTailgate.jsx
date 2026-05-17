@@ -197,7 +197,7 @@ export default function CapstoneTailgate() {
                 Overview
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Project Summary
               </h2>
 
@@ -264,7 +264,7 @@ export default function CapstoneTailgate() {
                 Background
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Problem Context
               </h2>
 
@@ -293,7 +293,7 @@ export default function CapstoneTailgate() {
                 Development
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Concept Exploration
               </h2>
 
@@ -346,7 +346,7 @@ export default function CapstoneTailgate() {
                 Architecture
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Mechanical System
               </h2>
 
@@ -452,7 +452,7 @@ export default function CapstoneTailgate() {
                 Design
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Mechanical Design
               </h2>
 
@@ -527,7 +527,7 @@ export default function CapstoneTailgate() {
                 Validation
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Engineering Analysis
               </h2>
 
@@ -608,7 +608,7 @@ export default function CapstoneTailgate() {
                 Prototype
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Fabrication & Testing
               </h2>
 
@@ -661,7 +661,7 @@ export default function CapstoneTailgate() {
                 Reflection
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Future Improvements
               </h2>
 

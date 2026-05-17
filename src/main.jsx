@@ -6,9 +6,9 @@ import './index.css'
 
 // Import all project pages
 import VistaTactileDisplay from './projects/VistaTactileDisplay'
-import StereotacticNavigationSystem from './projects/StereotacticNavigationSystem.jsx'
 import AutonomousRover from './projects/AutonomousRover.jsx'
 import CapstoneTailgate from './projects/CapstoneTailgate.jsx'
+import ComputerIntegratedSurgery from './projects/ComputerIntegratedSurgery.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,9 +16,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/vista-tactile-display" element={<VistaTactileDisplay />} />
-        {/* <Route path="/portfolio/stereotactic-navigation-system" element={<StereotacticNavigationSystem />} /> */}
         <Route path="/portfolio/autonomous-rover" element={<AutonomousRover />} />
         <Route path="/portfolio/capstone-tailgate" element={<CapstoneTailgate />} />
+        <Route path="/portfolio/computer-integrated-surgery" element={<ComputerIntegratedSurgery/>} />
         {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />
       </Routes>

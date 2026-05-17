@@ -198,7 +198,7 @@ export default function VistaTactileDisplay() {
                 Overview
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Project Summary
               </h2>
 
@@ -265,7 +265,7 @@ export default function VistaTactileDisplay() {
                 Background
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Context & Overview
               </h2>
 
@@ -285,6 +285,46 @@ export default function VistaTactileDisplay() {
 
           </section>
 
+          {/* SYMPOSIUM */}
+          <section className="mb-24">
+
+            <div className="mb-10">
+
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
+                Conference
+              </p>
+
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Haptics Symposium 2026
+              </h2>
+
+            </div>
+
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-10">
+
+              <p>
+                Presented VISTA as a Work-In-Progress paper at the 2026 Haptics Symposium in Reno, Nevada. This included a poster session covering the preliminary user study results exploring shape and color recognition through tactile feedback.
+              </p>
+
+            </div>
+
+            {/* IMAGE CENTERED */}
+            <div className="flex justify-center mt-6 mb-16">
+
+              <div className="bg-white p-4 shadow-xl max-w-md w-full">
+
+                <img
+                  src="/portfolio/haptics-reno.jpeg"
+                  alt="Haptics Symposium 2026 presentation"
+                  className="w-full h-[280px] object-cover"
+                />
+
+              </div>
+
+            </div>
+
+          </section>
+
           {/* SYSTEM */}
           <section>
 
@@ -294,7 +334,7 @@ export default function VistaTactileDisplay() {
                 Pipeline
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 System Architecture
               </h2>
 
@@ -412,7 +452,7 @@ export default function VistaTactileDisplay() {
                 Design
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Mechanical Design
               </h2>
 
@@ -481,7 +521,7 @@ export default function VistaTactileDisplay() {
                 Controls
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Electronics & Pipeline
               </h2>
 
@@ -548,7 +588,7 @@ export default function VistaTactileDisplay() {
                 Validation
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Results & Impact
               </h2>
 
@@ -605,7 +645,7 @@ export default function VistaTactileDisplay() {
                 Media
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Demo Videos
               </h2>
 

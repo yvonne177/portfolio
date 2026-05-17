@@ -197,7 +197,7 @@ export default function AutonomousRover() {
                 Overview
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Project Summary
               </h2>
 
@@ -264,7 +264,7 @@ export default function AutonomousRover() {
                 Background
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Context & Overview
               </h2>
 
@@ -293,7 +293,7 @@ export default function AutonomousRover() {
                 Pipeline
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 System Architecture
               </h2>
 
@@ -412,7 +412,7 @@ export default function AutonomousRover() {
                 Design
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Mechanical Design
               </h2>
 
@@ -479,7 +479,7 @@ export default function AutonomousRover() {
                 Controls
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Electronics & Algorithms
               </h2>
 
@@ -546,7 +546,7 @@ export default function AutonomousRover() {
                 Autonomy
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Control System
               </h2>
 
@@ -694,7 +694,7 @@ export default function AutonomousRover() {
                 Validation
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Results & Impact
               </h2>
 
@@ -751,7 +751,7 @@ export default function AutonomousRover() {
                 Media
               </p>
 
-              <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
+              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
                 Demo Video
               </h2>
 
