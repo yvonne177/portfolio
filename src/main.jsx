@@ -9,6 +9,8 @@ import VistaTactileDisplay from './projects/VistaTactileDisplay'
 import AutonomousRover from './projects/AutonomousRover.jsx'
 import CapstoneTailgate from './projects/CapstoneTailgate.jsx'
 import ComputerIntegratedSurgery from './projects/ComputerIntegratedSurgery.jsx'
+import UR5eControls from './projects/UR5eControls.jsx'
+import HapticsTeleoperation from './projects/HapticsTeleoperation.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,6 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/autonomous-rover" element={<AutonomousRover />} />
         <Route path="/portfolio/capstone-tailgate" element={<CapstoneTailgate />} />
         <Route path="/portfolio/computer-integrated-surgery" element={<ComputerIntegratedSurgery/>} />
+        <Route path="/portfolio/ur5e-controls" element={<UR5eControls/>} />
+        <Route path="/portfolio/hapkit" element={<HapticsTeleoperation/>} />
         {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />
       </Routes>

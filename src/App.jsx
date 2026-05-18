@@ -52,22 +52,34 @@ export default function Portfolio() {
     { 
       id: 4,
       title: "Computer Integrated Surgery", 
-      subtitle: "Medical image registration for surgical guidance through advanced 3D geometry and signal processing", 
-      color: "from-blue-400 to-blue-600",
+      subtitle: "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.", 
       image: "/portfolio/pa3-icp.jpg",
-      skills: ["Computational Geometry", "Image Registration", "Algorithm Design"],
-      description: "Exploring robotic control and surgical workflow integration.",
+      skills: ["MATLAB", "Linear Algebra", "Algorithm Design"],
       slug: "computer-integrated-surgery"
     },
+    { 
+      id: 4,
+      title: "UR5e Robotic Arm Controls", 
+      subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
+      image: "/portfolio/rdkdc-ur5e.png",
+      skills: ["MATLAB", "ROS2", "Kinematics", "Controls"],
+      slug: "ur5e-controls"
+    },
+    { 
+      id: 5,
+      title: "Hapkit Bilateral Teleoperation", 
+      subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling", 
+      image: "/portfolio/hapkit.png",
+      skills: ["Arduino / C++", "PD Control", "Force Feedback"],
+      slug: "hapkit"
+    },
     // { 
-    //   id: 4,
-    //   title: "UR5e Robotic Arm Controls", 
-    //   subtitle: "Inverse kinematics and RTDE in ROS", 
-    //   color: "from-purple-400 to-purple-600",
+    //   id: 6,
+    //   title: "ASBR Assignments ", 
+    //   subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
     //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["ROS2", "Inverse Kinematics", "RTDE", "Python"],
-    //   description: "Developed advanced control algorithms for UR5e robotic arm using inverse kinematics and real-time data exchange in ROS environment.",
-    //   slug: "ur5e-controls"
+    //   skills: ["C++", "MATLAB", "Control Algorithms"],
+    //   slug: "hapkit"
     // },
     // { 
     //   id: 5,
