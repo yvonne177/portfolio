@@ -163,7 +163,7 @@ export default function UR5eControls() {
 
                 <img
                   src="/portfolio/rdkdc-ur5e.png"
-                  alt="UR5 Manipulator"
+                  alt="UR5e Manipulator"
                   className="w-full h-[420px] object-contain"
                 />
 

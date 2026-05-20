@@ -73,7 +73,7 @@ export default function UR5ManipulationFoundations() {
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mb-10 font-light">
                 Built the mathematical and planning foundations for autonomous robot manipulation, including resolved-rate kinematics,
-                hand-eye calibration, collision-free motion planning and real-hardware deployment on a UR5e arm.
+                hand-eye calibration, collision-free motion planning and real-hardware deployment on a UR5 arm.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["C++ / ROS2", "Simulation to Hardware"].map((skill, idx) => (
@@ -91,13 +91,10 @@ export default function UR5ManipulationFoundations() {
             <div className="relative flex justify-center">
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
                 <img
-                  src="/portfolio/ur5e-hero.jpg"
-                  alt="UR5e robot arm"
+                  src="/portfolio/car_mesh.png"
+                  alt="UR5 robot arm"
                   className="w-full h-[420px] object-contain"
                 />
-                <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
-                  UR5e with Robotiq gripper navigating around obstacles
-                </p>
               </div>
             </div>
 
@@ -118,7 +115,7 @@ export default function UR5ManipulationFoundations() {
             <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-10 lg:p-12">
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 This project series built a complete robotics manipulation stack from the ground up, such as
-                deriving the math, implementing it in C++ with ROS2, and validating on a physical UR5e.
+                deriving the math, implementing it in C++ with ROS2, and validating on a physical UR5.
               </p>
               <div className="grid lg:grid-cols-2 gap-12">
                 <div>
@@ -127,7 +124,7 @@ export default function UR5ManipulationFoundations() {
                     <li>✓ Resolved-rate Jacobian controller for straight-line Cartesian trajectory generation</li>
                     <li>✓ Closed-form and least-squares AX=XB hand-eye calibration achieving &lt;5mm / &lt;0.1 rad error</li>
                     <li>✓ PRM path planner withj ≥90% planning success rate navigating robot arm through car door frame</li>
-                    <li>✓ Deployed trajectory controller on physical UR5e hardware</li>
+                    <li>✓ Deployed trajectory controller on physical UR5 hardware</li>
                   </ul>
                 </div>
                 <div>
@@ -321,7 +318,7 @@ export default function UR5ManipulationFoundations() {
                 </h3>
 
                 <p>
-                The planner was required to achieve with 85% success navigating the UR5e arm through the door opening of a high-fidelity Bugatti car mesh and positioning the gripper near the steering wheel, a highly constrained narrow-passage planning problem.
+                The planner was required to achieve with 85% success navigating the UR5 arm through the door opening of a high-fidelity Bugatti car mesh and positioning the gripper near the steering wheel, a highly constrained narrow-passage planning problem.
                 </p>
 
                 <p>
@@ -355,7 +352,7 @@ export default function UR5ManipulationFoundations() {
             </p>
 
             <p>
-                The finalized system was then deployed onto a physical UR5e robot, where all
+                The finalized system was then deployed onto a physical UR5 robot, where all
                 three phases were successfully demonstrated through real-world trajectory
                 execution and collision-free manipulation tasks.
             </p>

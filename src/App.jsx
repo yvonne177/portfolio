@@ -69,7 +69,7 @@ export default function Portfolio() {
       id: 5,
       title: "UR5 Manipulation Foundations", 
       subtitle: "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.", 
-      image: "/portfolio/Banff_lakelouise.jpg",
+      image: "/portfolio/car_mesh.png",
       skills: ["C++ / ROS2", "Simulation to Hardware"],
       slug: "ur5-manipulation"
     },
