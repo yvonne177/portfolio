@@ -10,6 +10,7 @@ import AutonomousRover from './projects/AutonomousRover.jsx'
 import CapstoneTailgate from './projects/CapstoneTailgate.jsx'
 import ComputerIntegratedSurgery from './projects/ComputerIntegratedSurgery.jsx'
 import UR5eControls from './projects/UR5eControls.jsx'
+import UR5ManipulationFoundations from './projects/UR5ManipulationFoundations.jsx'
 import HapticsTeleoperation from './projects/HapticsTeleoperation.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/capstone-tailgate" element={<CapstoneTailgate />} />
         <Route path="/portfolio/computer-integrated-surgery" element={<ComputerIntegratedSurgery/>} />
         <Route path="/portfolio/ur5e-controls" element={<UR5eControls/>} />
+        <Route path="portfolio/ur5-manipulation" element={<UR5ManipulationFoundations/>} />
         <Route path="/portfolio/hapkit" element={<HapticsTeleoperation/>} />
         {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />

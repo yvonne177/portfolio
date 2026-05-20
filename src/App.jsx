@@ -67,20 +67,20 @@ export default function Portfolio() {
     },
     { 
       id: 5,
+      title: "UR5 Manipulation Foundations", 
+      subtitle: "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.", 
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["C++ / ROS2", "Simulation to Hardware"],
+      slug: "ur5-manipulation"
+    },
+    { 
+      id: 6,
       title: "Hapkit Bilateral Teleoperation", 
       subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling", 
       image: "/portfolio/hapkit.png",
       skills: ["Arduino / C++", "PD Control", "Force Feedback"],
       slug: "hapkit"
     },
-    // { 
-    //   id: 6,
-    //   title: "ASBR Assignments ", 
-    //   subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["C++", "MATLAB", "Control Algorithms"],
-    //   slug: "hapkit"
-    // },
     // { 
     //   id: 5,
     //   title: "Hand Tracking System", 
@@ -121,6 +121,9 @@ export default function Portfolio() {
     //   description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
     //   slug: "train-fire-characterization"
     // },
+    // FEA and CFD Projects
+    // cnc design
+    // pcb design mie346
   ];
 
   useEffect(() => {
