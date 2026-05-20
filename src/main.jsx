@@ -12,6 +12,7 @@ import ComputerIntegratedSurgery from './projects/ComputerIntegratedSurgery.jsx'
 import UR5eControls from './projects/UR5eControls.jsx'
 import UR5ManipulationFoundations from './projects/UR5ManipulationFoundations.jsx'
 import HapticsTeleoperation from './projects/HapticsTeleoperation.jsx'
+import RobotLocalizationProject from './projects/RobotLocalizationFoundations.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/ur5e-controls" element={<UR5eControls/>} />
         <Route path="portfolio/ur5-manipulation" element={<UR5ManipulationFoundations/>} />
         <Route path="/portfolio/hapkit" element={<HapticsTeleoperation/>} />
+        <Route path="/portfolio/robot-localization" element={<RobotLocalizationProject/>} />
         {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />
       </Routes>

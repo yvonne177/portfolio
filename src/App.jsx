@@ -58,7 +58,7 @@ export default function Portfolio() {
       slug: "computer-integrated-surgery"
     },
     { 
-      id: 4,
+      id: 5,
       title: "UR5e Robotic Arm Controls", 
       subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
       image: "/portfolio/rdkdc-ur5e.png",
@@ -66,7 +66,7 @@ export default function Portfolio() {
       slug: "ur5e-controls"
     },
     { 
-      id: 5,
+      id: 6,
       title: "UR5 Manipulation Foundations", 
       subtitle: "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.", 
       image: "/portfolio/car_mesh.png",
@@ -74,12 +74,20 @@ export default function Portfolio() {
       slug: "ur5-manipulation"
     },
     { 
-      id: 6,
+      id: 7,
       title: "Hapkit Bilateral Teleoperation", 
       subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling", 
       image: "/portfolio/hapkit.png",
       skills: ["Arduino / C++", "PD Control", "Force Feedback"],
       slug: "hapkit"
+    },
+    { 
+      id: 8,
+      title: "Robot Localization Foundations", 
+      subtitle: "Implemented probabilistic localization systems, Extended Kalman Filter and Particle Filter, in Gazebo/ROS2.", 
+      image: "/portfolio/.png",
+      skills: ["C++ / ROS2", "Probabilistic Inference"],
+      slug: "robot-localization"
     },
     // { 
     //   id: 5,
