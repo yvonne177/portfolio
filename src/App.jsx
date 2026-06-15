@@ -82,55 +82,55 @@ export default function Portfolio() {
       slug: "robot-localization"
     },
 
-    { 
-      title: "Hand Tracking Surgical Robotic Assistance System", 
-      subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
-      slug: "hand-tracking-assistance-system"
-    },
-    { 
-      title: "Window Cable Tensioner", 
-      subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["SolidWorks", "FEA", "Manufacturing"],
-      slug: "window-cable-tensioner"
-    },
-    { 
-      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
-      subtitle: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
-      slug: "microchannel-heat-sinks"
-    },
-    { 
-      title: "Desktop CNC Milling Machine Design", 
-      subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping, featuring a compact 3-axis configuration and modular tool head.",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["SolidWorks", "Mechanical Design"],
-      slug: "desktop-cnc-design"
-    },
-    { 
-      title: "Offset Gearbox Design", 
-      subtitle: "Conceptual design and simulation of an offset gearbox for automotive applications.",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["SolidWorks", "Mechanical Design"],
-      slug: "offset-gearbox-design"
-    },
-    { 
-      title: "Oscilloscope PCB Design", 
-      subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["PCB Design", "Electronics", "Simulation"],
-      slug: "oscilloscope-pcb-design"
-    },
-    { 
-      title: "Full Assembly Line Design for Castor Wheel Manufacturing", 
-      subtitle: "Design and simulation of a full assembly line for castor wheel manufacturing.",
-      image: "/portfolio/Banff_lakelouise.jpg",
-      skills: ["SolidWorks", "Manufacturing"],
-      slug: "castor-wheel-assembly-line"
-    }
+    // { 
+    //   title: "Hand Tracking Surgical Robotic Assistance System", 
+    //   subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
+    //   slug: "hand-tracking-assistance"
+    // },
+    // { 
+    //   title: "Window Cable Tensioner", 
+    //   subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "FEA", "Manufacturing"],
+    //   slug: "window-cable-tensioner"
+    // },
+    // { 
+    //   title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+    //   subtitle: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
+    //   slug: "microchannel-heat-sinks"
+    // },
+    // { 
+    //   title: "Desktop CNC Milling Machine Design", 
+    //   subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping, featuring a compact 3-axis configuration and modular tool head.",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "Mechanical Design"],
+    //   slug: "desktop-cnc-design"
+    // },
+    // { 
+    //   title: "Offset Gearbox Design", 
+    //   subtitle: "Conceptual design and simulation of an offset gearbox for automotive applications.",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "Mechanical Design"],
+    //   slug: "offset-gearbox-design"
+    // },
+    // { 
+    //   title: "Oscilloscope PCB Design", 
+    //   subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["PCB Design", "Electronics", "Simulation"],
+    //   slug: "oscilloscope-pcb-design"
+    // },
+    // { 
+    //   title: "Full Assembly Line Design for Castor Wheel Manufacturing", 
+    //   subtitle: "Design and simulation of a full assembly line for castor wheel manufacturing.",
+    //   image: "/portfolio/Banff_lakelouise.jpg",
+    //   skills: ["SolidWorks", "Manufacturing"],
+    //   slug: "castor-wheel-assembly-line"
+    // }
 
     // FEA and CFD Projects
   ];

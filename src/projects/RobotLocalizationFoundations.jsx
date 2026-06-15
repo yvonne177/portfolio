@@ -1,29 +1,89 @@
 // projects/RobotLocalizationProject.jsx
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function RobotLocalizationProject() {
+  const navigate = useNavigate();
+
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0,0);
+  },[])
+
+  const goToMainSection = (section) => {
+    navigate(`/portfolio#${section}`);
+
+    setTimeout(() => {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    },100);
+  };
+
+  const handleHome = () => {
+    navigate('/portfolio');
+
+    setTimeout(() => {
+      window.scrollTo({top:0,behavior:"smooth"});
+    },100);
+  };
 
   return (
+
     <div className="min-h-screen bg-[#F5F3EE] text-gray-900 overflow-x-hidden">
 
       {/* NAVIGATION */}
       <nav className="fixed top-0 w-full z-50 bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#D9D3C7]">
+
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
+
           <div className="flex justify-between items-center h-16">
+
             <div className="text-2xl font-bold tracking-tight font-['Cormorant_Garamond'] text-[#18342E]">
               Yvonne Zhang
             </div>
+
             <div className="hidden md:flex space-x-10">
-              <button className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors">Home</button>
-              <button className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors">About</button>
-              <button className="text-sm uppercase tracking-[0.2em] text-[#2A5C52] transition-colors">Projects</button>
-              <button className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors">Contact</button>
+
+              <button
+                onClick={handleHome}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                Home
+              </button>
+
+              <button
+                onClick={() => goToMainSection('about me')}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                About
+              </button>
+
+              <button
+                onClick={() => goToMainSection('projects')}
+                className="text-sm uppercase tracking-[0.2em] text-[#2A5C52] transition-colors"
+              >
+                Projects
+              </button>
+
+              <button
+                onClick={() => goToMainSection('contact')}
+                className="text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+              >
+                Contact
+              </button>
+
             </div>
-            <a href="/portfolio/YvonneZhang_CV_Jan2026.pdf" target="_blank" rel="noopener noreferrer"
-              className="hidden md:block text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors">Resume</a>
+
+            <a
+              href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
+            >
+              Resume
+            </a>
+
           </div>
         </div>
       </nav>
