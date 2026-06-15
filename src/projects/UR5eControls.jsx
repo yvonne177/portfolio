@@ -512,39 +512,61 @@ export default function UR5eControls() {
             {/* VIDEO PLACEHOLDERS */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
 
-            {/* RR VIDEO */}
-            <div className="w-full min-w-0">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-6">
-                Resolved-Rate Control Demo
-                </h3>
+          {/* RR VIDEO */}
+          <div className="w-full min-w-0">
+            <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-6">
+              Resolved-Rate Control Demo
+            </h3>
 
-                <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-2">
-                <video
-                    controls
-                    className="w-full aspect-video object-contain"
-                    src="/portfolio/rr_demo.mp4"
-                >
-                    Your browser does not support the video tag.
-                </video>
-                </div>
+            <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-2">
+              <div
+                className="relative w-full"
+                style={{ paddingBottom: '56.25%', position: 'relative' }}
+              >
+                <iframe
+                  src="https://drive.google.com/file/d/1rLRH04IO1VAQyZ3Y5gSXFJ1EC7Vy1zc0/preview"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  allow="autoplay"
+                  allowFullScreen
+                  title="Resolved-Rate Control Demo"
+                />
+              </div>
             </div>
+          </div>
 
-            {/* IK VIDEO */}
-            <div className="w-full min-w-0">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-6">
-                Inverse Kinematics Demo
-                </h3>
+          {/* IK VIDEO */}
+          <div className="w-full min-w-0">
+            <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-6">
+              Inverse Kinematics Demo
+            </h3>
 
-                <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-2">
-                <video
-                    controls
-                    className="w-full aspect-video object-contain"
-                    src="/portfolio/ik_demo.mp4"
-                >
-                    Your browser does not support the video tag.
-                </video>
-                </div>
+            <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-2">
+              <div
+                className="relative w-full"
+                style={{ paddingBottom: '56.25%', position: 'relative' }}
+              >
+                <iframe
+                  src="https://drive.google.com/file/d/1c9mLFi2DCbkjLOWL5MJ_kgFzWLd8jgTl/preview"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  allow="autoplay"
+                  allowFullScreen
+                  title="Inverse Kinematics Demo"
+                />
+              </div>
             </div>
+          </div>
 
             </div>
 

@@ -77,54 +77,7 @@ export default function RobotLocalizationProject() {
             <div className="relative flex justify-center">
               <div className="bg-white p-4 shadow-2xl rotate-[-3deg] max-w-md w-full">
                 <div className="w-full h-[420px] bg-[#0d1117] flex items-center justify-center relative overflow-hidden">
-                  {/* Particle field visualization */}
-                  <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-                    {/* Grid */}
-                    {Array.from({length: 9}).map((_, i) => (
-                      <line key={`v${i}`} x1={i*50} y1="0" x2={i*50} y2="360" stroke="#1a2a1a" strokeWidth="0.5"/>
-                    ))}
-                    {Array.from({length: 8}).map((_, i) => (
-                      <line key={`h${i}`} x1="0" y1={i*50} x2="400" y2={i*50} stroke="#1a2a1a" strokeWidth="0.5"/>
-                    ))}
-                    {/* Laser beams */}
-                    {[15,30,45,60,75,90,105,120,135,150,165,180,195,210,225,240,255,270,285,300,315,330,345,360].map((angle, i) => {
-                      const rad = (angle * Math.PI) / 180;
-                      const len = 60 + (i % 5) * 18;
-                      return (
-                        <line key={`beam${i}`}
-                          x1="200" y1="180"
-                          x2={200 + Math.cos(rad) * len}
-                          y2={180 + Math.sin(rad) * len}
-                          stroke="#4ade80" strokeWidth="0.6" opacity="0.35"
-                        />
-                      );
-                    })}
-                    {/* Particles */}
-                    {[
-                      [185,165],[210,172],[195,190],[178,180],[205,185],[192,168],[218,178],
-                      [175,190],[202,160],[188,195],[215,190],[170,175],[220,165],[198,200],
-                      [182,158],[208,195],[193,175],[177,165],[212,182],[200,170]
-                    ].map(([x, y], i) => (
-                      <circle key={`p${i}`} cx={x} cy={y} r="2.5" fill="#4ade80" opacity={0.4 + (i%4)*0.12}/>
-                    ))}
-                    {/* Robot */}
-                    <circle cx="200" cy="180" r="10" fill="none" stroke="#86efac" strokeWidth="2"/>
-                    <circle cx="200" cy="180" r="4" fill="#86efac"/>
-                    {/* Heading arrow */}
-                    <line x1="200" y1="180" x2="200" y2="155" stroke="#86efac" strokeWidth="2"/>
-                    <polygon points="200,148 196,158 204,158" fill="#86efac"/>
-                    {/* Covariance ellipse */}
-                    <ellipse cx="200" cy="180" rx="28" ry="18" fill="none" stroke="#86efac" strokeWidth="1" opacity="0.4" strokeDasharray="4 2"/>
-                    {/* GPS dot */}
-                    <circle cx="205" cy="174" r="3" fill="#facc15" opacity="0.8"/>
-                    <text x="210" y="170" fill="#facc15" fontSize="8" opacity="0.8">GPS</text>
-                    {/* Legend */}
-                    <circle cx="18" cy="330" r="3" fill="#4ade80" opacity="0.7"/>
-                    <text x="26" y="334" fill="#86efac" fontSize="9" opacity="0.8">particles</text>
-                    <circle cx="90" cy="330" r="3" fill="#facc15" opacity="0.8"/>
-                    <text x="98" y="334" fill="#facc15" fontSize="9" opacity="0.8">GPS fix</text>
-                    <text x="160" y="334" fill="#4ade80" fontSize="9" opacity="0.5">— laser</text>
-                  </svg>
+                    
                 </div>
               </div>
             </div>

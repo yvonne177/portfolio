@@ -24,33 +24,29 @@ export default function Portfolio() {
 
   const projects = [
     { 
-      id: 1,
       title: "VISTA - Haptic Museum Display", 
-      subtitle: "Visual Information through Sensory Tactile Array for museum display accessibility", 
+      subtitle: "Visual Information through Sensory Tactile Array for museum display accessibility.", 
       image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Fusion 360", "Arduino", "Python"],
       slug: "vista-tactile-display",
     },
 
     { 
-      id: 2,
       title: "Autonomous Maze-Solving Rover", 
-      subtitle: "Autonomous localization and block retrieval in predefined maze environment", 
+      subtitle: "Autonomous localization and block retrieval in predefined maze environment.", 
       image: "/portfolio/autonomous-rover-cad.jpeg",
       skills: ["SolidWorks", "Arduino", "Python"],
       slug: "autonomous-rover"
     },
 
     {
-      id: 3,
       title: "Capstone Tailgate System",
-      subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150",
+      subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150.",
       image: "/portfolio/tailgate-cad.png",
       skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
       slug: "capstone-tailgate",
     },
     { 
-      id: 4,
       title: "Computer Integrated Surgery", 
       subtitle: "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.", 
       image: "/portfolio/pa3-icp.jpg",
@@ -58,7 +54,6 @@ export default function Portfolio() {
       slug: "computer-integrated-surgery"
     },
     { 
-      id: 5,
       title: "UR5e Robotic Arm Controls", 
       subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
       image: "/portfolio/rdkdc-ur5e.png",
@@ -66,7 +61,6 @@ export default function Portfolio() {
       slug: "ur5e-controls"
     },
     { 
-      id: 6,
       title: "UR5 Manipulation Foundations", 
       subtitle: "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.", 
       image: "/portfolio/car_mesh.png",
@@ -74,64 +68,71 @@ export default function Portfolio() {
       slug: "ur5-manipulation"
     },
     { 
-      id: 7,
       title: "Hapkit Bilateral Teleoperation", 
-      subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling", 
+      subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.", 
       image: "/portfolio/hapkit.png",
       skills: ["Arduino / C++", "PD Control", "Force Feedback"],
       slug: "hapkit"
     },
     { 
-      id: 8,
       title: "Robot Localization Foundations", 
-      subtitle: "Implemented probabilistic localization systems, Extended Kalman Filter and Particle Filter, in Gazebo/ROS2.", 
+      subtitle: "Implemented probabilistic localization systems, Extended Kalman Filter and Particle Filter.", 
       image: "/portfolio/.png",
       skills: ["C++ / ROS2", "Probabilistic Inference"],
       slug: "robot-localization"
     },
-    // { 
-    //   id: 5,
-    //   title: "Hand Tracking System", 
-    //   subtitle: "ROS2 + MediaPipe integration", 
-    //   color: "from-purple-400 to-purple-600",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
-    //   description: "Developed a real-time hand gesture recognition and tracking system using computer vision for robotic control.",
-    //   slug: "hand-tracking"
-    // },
-    // { 
-    //   id: 6,
-    //   title: "Window Cable Tensioner", 
-    //   subtitle: "Magna International collaboration", 
-    //   color: "from-blue-400 to-blue-600",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["SolidWorks", "FEA", "Manufacturing"],
-    //   description: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.",
-    //   slug: "window-cable-tensioner"
-    // },
-    // { 
-    //   id: 7,
-    //   title: "Microchannel Heat Sinks via Advanced Manufacturing", 
-    //   subtitle: "Laser Powder Bed Fusion with Al-Graphene composite", 
-    //   color: "from-orange-400 to-orange-600",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
-    //   description: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
-    //   slug: "microchannel-heat-sinks"
-    // },
-    // { 
-    //   id: 8,
-    //   title: "Train Fire Spread Thermal Characterization", 
-    //   subtitle: "Material testing methodology for CFD boundary conditions", 
-    //   color: "from-red-400 to-red-600",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["Material Testing", "CFD Modeling", "ANSYS", "Data Analysis"],
-    //   description: "Authored a new methodology for characterizing thermal properties of train fire spread through material testing results. Influenced determining boundary conditions of CFD models adopted within three upcoming mass transportation projects.",
-    //   slug: "train-fire-characterization"
-    // },
+
+    { 
+      title: "Hand Tracking Surgical Robotic Assistance System", 
+      subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
+      slug: "hand-tracking-assistance-system"
+    },
+    { 
+      title: "Window Cable Tensioner", 
+      subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["SolidWorks", "FEA", "Manufacturing"],
+      slug: "window-cable-tensioner"
+    },
+    { 
+      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+      subtitle: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
+      slug: "microchannel-heat-sinks"
+    },
+    { 
+      title: "Desktop CNC Milling Machine Design", 
+      subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping, featuring a compact 3-axis configuration and modular tool head.",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["SolidWorks", "Mechanical Design"],
+      slug: "desktop-cnc-design"
+    },
+    { 
+      title: "Offset Gearbox Design", 
+      subtitle: "Conceptual design and simulation of an offset gearbox for automotive applications.",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["SolidWorks", "Mechanical Design"],
+      slug: "offset-gearbox-design"
+    },
+    { 
+      title: "Oscilloscope PCB Design", 
+      subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["PCB Design", "Electronics", "Simulation"],
+      slug: "oscilloscope-pcb-design"
+    },
+    { 
+      title: "Full Assembly Line Design for Castor Wheel Manufacturing", 
+      subtitle: "Design and simulation of a full assembly line for castor wheel manufacturing.",
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["SolidWorks", "Manufacturing"],
+      slug: "castor-wheel-assembly-line"
+    }
+
     // FEA and CFD Projects
-    // cnc design
-    // pcb design mie346
   ];
 
   useEffect(() => {
