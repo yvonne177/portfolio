@@ -14,11 +14,12 @@ import UR5ManipulationFoundations from './projects/UR5ManipulationFoundations.js
 import HapticsTeleoperation from './projects/HapticsTeleoperation.jsx'
 import RobotLocalizationProject from './projects/RobotLocalizationFoundations.jsx'
 import HandTrackingAssistance from './projects/HandTrackingAssistance.jsx'
-// import WindowCableTensioner from './projects/WindowCableTensioner.jsx'
-// import MicrochannelHeatSinks from './projects/MicrochannelHeatSinks.jsx'
-// import DesktopCNCDesign from './projects/DesktopCNCDesign.jsx'
+import MicrochannelHeatSinks from './projects/MicrochannelHeatSinks.jsx'
+import DesktopCNCDesign from './projects/DesktopCNCDesign.jsx'
 // import OffsetGearboxDesign from './projects/OffsetGearboxDesign.jsx'
 // import OscilloscopePCBDesign from './projects/OscilloscopePCBDesign.jsx'
+
+// import WindowCableTensioner from './projects/WindowCableTensioner.jsx'
 // import CastorWheelAssemblyLine from './projects/CastorWheelAssemblyLine.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -35,17 +36,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/hapkit" element={<HapticsTeleoperation/>} />
         <Route path="/portfolio/robot-localization" element={<RobotLocalizationProject/>} />
         <Route path="/portfolio/hand-tracking-assistance" element={<HandTrackingAssistance />} />
-
-        {/* <Route path="/portfolio/hand-tracking-assistance" element={<HandTrackingAssistance />} />
         <Route path="/portfolio/microchannel-heat-sinks" element={<MicrochannelHeatSinks />} />
-
         <Route path="/portfolio/desktop-cnc-design" element={<DesktopCNCDesign />} />
-        <Route path="/portfolio/offset-gearbox-design" element={<OffsetGearboxDesign />} />
-        <Route path="/portfolio/oscilloscope-pcb-design" element={<OscilloscopePCBDesign />} />
-
+        {/* <Route path="/portfolio/offset-gearbox-design" element={<OffsetGearboxDesign />} />
+        <Route path="/portfolio/oscilloscope-pcb-design" element={<OscilloscopePCBDesign />} /> */}
+        
+        {/*
 
         <Route path="/portfolio/window-cable-tensioner" element={<WindowCableTensioner />} />
-        <Route path="/portfolio/microchannel-heat-sinks" element={<MicrochannelHeatSinks />} />
         <Route path="/portfolio/castor-wheel-assembly-line" element={<CastorWheelAssemblyLine />} /> */}
                 {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />

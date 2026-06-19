@@ -84,9 +84,16 @@ export default function Portfolio() {
     { 
       title: "Hand Tracking Surgical Robotic Assistance System", 
       subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
-      image: "/portfolio/Banff_lakelouise.jpg",
+      image: "/portfolio/franka-dual-mount.png",
       skills: ["Computer Vision", "ROS2", "Python"],
       slug: "hand-tracking-assistance"
+    },
+    { 
+      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
+      subtitle: "Developed a manufacturing concept for a graphene-enhanced micro pin fin heat sink.",
+      image: "/portfolio/heatsink-pinfin-design.png",
+      skills: ["Advanced Manufacturing", "Materials Engineering", "Thermal Design"],
+      slug: "microchannel-heat-sinks"
     },
     // { 
     //   title: "Window Cable Tensioner", 
@@ -94,13 +101,6 @@ export default function Portfolio() {
     //   image: "/portfolio/Banff_lakelouise.jpg",
     //   skills: ["SolidWorks", "FEA", "Manufacturing"],
     //   slug: "window-cable-tensioner"
-    // },
-    // { 
-    //   title: "Microchannel Heat Sinks via Advanced Manufacturing", 
-    //   subtitle: "Research paper on optimized microchannel heat sinks utilizing Laser Powder Bed Fusion with Aluminum-Graphene material composite and Boron Nitride coating for enhanced thermal performance.",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["ANSYS CFD", "Advanced Manufacturing", "FEA", "Materials Science"],
-    //   slug: "microchannel-heat-sinks"
     // },
     // { 
     //   title: "Desktop CNC Milling Machine Design", 
