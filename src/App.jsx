@@ -81,14 +81,13 @@ export default function Portfolio() {
       skills: ["C++ / ROS2", "Probabilistic Inference"],
       slug: "robot-localization"
     },
-
-    // { 
-    //   title: "Hand Tracking Surgical Robotic Assistance System", 
-    //   subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["MediaPipe", "ROS2", "OpenCV", "Python"],
-    //   slug: "hand-tracking-assistance"
-    // },
+    { 
+      title: "Hand Tracking Surgical Robotic Assistance System", 
+      subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
+      image: "/portfolio/Banff_lakelouise.jpg",
+      skills: ["Computer Vision", "ROS2", "Python"],
+      slug: "hand-tracking-assistance"
+    },
     // { 
     //   title: "Window Cable Tensioner", 
     //   subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
