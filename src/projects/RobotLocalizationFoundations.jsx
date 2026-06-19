@@ -28,6 +28,17 @@ export default function RobotLocalizationProject() {
     },100);
   };
 
+  const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
+
   return (
 
     <div className="min-h-screen bg-[#F5F3EE] text-gray-900 overflow-x-hidden">
@@ -117,9 +128,11 @@ export default function RobotLocalizationProject() {
                 Foundations
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mb-10 font-light">
-                Implemented two complementary probabilistic localization systems: an Extended Kalman Filter
-                fusing GPS and IMU for 3D terrain navigation, and a Particle Filter with laser beam modeling
-                for indoor mapping, both deployed on real robot hardware in Gazebo/ROS2.
+                Implemented probabilistic localization systems for applying theoretical understanding to simulation. 
+               <br />
+               <br />
+                This included Extended Kalman Filter fusing GPS and IMU for 3D terrain navigation, and a Particle Filter with laser beam modeling
+                for indoor mapping. Both models were deployed on robot hardware in Gazebo/ROS2.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
                 {["C++ / ROS2", "Probabilistic Inference"].map((skill, idx) => (
@@ -129,16 +142,46 @@ export default function RobotLocalizationProject() {
                 ))}
               </div>
               <div className="text-blue-100 text-lg">
-                <span className="font-semibold text-white">Duration:</span>{" "}January – May 2026
+                <span className="font-semibold text-white">Duration:</span>{" "}Feburary to March 2026
               </div>
             </div>
 
-            {/* RIGHT — abstract sensor visualization */}
-            <div className="relative flex justify-center">
-              <div className="bg-white p-4 shadow-2xl rotate-[-3deg] max-w-md w-full">
-                <div className="w-full h-[420px] bg-[#0d1117] flex items-center justify-center relative overflow-hidden">
-                    
-                </div>
+            {/* RIGHT */}
+            <div className="relative hidden lg:flex justify-center items-center min-h-[620px]">
+              <div className="relative w-[620px] h-[620px]">
+
+                {/* EKF */}
+                <button
+                  onClick={() => scrollToSection("ekf")}
+                  className="absolute top-0 left-0 bg-white p-3 shadow-2xl rotate-[-6deg]
+                            w-72 hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <img
+                    src="/portfolio/ekf-localization.png"
+                    alt="Extended Kalman Filter"
+                    className="w-full h-72 object-cover"
+                  />
+                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
+                    Extended Kalman Filter
+                  </p>
+                </button>
+
+                {/* Particle Filter */}
+                <button
+                  onClick={() => scrollToSection("particle-filter")}
+                  className="absolute bottom-0 right-0 bg-white p-3 shadow-2xl rotate-[6deg]
+                            w-72 hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <img
+                    src="/portfolio/particle-filter-localization.png"
+                    alt="Particle Filter"
+                    className="w-full h-72 object-cover"
+                  />
+                  <p className="text-center mt-3 text-sm tracking-wide text-gray-700">
+                    Particle Filter
+                  </p>
+                </button>
+
               </div>
             </div>
 
@@ -160,7 +203,7 @@ export default function RobotLocalizationProject() {
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 This two-part project series built probabilistic localization systems from first principles, deriving
                 the math, implementing it in C++ with ROS2, and validating against ground-truth simulation data.
-                Assignment 4 targeted 3D outdoor navigation using an EKF; Assignment 5 tackled 2D indoor localization
+                Method 1 targeted 3D outdoor navigation using an EKF; Method 2 tackled 2D indoor localization
                 using a particle filter with laser sensing.
               </p>
               <div className="grid lg:grid-cols-2 gap-12">
@@ -186,26 +229,25 @@ export default function RobotLocalizationProject() {
             </div>
           </section>
 
-          {/* ASSIGNMENT 4 — EKF */}
-          <section>
+          {/*EKF */}
+          <section id="ekf" className="scroll-mt-24">
             <div className="mb-10">
-              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Assignment 4</p>
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Method 1 </p>
               <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">Extended Kalman Filter: 3D Terrain Localization</h2>
             </div>
 
             <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-14">
-              <p>
-                The Clearpath Robotics Jackal operates on a rugged simulated canyon, meaning a standard 2D
-                planar model would fail. I extended the state to six dimensions: position (x, y, z) and orientation
-                as roll, pitch, yaw. I then derived the full nonlinear process model driven by linear and angular
-                velocity commands from the robot's body frame.
-              </p>
-              <p>
-                The EKF runs inside the Orocos Bayesian Filtering Library (BFL), fusing asynchronous GPS fixes
-                (converted from latitude/longitude/altitude via a flat-earth linear calibration) with IMU quaternion
-                measurements (converted to RPY). All Jacobians were derived analytically using the RPY rotation
-                composition R = R<sub>X</sub>(r)R<sub>Y</sub>(p)R<sub>Z</sub>(y), which keeps the linearization tractable.
-              </p>
+            <p>
+              The Clearpath Robotics Jackal was simulated in a rugged canyon environment, where a simple 2D navigation model is not sufficient.
+              To capture its full motion, I extended the robot’s state representation to six dimensions, including position (x, y, z) and orientation (roll, pitch, yaw).
+             I then developed a nonlinear motion model based on the robot’s velocity commands in its own body frame.
+            </p>
+
+            <p>
+              I implemented an Extended Kalman Filter (EKF) using the Orocos Bayesian Filtering Library (BFL) to estimate the robot’s state in real time.
+              The filter combines GPS measurements (converted from latitude, longitude, and altitude into a local coordinate frame) with IMU orientation data (converted from quaternions to roll, pitch, and yaw angles).
+              To ensure accurate updates, I derived the necessary linear approximations analytically using a standard roll–pitch–yaw rotation sequence, which made the system easier to compute and more stable.
+            </p>
             </div>
 
             {/* EKF pipeline */}
@@ -235,55 +277,23 @@ export default function RobotLocalizationProject() {
             </div>
             <p className="text-center text-sm text-gray-500 tracking-wide mb-14">EKF Predict–Correct cycle, runs every timestep on incoming sensor data</p>
 
-            {/* Sensor cards */}
-            <div className="grid lg:grid-cols-3 gap-6">
-              {[
-                {
-                  label: "System Model",
-                  title: "3D Process Function f",
-                  body: "Propagates pose using linear velocity vₜ along the Jackal's X axis and angular velocity ωₜ about its Z axis, integrated with the current RPY orientation to update world-frame position."
-                },
-                {
-                  label: "GPS Observation",
-                  title: "hGPS: Geographic → Cartesian",
-                  body: "Mapped latitude, longitude, and altitude to simulation XYZ using a flat-earth linear model calibrated against ground-truth simulator pose. Implemented 3×3 Jacobian H_GPS."
-                },
-                {
-                  label: "IMU Observation",
-                  title: "hIMU: Quaternion → RPY",
-                  body: "Converted ROS quaternion orientation messages to roll-pitch-yaw matching the EKF state convention. Implemented the 3×3 identity-structured Jacobian H_IMU."
-                }
-              ].map((card, idx) => (
-                <div key={idx} className="bg-[#EFEAE0] border border-[#D9D3C7] p-8">
-                  <p className="uppercase tracking-[0.25em] text-xs text-[#2A5C52] mb-2">{card.label}</p>
-                  <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-4">{card.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">{card.body}</p>
-                </div>
-              ))}
-            </div>
-
             {/* Accuracy callout */}
-            <div className="mt-10 bg-[#18342E] text-white p-8 lg:p-10 flex flex-col lg:flex-row items-center gap-8">
-              <div className="text-center lg:text-left">
-                <p className="text-5xl font-['Cormorant_Garamond'] font-bold text-[#86efac]">&lt; 0.5 m</p>
-                <p className="text-sm uppercase tracking-[0.2em] text-blue-100 mt-1">Average XYZ position error</p>
-              </div>
-              <div className="w-px bg-white/20 self-stretch hidden lg:block" />
-              <p className="text-blue-100 leading-relaxed max-w-xl">
-                Validated by driving the Jackal around the simulated canyon and comparing the
+            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-14">
+            <p>
+               Results were validated by driving the Jackal around the simulated canyon and comparing the
                 <code className="bg-white/10 px-1 py-0.5 mx-1 text-sm font-mono">/posterior</code>
                 topic against ground-truth pose from
                 <code className="bg-white/10 px-1 py-0.5 mx-1 text-sm font-mono">ign topic -e -t /model/robot/pose</code>.
                 Filter tuning of both process and sensor covariance matrices was iterated until the
-                localization consistently met the accuracy threshold during extended teleoperation runs.
+                localization consistently met the accuracy threshold of less than 0.5 meters during extended teleoperation runs.
               </p>
             </div>
           </section>
 
-          {/* ASSIGNMENT 5 — PARTICLE FILTER */}
-          <section>
+          {/*  PARTICLE FILTER */}
+          <section id="particle-filter" className="scroll-mt-24">
             <div className="mb-10">
-              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Assignment 5</p>
+              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Method 2</p>
               <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">Particle Filter: Indoor Laser Localization</h2>
             </div>
 
@@ -295,7 +305,7 @@ export default function RobotLocalizationProject() {
               </p>
               <p>
                 The beam model scores each particle's likelihood by ray-casting expected ranges from its hypothesized
-                position through the 35 MB building mesh and comparing them to actual laser measurements across
+                position through the building mesh and comparing them to actual laser measurements across
                 hundreds of beams per scan. The motion model propagates particles forward by sampling Gaussian noise
                 around the odometry-reported displacement, capturing real-world wheel slip and encoder error.
               </p>
@@ -339,7 +349,7 @@ export default function RobotLocalizationProject() {
                 ))}
               </div>
               <p className="mt-4 text-sm text-gray-500 tracking-wide text-center">
-                Final beam probability: P(z|s,m) = w_hit·p_hit + w_short·p_short + w_max·p_max + w_rand·p_rand, summed in log space to avoid floating-point underflow
+                Final beam probability: P(z|s,m) = w_hit·p_hit + w_short·p_short + w_max·p_max + w_rand·p_rand, summed in log space
               </p>
             </div>
 
@@ -373,20 +383,16 @@ export default function RobotLocalizationProject() {
             {/* Odometry model section */}
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div className="space-y-6 text-lg leading-relaxed text-gray-700">
-                <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52]">Motion Model</p>
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">Odometry Sampling</h3>
+                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">Motion Mode: Odometry Sampling</h3>
                 <p>
-                  The odometry motion model propagates each particle by sampling from a Gaussian centered on
-                  the wheel-encoder displacement Δ = [x′−xₜ₋₁, y′−yₜ₋₁, θ′−θₜ₋₁], with noise scaled by
-                  four tunable alpha parameters. This captures the mismatch between commanded and actual motion
-                  on real hardware.
+                  The odometry motion model predicts where the robot could move based on wheel encoder measurements.
+                   Since real robots never move exactly as commanded, I incorporated Gaussian noise into each particle's motion to simulate the uncertainty
+                    caused by wheel slip, uneven terrain, and sensor error.
                 </p>
+
                 <p>
-                  Angle wrapping to ±π was enforced rigorously throughout, a subtle but critical implementation
-                  detail that prevents particle divergence during turns. The
-                  <code className="bg-[#EFEAE0] px-2 py-0.5 text-sm font-mono mx-1">pf_ran_gaussian(sigma)</code>
-                  utility was used to draw noise samples, with sigma derived from the alpha parameters and
-                  the magnitude of the motion increment.
+                  To keep the localization stable during rotations, I carefully handled angle wrapping so orientation values always remained within a valid range of ±π and prevent particle divergence during turns.
+                   I also tuned the motion noise parameters to realistically model how uncertainty grows as the robot moves, resulting in more accurate and robust state estimation.
                 </p>
               </div>
 
@@ -426,14 +432,14 @@ export default function RobotLocalizationProject() {
             </div>
             <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700 mb-14">
               <p>
-                Both assignments tackle the same core problem (where is the robot?) but with different tradeoffs.
+                Both methods tackle the same core problem (where is the robot?) but with different tradeoffs.
                 The EKF is computationally efficient and provides a single Gaussian estimate, well-suited to the
                 smooth outdoor terrain where sensor noise is roughly Gaussian. The particle filter handles arbitrary,
                 multi-modal distributions and recovers from poor initialization, making it a better fit for the
                 structured indoor environment with ambiguous corridors.
               </p>
               <p>
-                Implementing both back-to-back gave a concrete sense of when each filter excels: EKFs for efficiency
+                Implementing both  gave a concrete sense of when each filter excels: EKFs for efficiency
                 and continuous state estimation in relatively predictable environments; particle filters for robustness
                 to initialization uncertainty and highly non-Gaussian observation models like the beam sensor.
               </p>
@@ -442,7 +448,7 @@ export default function RobotLocalizationProject() {
             <div className="grid lg:grid-cols-2 gap-6">
               {[
                 {
-                  label: "Assignment 4 · EKF",
+                  label: "Method 1 · EKF",
                   title: "Jackal on Canyon Terrain",
                   items: [
                     "6-DOF state: position + roll/pitch/yaw",
@@ -453,7 +459,7 @@ export default function RobotLocalizationProject() {
                   ]
                 },
                 {
-                  label: "Assignment 5 · Particle Filter",
+                  label: "Method 2 · Particle Filter",
                   title: "Husky in Wyman Building",
                   items: [
                     "3-DOF state: x, y, heading θ",

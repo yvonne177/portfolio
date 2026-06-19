@@ -76,8 +76,8 @@ export default function Portfolio() {
     },
     { 
       title: "Robot Localization Foundations", 
-      subtitle: "Implemented probabilistic localization systems, Extended Kalman Filter and Particle Filter.", 
-      image: "/portfolio/.png",
+      subtitle: "Implemented probabilistic localization systems Extended Kalman Filter and Particle Filter.", 
+      image: "/portfolio/ekf-localization.png",
       skills: ["C++ / ROS2", "Probabilistic Inference"],
       slug: "robot-localization"
     },
