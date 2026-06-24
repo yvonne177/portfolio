@@ -95,6 +95,20 @@ export default function Portfolio() {
       skills: ["Advanced Manufacturing", "Materials Engineering", "Thermal Design"],
       slug: "microchannel-heat-sinks"
     },
+    { 
+      title: "Desktop CNC Milling Machine Design", 
+      subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping applications.",
+      image: "/portfolio/cnc-milling-render.png",
+      skills: ["Mechanical Design", "Mechanism Selection", "CAD / SolidWorks"],
+      slug: "desktop-cnc-design"
+    },
+    { 
+      title: "Offset Gearbox Design", 
+      subtitle: "Conceptual design to 3D printing of an offset gearbox for automotive applications.",
+      image: "/portfolio/gearbox-casing.png",
+      skills: ["SolidWorks", "CAD", "3D Printing"],
+      slug: "offset-gearbox-design"
+    },
     // { 
     //   title: "Window Cable Tensioner", 
     //   subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
@@ -102,27 +116,13 @@ export default function Portfolio() {
     //   skills: ["SolidWorks", "FEA", "Manufacturing"],
     //   slug: "window-cable-tensioner"
     // },
-    // { 
-    //   title: "Desktop CNC Milling Machine Design", 
-    //   subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping, featuring a compact 3-axis configuration and modular tool head.",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["SolidWorks", "Mechanical Design"],
-    //   slug: "desktop-cnc-design"
-    // },
-    // { 
-    //   title: "Offset Gearbox Design", 
-    //   subtitle: "Conceptual design and simulation of an offset gearbox for automotive applications.",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["SolidWorks", "Mechanical Design"],
-    //   slug: "offset-gearbox-design"
-    // },
-    // { 
-    //   title: "Oscilloscope PCB Design", 
-    //   subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["PCB Design", "Electronics", "Simulation"],
-    //   slug: "oscilloscope-pcb-design"
-    // },
+    { 
+      title: "Oscilloscope PCB Design", 
+      subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
+      image: "/portfolio/oscilloscope-pcb-output.png",
+      skills: ["Eagle CAD", "PCB Layout", "Circuit Simulation"],
+      slug: "oscilloscope-pcb-design"
+    },
     // { 
     //   title: "Full Assembly Line Design for Castor Wheel Manufacturing", 
     //   subtitle: "Design and simulation of a full assembly line for castor wheel manufacturing.",
