@@ -11,6 +11,7 @@ export default function Portfolio() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(70);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const roles = [
     "Student",
@@ -22,117 +23,161 @@ export default function Portfolio() {
     "Outdoors Enthusiast"
   ];
 
+  const categories = [
+    "All",
+    "Robotics",
+    "Mechanical Design",
+    "Controls",
+    "Electronics",
+    "Research",
+  ];
+
   const projects = [
-    { 
-      title: "VISTA - Haptic Museum Display", 
-      subtitle: "Visual Information through Sensory Tactile Array for museum display accessibility.", 
+    {
+      title: "VISTA - Haptic Museum Display",
+      subtitle:
+        "Visual Information through Sensory Tactile Array for museum display accessibility.",
       image: "/portfolio/vista-cad-v1.jpeg",
       skills: ["Fusion 360", "Arduino", "Python"],
+      categories: ["Mechanical Design", "Research"],
       slug: "vista-tactile-display",
     },
 
-    { 
-      title: "Autonomous Maze-Solving Rover", 
-      subtitle: "Autonomous localization and block retrieval in predefined maze environment.", 
+    {
+      title: "Autonomous Maze-Solving Rover",
+      subtitle:
+        "Autonomous localization and block retrieval in predefined maze environment.",
       image: "/portfolio/autonomous-rover-cad.jpeg",
       skills: ["SolidWorks", "Arduino", "Python"],
-      slug: "autonomous-rover"
+      categories: ["Robotics", "Mechanical Design", "Electronics"],
+      slug: "autonomous-rover",
     },
 
     {
       title: "Capstone Tailgate System",
-      subtitle: "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150.",
+      subtitle:
+        "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150.",
       image: "/portfolio/tailgate-cad.png",
       skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
+      categories: ["Mechanical Design"],
       slug: "capstone-tailgate",
     },
-    { 
-      title: "Computer Integrated Surgery", 
-      subtitle: "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.", 
+
+    {
+      title: "Computer Integrated Surgery",
+      subtitle:
+        "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.",
       image: "/portfolio/pa3-icp.jpg",
       skills: ["MATLAB", "Linear Algebra", "Algorithm Design"],
-      slug: "computer-integrated-surgery"
+      categories: ["Robotics"],
+      slug: "computer-integrated-surgery",
     },
-    { 
-      title: "UR5e Robotic Arm Controls", 
-      subtitle: "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.", 
+
+    {
+      title: "UR5e Robotic Arm Controls",
+      subtitle:
+        "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.",
       image: "/portfolio/rdkdc-ur5e.png",
       skills: ["MATLAB", "ROS2", "Kinematics", "Controls"],
-      slug: "ur5e-controls"
+      categories: ["Robotics", "Controls"],
+      slug: "ur5e-controls",
     },
-    { 
-      title: "UR5 Manipulation Foundations", 
-      subtitle: "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.", 
+
+    {
+      title: "UR5 Manipulation Foundations",
+      subtitle:
+        "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.",
       image: "/portfolio/car_mesh.png",
       skills: ["C++ / ROS2", "Simulation to Hardware"],
-      slug: "ur5-manipulation"
+      categories: ["Robotics", "Controls"],
+      slug: "ur5-manipulation",
     },
-    { 
-      title: "Hapkit Bilateral Teleoperation", 
-      subtitle: "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.", 
+
+    {
+      title: "Hapkit Bilateral Teleoperation",
+      subtitle:
+        "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.",
       image: "/portfolio/hapkit.png",
       skills: ["Arduino / C++", "PD Control", "Force Feedback"],
-      slug: "hapkit"
+      categories: ["Robotics", "Controls"],
+      slug: "hapkit",
     },
-    { 
-      title: "Robot Localization Foundations", 
-      subtitle: "Implemented probabilistic localization systems Extended Kalman Filter and Particle Filter.", 
+
+    {
+      title: "Robot Localization Foundations",
+      subtitle:
+        "Implemented probabilistic localization systems Extended Kalman Filter and Particle Filter.",
       image: "/portfolio/ekf-localization.png",
       skills: ["C++ / ROS2", "Probabilistic Inference"],
-      slug: "robot-localization"
+      categories: ["Robotics", "Controls"],
+      slug: "robot-localization",
     },
-    { 
-      title: "Hand Tracking Surgical Robotic Assistance System", 
-      subtitle: "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.", 
+
+    {
+      title: "Hand Tracking Surgical Robotic Assistance System",
+      subtitle:
+        "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.",
       image: "/portfolio/franka-dual-mount.png",
       skills: ["Computer Vision", "ROS2", "Python"],
-      slug: "hand-tracking-assistance"
+      categories: ["Robotics", "Research"],
+      slug: "hand-tracking-assistance",
     },
-    { 
-      title: "Microchannel Heat Sinks via Advanced Manufacturing", 
-      subtitle: "Developed a manufacturing concept for a graphene-enhanced micro pin fin heat sink.",
+
+    {
+      title: "Microchannel Heat Sinks via Advanced Manufacturing",
+      subtitle:
+        "Developed a manufacturing concept for a graphene-enhanced micro pin fin heat sink.",
       image: "/portfolio/heatsink-pinfin-design.png",
-      skills: ["Advanced Manufacturing", "Materials Engineering", "Thermal Design"],
-      slug: "microchannel-heat-sinks"
+      skills: [
+        "Advanced Manufacturing",
+        "Materials Engineering",
+        "Thermal Design",
+      ],
+      categories: ["Research"],
+      slug: "microchannel-heat-sinks",
     },
-    { 
-      title: "Desktop CNC Milling Machine Design", 
-      subtitle: "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping applications.",
+
+    {
+      title: "Desktop CNC Milling Machine Design",
+      subtitle:
+        "Conceptual design and simulation of a desktop CNC milling machine for precision prototyping applications.",
       image: "/portfolio/cnc-milling-render.png",
-      skills: ["Mechanical Design", "Mechanism Selection", "CAD / SolidWorks"],
-      slug: "desktop-cnc-design"
+      skills: [
+        "Mechanical Design",
+        "Mechanism Selection",
+        "CAD / SolidWorks",
+      ],
+      categories: ["Mechanical Design"],
+      slug: "desktop-cnc-design",
     },
-    { 
-      title: "Offset Gearbox Design", 
-      subtitle: "Conceptual design to 3D printing of an offset gearbox for automotive applications.",
+
+    {
+      title: "Offset Gearbox Design",
+      subtitle:
+        "Conceptual design to 3D printing of an offset gearbox for automotive applications.",
       image: "/portfolio/gearbox-casing.png",
       skills: ["SolidWorks", "CAD", "3D Printing"],
-      slug: "offset-gearbox-design"
+      categories: ["Mechanical Design"],
+      slug: "offset-gearbox-design",
     },
-    // { 
-    //   title: "Window Cable Tensioner", 
-    //   subtitle: "Designed and prototyped a precision cable tensioning mechanism for automotive applications in collaboration with Magna International.", 
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["SolidWorks", "FEA", "Manufacturing"],
-    //   slug: "window-cable-tensioner"
-    // },
-    { 
-      title: "Oscilloscope PCB Design", 
-      subtitle: "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
+
+    {
+      title: "Oscilloscope PCB Design",
+      subtitle:
+        "Design and simulation of an oscilloscope PCB for signal analysis and measurement applications.",
       image: "/portfolio/oscilloscope-pcb-output.png",
       skills: ["Eagle CAD", "PCB Layout", "Circuit Simulation"],
-      slug: "oscilloscope-pcb-design"
+      categories: ["Electronics"],
+      slug: "oscilloscope-pcb-design",
     },
-    // { 
-    //   title: "Full Assembly Line Design for Castor Wheel Manufacturing", 
-    //   subtitle: "Design and simulation of a full assembly line for castor wheel manufacturing.",
-    //   image: "/portfolio/Banff_lakelouise.jpg",
-    //   skills: ["SolidWorks", "Manufacturing"],
-    //   slug: "castor-wheel-assembly-line"
-    // }
-
-    // FEA and CFD Projects
   ];
+
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter(project =>
+          project.categories.includes(selectedCategory)
+        );
 
   useEffect(() => {
 
@@ -536,15 +581,33 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-14">
             <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">
-              Selected Work
+              Featured Work
             </p>
             <h2 className="text-5xl md:text-6xl font-['Cormorant_Garamond'] text-[#18342E]">
               Projects & Research
             </h2>
+
+            <div className="flex flex-wrap gap-3 mt-10 mb-10">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-5 py-2 border transition-all duration-300 text-sm uppercase tracking-[0.15em]
+                    ${
+                      selectedCategory === category
+                        ? "bg-[#2A5C52] text-white border-[#2A5C52]"
+                        : "border-[#2A5C52]/30 text-[#2A5C52] hover:bg-[#2A5C52] hover:text-white"
+                    }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <Link 
                 key={project.slug}
                 to={`/portfolio/${project.slug}`}
