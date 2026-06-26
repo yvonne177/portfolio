@@ -397,10 +397,8 @@ export default function Portfolio() {
               <p className="uppercase tracking-[0.35em] text-sm mb-6 text-blue-100 font-medium">
                 Robotics • Mechanical Design • Research
               </p>
-              <h1 className="text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-8 font-['Cormorant_Garamond']">
-                Yvonne
-                <br />
-                Zhang
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-8 font-['Cormorant_Garamond'] whitespace-nowrap">
+                Yvonne Zhang
               </h1>
               <p className="text-xl sm:text-2xl text-blue-100 leading-relaxed max-w-xl mb-8 font-light">
                 Designing autonomous systems and human-centered engineering experiences through robotics, prototyping, and research.
