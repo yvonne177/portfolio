@@ -34,6 +34,16 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "Autonomous Bleeding Control",
+      subtitle:
+        "Perfused hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in partial nephrectomy.",
+      image: "/portfolio/lpn-1.jpg",
+      skills: ["SolidWorks", "Surgical Robotics", "Computer Vision"],
+      categories: ["Robotics", "Research"],
+      slug: "autonomous-bleed-control",
+    },
+
+    {
       title: "VISTA - Haptic Museum Display",
       subtitle:
         "Visual Information through Sensory Tactile Array for museum display accessibility.",
@@ -41,66 +51,6 @@ export default function Portfolio() {
       skills: ["Fusion 360", "Arduino", "Python"],
       categories: ["Mechanical Design", "Research"],
       slug: "vista-tactile-display",
-    },
-
-    {
-      title: "Autonomous Maze-Solving Rover",
-      subtitle:
-        "Autonomous localization and block retrieval in predefined maze environment.",
-      image: "/portfolio/autonomous-rover-cad.jpeg",
-      skills: ["SolidWorks", "Arduino", "Python"],
-      categories: ["Robotics", "Mechanical Design", "Electronics"],
-      slug: "autonomous-rover",
-    },
-
-    {
-      title: "Capstone Tailgate System",
-      subtitle:
-        "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150.",
-      image: "/portfolio/tailgate-cad.png",
-      skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
-      categories: ["Mechanical Design"],
-      slug: "capstone-tailgate",
-    },
-
-    {
-      title: "Computer Integrated Surgery",
-      subtitle:
-        "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.",
-      image: "/portfolio/pa3-icp.jpg",
-      skills: ["MATLAB", "Linear Algebra", "Algorithm Design"],
-      categories: ["Robotics"],
-      slug: "computer-integrated-surgery",
-    },
-
-    {
-      title: "UR5e Robotic Arm Controls",
-      subtitle:
-        "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.",
-      image: "/portfolio/rdkdc-ur5e.png",
-      skills: ["MATLAB", "ROS2", "Kinematics", "Controls"],
-      categories: ["Robotics", "Controls"],
-      slug: "ur5e-controls",
-    },
-
-    {
-      title: "UR5 Manipulation Foundations",
-      subtitle:
-        "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.",
-      image: "/portfolio/car_mesh.png",
-      skills: ["C++ / ROS2", "Simulation to Hardware"],
-      categories: ["Robotics", "Controls"],
-      slug: "ur5-manipulation",
-    },
-
-    {
-      title: "Hapkit Bilateral Teleoperation",
-      subtitle:
-        "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.",
-      image: "/portfolio/hapkit.png",
-      skills: ["Arduino / C++", "PD Control", "Force Feedback"],
-      categories: ["Robotics", "Controls"],
-      slug: "hapkit",
     },
 
     {
@@ -114,6 +64,66 @@ export default function Portfolio() {
     },
 
     {
+      title: "UR5 Manipulation Foundations",
+      subtitle:
+        "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.",
+      image: "/portfolio/car_mesh.png",
+      skills: ["C++ / ROS2", "Simulation to Hardware"],
+      categories: ["Robotics", "Controls"],
+      slug: "ur5-manipulation",
+    },
+
+    {
+      title: "UR5e Robotic Arm Controls",
+      subtitle:
+        "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.",
+      image: "/portfolio/rdkdc-ur5e.png",
+      skills: ["MATLAB", "ROS2", "Kinematics", "Controls"],
+      categories: ["Robotics", "Controls"],
+      slug: "ur5e-controls",
+    },
+
+    {
+      title: "Stereotactic Navigation System",
+      subtitle:
+        "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.",
+      image: "/portfolio/pa3-icp.jpg",
+      skills: ["MATLAB", "Linear Algebra", "Algorithm Design"],
+      categories: ["Robotics"],
+      slug: "computer-integrated-surgery",
+    },
+
+    {
+      title: "Hapkit Bilateral Teleoperation",
+      subtitle:
+        "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.",
+      image: "/portfolio/hapkit.png",
+      skills: ["Arduino / C++", "PD Control", "Force Feedback"],
+      categories: ["Robotics", "Controls"],
+      slug: "hapkit",
+    },
+
+    {
+      title: "World Models in Autonomous Driving",
+      subtitle:
+        "Controlled comparison of TD-MPC2 and DreamerV3 in CARLA examining sample-efficient learning and safety-relevant decision.",
+      image: "/portfolio/carla-world-model.png",
+      skills: ["World Models", "Reinforcement Learning"],
+      categories: ["Robotics", "Research"],
+      slug: "world-model-driving",
+    },
+
+    {
+      title: "Autonomous Maze-Solving Rover",
+      subtitle:
+        "Autonomous localization and block retrieval in predefined maze environment.",
+      image: "/portfolio/autonomous-rover-cad.jpeg",
+      skills: ["SolidWorks", "Arduino", "Python"],
+      categories: ["Robotics", "Mechanical Design", "Electronics"],
+      slug: "autonomous-rover",
+    },
+
+    {
       title: "Hand Tracking Surgical Robotic Assistance System",
       subtitle:
         "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.",
@@ -121,6 +131,16 @@ export default function Portfolio() {
       skills: ["Computer Vision", "ROS2", "Python"],
       categories: ["Robotics", "Research"],
       slug: "hand-tracking-assistance",
+    },
+
+    {
+      title: "Capstone Tailgate System",
+      subtitle:
+        "Purely mechanical design of a 2-in-1 multifunction tailgate for Ford F-150.",
+      image: "/portfolio/tailgate-cad.png",
+      skills: ["SolidWorks", "ANSYS FEA", "Machine Shop"],
+      categories: ["Mechanical Design"],
+      slug: "capstone-tailgate",
     },
 
     {
@@ -152,13 +172,13 @@ export default function Portfolio() {
     },
 
     {
-      title: "Offset Gearbox Design",
+      title: "Automated Chair Caster Assembly System",
       subtitle:
-        "Conceptual design to 3D printing of an offset gearbox for automotive applications.",
-      image: "/portfolio/gearbox-casing.png",
-      skills: ["SolidWorks", "CAD", "3D Printing"],
+        "Fully automated mass-production workcell for assembling 2-inch chair casters, covering sorting, orientation, positioner design, fixturing, and quality control.",
+      image: "/portfolio/castor-wheel-assembly.png",
+      skills: ["Pallet Conveyors", "Vibratory Feeders", "Positioner Design", "Cost Analysis"],
       categories: ["Mechanical Design"],
-      slug: "offset-gearbox-design",
+      slug: "castor-wheel-assembly",
     },
 
     {
@@ -169,6 +189,26 @@ export default function Portfolio() {
       skills: ["Eagle CAD", "PCB Layout", "Circuit Simulation"],
       categories: ["Electronics"],
       slug: "oscilloscope-pcb-design",
+    },
+
+    {
+      title: "Machine Shop: Pneumatic Air Pump Cylinder",
+      subtitle:
+        "Introductory machine shop course culminating in machining a working pneumatic air pump cylinder motor by hand using lathe, mill, and drill press.",
+      image: "/portfolio/machineshop-cylinder.png",
+      skills: ["Lathe", "Mill", "Drill Press", "Shop Safety"],
+      categories: ["Mechanical Design"],
+      slug: "machineshop-cylinder",
+    },
+
+    {
+      title: "Offset Gearbox Design",
+      subtitle:
+        "Conceptual design to 3D printing of an offset gearbox for automotive applications.",
+      image: "/portfolio/gearbox-casing.png",
+      skills: ["SolidWorks", "CAD", "3D Printing"],
+      categories: ["Mechanical Design"],
+      slug: "offset-gearbox-design",
     },
   ];
 

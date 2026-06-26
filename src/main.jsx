@@ -19,8 +19,11 @@ import DesktopCNCDesign from './projects/DesktopCNCDesign.jsx'
 import OffsetGearboxDesign from './projects/OffsetGearboxDesign.jsx'
 import OscilloscopePCBDesign from './projects/OscilloscopePCBDesign.jsx'
 
+import AutonomousBleedControl from './projects/AutonomousBleedControl.jsx'
+import WorldModelDriving from './projects/WorldModelDriving.jsx'
+import CastorWheelAssemblyLine from './projects/CastorWheelAssemblyLine.jsx'
+import MachineShopCylinder from './projects/MachineShopCylinder.jsx'
 // import WindowCableTensioner from './projects/WindowCableTensioner.jsx'
-// import CastorWheelAssemblyLine from './projects/CastorWheelAssemblyLine.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,7 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/capstone-tailgate" element={<CapstoneTailgate />} />
         <Route path="/portfolio/computer-integrated-surgery" element={<ComputerIntegratedSurgery/>} />
         <Route path="/portfolio/ur5e-controls" element={<UR5eControls/>} />
-        <Route path="portfolio/ur5-manipulation" element={<UR5ManipulationFoundations/>} />
+        <Route path="/portfolio/ur5-manipulation" element={<UR5ManipulationFoundations/>} />
         <Route path="/portfolio/hapkit" element={<HapticsTeleoperation/>} />
         <Route path="/portfolio/robot-localization" element={<RobotLocalizationProject/>} />
         <Route path="/portfolio/hand-tracking-assistance" element={<HandTrackingAssistance />} />
@@ -40,12 +43,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/portfolio/desktop-cnc-design" element={<DesktopCNCDesign />} />
         <Route path="/portfolio/offset-gearbox-design" element={<OffsetGearboxDesign />} />
         <Route path="/portfolio/oscilloscope-pcb-design" element={<OscilloscopePCBDesign />} />
+        <Route path="/portfolio/autonomous-bleed-control" element={<AutonomousBleedControl />} />
+        <Route path="/portfolio/world-model-driving" element={<WorldModelDriving />} />
+        <Route path="/portfolio/castor-wheel-assembly" element={<CastorWheelAssemblyLine />} />
+        <Route path="/portfolio/machineshop-cylinder" element={<MachineShopCylinder />} />
 
-        {/*
+        {/* <Route path="/portfolio/window-cable-tensioner" element={<WindowCableTensioner />} /> */}
 
-        <Route path="/portfolio/window-cable-tensioner" element={<WindowCableTensioner />} />
-        <Route path="/portfolio/castor-wheel-assembly-line" element={<CastorWheelAssemblyLine />} /> */}
-                {/* Catch-all route - redirect to portfolio */}
+        {/* Catch-all route - redirect to portfolio */}
         <Route path="/" element={<Portfolio />} />
       </Routes>
     </Router>
