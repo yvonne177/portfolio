@@ -466,167 +466,37 @@ export default function WorldModelsAutonomousDriving() {
 
           </section>
 
-          {/* KEY OBSERVATIONS */}
-          <section>
+          {/* KEY INSIGHTS & FUTURE WORK */}
+            <section>
 
             <div className="mb-10">
-              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Analysis</p>
-              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
-                Key Observations
-              </h2>
+                <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Findings</p>
+                <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
+                Key Insights
+                </h2>
             </div>
 
-            <div className="space-y-10">
+            <div className="space-y-6 text-lg leading-relaxed text-gray-700 max-w-4xl">
 
-              <div>
-                <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
-                  Asymmetric Safety Transfer
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Zero collisions were recorded across every configuration and condition for
-                  both algorithms. The collision penalty, scaled by speed, exceeds the
-                  cumulative positive reward from any plausible collision trajectory, so it
-                  functions as a near-hard constraint even outside the training distribution.
-                  The out-of-lane penalty is roughly two orders of magnitude smaller, and the
-                  agents learned policies that disregard it once it competes with waypoint
-                  progress. In-distribution, lane-keeping happens to hold; under the left-turn
-                  shift, it fails completely while collision avoidance persists. Reward
-                  magnitude relative to competing terms, not the structural form of the
-                  constraint, determines which constraints survive distribution shift.
+                <p>
+                <span className="font-semibold text-[#18342E]">Safety depends more on the reward than the algorithm.</span> A large collision penalty consistently prevented crashes, even in new scenarios. A much smaller lane-keeping penalty, however, was not enough, causing the vehicle to leave its lane during an unseen left-turn scenario.
                 </p>
-              </div>
 
-              <div>
-                <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
-                  Distribution Shift Exposes the Limits of Reward Shaping
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Both methods perform well in-distribution but fail completely on the
-                  left-turn task, where the only difference from training is the direction of
-                  the maneuver. Neither method had any experience with left turns, and reward
-                  shaping offers no mechanism for the agent to remain safe once its learned
-                  model becomes irrelevant.
+                <p>
+                <span className="font-semibold text-[#18342E]">The input data matters more than a larger model.</span> Removing the front camera, which was affected by weather and lighting, improved performance more than increasing training time or planning farther ahead. Policies using only the bird's-eye view (BEV) were more reliable.
                 </p>
-              </div>
 
-              <div>
-                <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
-                  Observation Modality Affects Robustness More Than Model Capacity
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The largest single improvement came not from additional training budget or a
-                  longer planning horizon, but from removing the front-camera observation. The
-                  BEV channel carried enough information for the right-turn task on its own,
-                  while the camera introduced weather and lighting dependencies that propagated
-                  into the learned policy.
+                <p>
+                <span className="font-semibold text-[#18342E]">Good test results do not guarantee safety.</span> The agent completed 60 normal test episodes without collisions, but this did not carry over to new situations. Without additional safety checks, unsafe actions were still executed, leading to lane departures in every unseen left-turn test.
                 </p>
-              </div>
 
-              <div>
-                <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
-                  Checkpoint Selection Materially Affects Reported Performance
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The same training run produced 100% baseline success at the optimal
-                  checkpoint and 86.7% at the final checkpoint. Conclusions drawn from a final
-                  training step, without validation-based selection, can misstate the actual
-                  performance of the policy.
+                <p className="border-t border-[#D9D3C7] pt-6 mt-8">
+                <span className="font-semibold text-[#18342E]">Future work: A layered safety approach.</span> Future systems should combine three safety layers: (1) runtime safety checks to block unsafe actions, (2) training methods that automatically balance task performance and safety, and (3) risk-aware objectives that optimize for worst-case scenarios instead of average performance.
                 </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
-                  Empirical Safety Is Not Principled Safety
-                </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Zero collisions across 60 in-distribution episodes is the lowest tier of
-                  safety claim available: it is empirical, not a guarantee. No shield, control
-                  barrier function, reachability set, or safety filter is present in the
-                  pipeline, so any unsafe action is executed without modification. The 100%
-                  out-of-lane failure on the left-turn task makes this concrete: a safety
-                  property that holds in-distribution does not necessarily hold outside it.
-                </p>
-              </div>
 
             </div>
 
-          </section>
-
-          {/* NEXT STEPS */}
-          <section>
-
-            <div className="mb-10">
-              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Future Work</p>
-              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
-                Toward a Layered Safety Architecture
-              </h2>
-            </div>
-
-            <div className="max-w-4xl text-lg leading-relaxed text-gray-700 mb-12">
-              <p>
-                Closing the gap between empirical and principled safety calls for a layered
-                architecture in which each layer contributes a different class of guarantee,
-                so the layers complement rather than duplicate one another.
-              </p>
-            </div>
-
-            <div className="space-y-10">
-
-              <div className="grid lg:grid-cols-[0.3fr_1.7fr] gap-6 items-start border-l-4 border-[#2A5C52] pl-6">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">
-                  Runtime Layer
-                </h3>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.15em] text-[#2A5C52] mb-3">Control Barrier Functions</p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    A safety filter sits between the policy and the simulator actuators,
-                    encoding the lane boundary as a safe set and a minimum time-to-collision as
-                    a temporal constraint. Any proposed action that would leave the safe set is
-                    projected onto the nearest action that maintains it, providing a
-                    deterministic guarantee conditional on the accuracy of the dynamics model
-                    used for the projection.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-[0.3fr_1.7fr] gap-6 items-start border-l-4 border-[#2A5C52] pl-6">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">
-                  Training Layer
-                </h3>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.15em] text-[#2A5C52] mb-3">Constrained Optimization</p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    Collisions and lane departures are tracked as a separate cost signal rather
-                    than folded into the scalar reward, using a Lagrangian formulation or
-                    Constrained Policy Optimization. The Lagrangian multiplier auto-tunes the
-                    effective safety penalty during training, removing the manual tuning of
-                    penalty magnitudes that proved consequential in the experiments above, and
-                    yields a probabilistic guarantee that the cost constraint holds in
-                    expectation after training.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-[0.3fr_1.7fr] gap-6 items-start border-l-4 border-[#2A5C52] pl-6">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">
-                  Objective Layer
-                </h3>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.15em] text-[#2A5C52] mb-3">Risk-Aware Reward</p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    The expected-return objective is replaced with Conditional Value-at-Risk
-                    over the worst-performing fraction of episodes. Average-reward objectives
-                    favor a policy that fails catastrophically in a small fraction of episodes
-                    over one with a higher success rate but no catastrophic failures; a
-                    risk-sensitive objective explicitly maximizes the lower tail of the return
-                    distribution instead.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-
-          </section>
+            </section>
 
         </div>
       </section>

@@ -195,7 +195,7 @@ export default function Portfolio() {
       title: "Machine Shop: Pneumatic Air Pump Cylinder",
       subtitle:
         "Introductory machine shop course culminating in machining a working pneumatic air pump cylinder motor by hand using lathe, mill, and drill press.",
-      image: "/portfolio/machineshop-cylinder.png",
+      image: "/portfolio/pneumatic-final-3.png",
       skills: ["Lathe", "Mill", "Drill Press", "Shop Safety"],
       categories: ["Mechanical Design"],
       slug: "machineshop-cylinder",

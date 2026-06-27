@@ -22,6 +22,21 @@ export default function MachineShopPneumaticCylinder() {
     setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 100);
   };
 
+  const gallery = [
+    {
+      src: "/portfolio/pneumatic-final-1.png",
+      alt: "Finished pneumatic cylinder motor, front view",
+    },
+    {
+      src: "/portfolio/pneumatic-final-2.png",
+      alt: "Finished pneumatic cylinder motor, side view",
+    },
+    {
+      src: "/portfolio/pneumatic-final-3.png",
+      alt: "Finished pneumatic cylinder motor, 3/4 view",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#F5F3EE] text-gray-900 overflow-x-hidden">
 
@@ -133,24 +148,20 @@ export default function MachineShopPneumaticCylinder() {
 
             </div>
 
-            {/* RIGHT: skills card */}
+            {/* RIGHT */}
             <div className="relative flex justify-center">
-              <div className="bg-white p-8 shadow-2xl rotate-[2deg] max-w-md w-full">
-                <p className="uppercase tracking-[0.2em] text-xs text-[#2A5C52] mb-6">
-                  Machines Used
+              <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
+                <div className="bg-gray-100 flex items-center justify-center">
+                  <img
+                    src="/portfolio/pneumatic-final-3.png"
+                    alt="Hand-machined pneumatic air pump cylinder motor"
+                    className="w-full h-[420px] object-contain"
+                  />
+                </div>
+
+                <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
+                  Hand-machined pneumatic cylinder motor
                 </p>
-                <ul className="space-y-4 text-gray-700">
-                  {[
-                    ["Drill Press", "Hole drilling and reaming"],
-                    ["Lathe", "Turning, facing, boring"],
-                    ["Mill", "Slotting and port machining"],
-                  ].map(([machine, use], idx) => (
-                    <li key={idx} className="flex justify-between items-baseline border-b border-[#D9D3C7] pb-3 last:border-0 last:pb-0">
-                      <span className="font-['Cormorant_Garamond'] text-xl text-[#18342E]">{machine}</span>
-                      <span className="text-xs text-gray-500 text-right ml-4">{use}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
 
@@ -207,75 +218,6 @@ export default function MachineShopPneumaticCylinder() {
             </div>
           </section>
 
-          {/* PROCESS */}
-          <section>
-
-            <div className="mb-10">
-              <p className="uppercase tracking-[0.35em] text-sm text-[#2A5C52] mb-3">Process</p>
-              <h2 className="text-3xl md:text-4xl font-['Cormorant_Garamond'] text-[#18342E]">
-                From Safety Training to Final Assembly
-              </h2>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 text-center">
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Shop Safety
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  PPE & Setup
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Drill Press
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Hole Drilling
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Lathe
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Cylinder & Piston
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Mill
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Ports & End Caps
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Final Assembly
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Fit & Test
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
           {/* FINAL PROJECT */}
           <section>
 
@@ -295,6 +237,24 @@ export default function MachineShopPneumaticCylinder() {
                 course. Getting the parts to fit and move together was the real test of
                 whether each operation had been done correctly.
               </p>
+            </div>
+
+            {/* IMAGE GALLERY */}
+            <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {gallery.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white border border-[#D9D3C7] shadow-lg p-4"
+                >
+                  <div className="bg-gray-100 flex items-center justify-center">
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="w-full h-auto object-contain max-h-[350px]"
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
 
           </section>
