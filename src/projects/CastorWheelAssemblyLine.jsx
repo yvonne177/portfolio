@@ -277,7 +277,7 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figure 1 — exploded view of the six caster parts */}
             <div className="max-w-3xl mt-12">
               <PhotoSpot
-                src="/portfolio/caster-parts.png" {/* Fig 1 */}
+                src="/portfolio/caster-parts.png"
                 alt="Chair Caster Parts"
                 caption="The six parts of the 2-inch chair caster: housing, two wheels, axel, bolt, washer, and nut."
                 ratio="aspect-[3/2]"
@@ -307,7 +307,7 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figure 2 — annotated workcell layout */}
             <div className="mb-16">
               <PhotoSpot
-                src="/portfolio/caster-workcell.png" {/* Fig 2 */}
+                src="/portfolio/caster-workcell.png"
                 alt="Workcell Layout"
                 caption="Workcell layout with the four assembly sections marked. Blue circles are sorting bowls, green tracks are flip stations, red boxes are positioners."
                 ratio="aspect-[16/9]"
@@ -499,17 +499,17 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figures 4-6 — vibratory feeding diagrams */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
               <PhotoSpot
-                src="/portfolio/caster-housing-feed.png" {/* Fig 4 */}
+                src="/portfolio/caster-housing-feed.png"
                 alt="Housing Feeding"
                 caption="Top view of vibratory feeding for the housing."
               />
               <PhotoSpot
-                src="/portfolio/caster-wheel-feed.png" {/* Fig 5 */}
+                src="/portfolio/caster-wheel-feed.png"
                 alt="Wheel 2A Feeding"
                 caption="Vibratory feeding and orientation of the 2A wheels."
               />
               <PhotoSpot
-                src="/portfolio/caster-bolt-feed.png" {/* Fig 6 */}
+                src="/portfolio/caster-bolt-feed.png"
                 alt="Bolt Feeding"
                 caption="Vibratory feeding of the bolts."
               />
@@ -613,13 +613,13 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figures 7 & Appendix — representative positioner configurations */}
             <div className="grid sm:grid-cols-2 gap-6 mt-12 max-w-3xl">
               <PhotoSpot
-                src="/portfolio/caster-positioner-2dof.png" {/* Fig 7 */}
+                src="/portfolio/caster-positioner-2dof.png"
                 alt="2-DOF Positioner"
                 caption="Two-DOF positioner that lowers along Z to pick up the washer and reaches along X to place it."
                 ratio="aspect-[3/4]"
               />
               <PhotoSpot
-                src="/portfolio/caster-positioner-3dof.png" {/* Fig 8 */}
+                src="/portfolio/caster-positioner-3dof.png"
                 alt="3-DOF Positioner"
                 caption="Three-DOF positioner with an added rotation axis for the nut and Compound A screwing steps."
                 ratio="aspect-[3/4]"
@@ -659,17 +659,17 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figures 8-10 — fixture diagrams */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
               <PhotoSpot
-                src="/portfolio/caster-housing-fixture.png" {/* Fig 9 */}
+                src="/portfolio/caster-housing-fixture.png"
                 alt="Housing Fixture"
                 caption="Housing fixture with locators on the indentation walls."
               />
               <PhotoSpot
-                src="/portfolio/caster-assembly-fixture.png" {/* Fig 10 */}
+                src="/portfolio/caster-assembly-fixture.png"
                 alt="Final Assembly Fixture"
                 caption="Final assembly fixture holding wheel 2A in a wheel-shaped indentation."
               />
               <PhotoSpot
-                src="/portfolio/caster-fixture-topview.png" {/* Fig 11 */}
+                src="/portfolio/caster-fixture-topview.png"
                 alt="Assembly Fixture Top View"
                 caption="Top view showing the retractable prongs that stop the pallet at each step."
               />
@@ -773,12 +773,12 @@ export default function AutomatedChairCasterAssembly() {
             {/* Figures 11-12 — redesign concepts */}
             <div className="grid sm:grid-cols-2 gap-6 mt-14">
               <PhotoSpot
-                src="/portfolio/caster-housing-redesign.png" {/* Fig 12 */}
+                src="/portfolio/caster-housing-redesign.png"
                 alt="Housing Redesign"
                 caption="Housing redesign combining the bolt, washer, nut, and housing into one part."
               />
               <PhotoSpot
-                src="/portfolio/caster-wheel-redesign.png" {/* Fig 13 */}
+                src="/portfolio/caster-wheel-redesign.png"
                 alt="Wheel Redesign"
                 caption="Wheel redesign integrating the axel into a single wheel."
               />
