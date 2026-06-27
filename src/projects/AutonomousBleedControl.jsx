@@ -98,7 +98,7 @@ export default function AutonomousBleedingControl() {
             <div className="text-white">
 
               <p className="uppercase tracking-[0.35em] text-sm mb-5 text-blue-100 font-medium">
-                Surgical Robotics • Perfused Phantoms • Bleeding Perception
+                Surgical Robotics • Hydrogel Phantoms • Bleeding Perception
               </p>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-8 font-['Cormorant_Garamond']">
@@ -110,7 +110,7 @@ export default function AutonomousBleedingControl() {
               </h1>
 
               <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mb-10 font-light">
-                A perfused hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in robot-assisted partial nephrectomy.
+                A hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in robot-assisted partial nephrectomy.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
@@ -136,14 +136,14 @@ export default function AutonomousBleedingControl() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
                 <div className="bg-gray-100 flex items-center justify-center">
                   <img
-                    src="/portfolio/lpn-1.jpg"
-                    alt="Perfused kidney phantom with embedded tumors"
+                    src="/portfolio/rapn-setup.png"
+                    alt="Kidney phantom with embedded tumors"
                     className="w-full h-[420px] object-contain"
                   />
                 </div>
 
                 <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
-                  Perfused kidney phantom with embedded renal cavity pump
+                  Kidney phantom with embedded renal cavity pump
                 </p>
               </div>
             </div>
@@ -169,7 +169,7 @@ export default function AutonomousBleedingControl() {
             <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-10 lg:p-12">
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Built a perfused hydrogel phantom platform to simulate intraoperative bleeding during
+                Built a hydrogel phantom platform to simulate intraoperative bleeding during
                 robot-assisted partial nephrectomy, then used it to generate training data for a
                 two-stage perception pipeline that detects and localizes bleeding sources in real time.
               </p>
@@ -226,8 +226,8 @@ export default function AutonomousBleedingControl() {
                 Current robotic surgical systems offer no autonomous way to detect bleeding or maintain a
                 clear field of view. Closing that gap requires two things that did not exist together
                 before this project: a physically realistic, repeatable way to generate bleeding for
-                training data, and a perception system that can localize it. Our team, working in the
-                CIS II practicum at Johns Hopkins under mentorship from the IMERSE lab, built both.
+                training data, and a perception system that can localize it. Our team working under mentorship from the IMERSE (Intelligent Medical Robotic Systems and Equipment) Lab 
+                built a system that could generate realistic bleeding in kidney phantoms and localize it using a perception model.
               </p>
             </div>
 
@@ -278,7 +278,7 @@ export default function AutonomousBleedingControl() {
 
               <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
                 <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Perfused Phantom
+                  Hydrogel Phantom
                 </h3>
                 <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
                   Controlled Bleeding
@@ -307,6 +307,20 @@ export default function AutonomousBleedingControl() {
                 </p>
               </div>
 
+            </div>
+
+            {/* Workflow Figure */}
+            <div className="mt-14">
+              <div className="bg-white p-4 shadow-xl">
+                <img
+                  src="/portfolio/rapn-workflow.png"
+                  alt="Overview of the proposed system workflow"
+                  className="w-full object-contain"
+                />
+              </div>
+              <p className="text-center mt-3 text-sm text-gray-500 leading-relaxed max-w-3xl mx-auto">
+                Overview of the proposed system workflow, including custom bleeding phantom manufacturing, data collection, and vision-based bleeding segmentation pipeline.
+              </p>
             </div>
 
           </section>
@@ -341,7 +355,7 @@ export default function AutonomousBleedingControl() {
                   </h3>
                   <p className="text-sm uppercase tracking-[0.15em] text-[#2A5C52]">Renal Anatomy-Inspired Flow</p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Designed a closed-loop perfusion system embedded in the hydrogel phantom, with an
+                    Designed a perfusion system embedded in the hydrogel phantom, with an
                     inlet vein, outlet artery, and an internal cavity analogous to the renal pelvis. The
                     layout enables pressure-driven fluid flow and controlled bleeding release at
                     tumor-adjacent cut sites, reproducing the vascular pressure dynamics that drive
@@ -363,7 +377,7 @@ export default function AutonomousBleedingControl() {
                   </ul>
                 </div>
                 <div className="bg-white p-4 shadow-xl">
-                  <img src="/portfolio/lpn-2.png" alt="Annotated kidney perfusion design schematic" className="w-full h-[240px] object-contain" />
+                  <img src="/portfolio/rapn-kidney-drawing.png" alt="Annotated kidney perfusion design schematic" className="w-full h-[240px] object-contain" />
                   <p className="text-center mt-3 text-xs uppercase tracking-[0.12em] text-gray-500">Inlet vein, outlet artery, and renal pelvis cavity</p>
                 </div>
               </div>
@@ -381,11 +395,6 @@ export default function AutonomousBleedingControl() {
                     bottom and lateral outlet holes acting as fill indicators. A positioning peg fixes the
                     core within the mold cavity to keep wall thickness uniform across casts.
                   </p>
-                  <div className="bg-[#EFEAE0] border border-[#D9D3C7] px-6 py-4 font-mono text-sm text-[#18342E] space-y-1">
-                    <div>Top pour → silicone fills core/cavity gap</div>
-                    <div>Bottom + lateral outlets confirm full fill</div>
-                    <div>Lateral holes sealed with 3D-printed pins</div>
-                  </div>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     After demolding, the silicone component is released by cutting a slit at the top of
                     the cavity, then resealed with Sil-Poxy adhesive, formulated specifically for bonding
@@ -393,7 +402,7 @@ export default function AutonomousBleedingControl() {
                   </p>
                 </div>
                 <div className="bg-white p-4 shadow-xl">
-                  <img src="/portfolio/lpn-3.png" alt="3D-printed mold for the renal cavity pump system" className="w-full h-[240px] object-contain" />
+                  <img src="/portfolio/rapn-mold-design.png" alt="3D-printed mold for the renal cavity pump system" className="w-full h-[240px] object-contain" />
                   <p className="text-center mt-3 text-xs uppercase tracking-[0.12em] text-gray-500">Mold fill points and positioning peg</p>
                 </div>
               </div>
@@ -406,7 +415,7 @@ export default function AutonomousBleedingControl() {
                   </h3>
                   <p className="text-sm uppercase tracking-[0.15em] text-[#2A5C52]">Fabrication & Validation</p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Fabricated two kidney phantoms at the IMERSE lab using the mold system above, with
+                    Fabricated two kidney phantoms at the IMERSE Lab using the mold system above, with
                     tumor placements accessible from the superior and anterior aspects of the kidney.
                     Each phantom was validated by confirming proportional inlet-outlet flow and comparing
                     the resulting bleeding behavior against intraoperative clinical video for visual
@@ -424,7 +433,7 @@ export default function AutonomousBleedingControl() {
                   </ul>
                 </div>
                 <div className="bg-white p-4 shadow-xl">
-                  <img src="/portfolio/lpn-4.jpg" alt="Final two kidney phantoms with embedded pump systems" className="w-full h-[240px] object-contain" />
+                  <img src="/portfolio/rapn-final-tumors.png" alt="Final two kidney phantoms with embedded pump systems" className="w-full h-[240px] object-contain" />
                   <p className="text-center mt-3 text-xs uppercase tracking-[0.12em] text-gray-500">Two completed kidney phantoms</p>
                 </div>
               </div>
@@ -449,7 +458,7 @@ export default function AutonomousBleedingControl() {
                     <div>
                       <p className="font-semibold text-[#18342E] mb-2">Data Collection Setup</p>
                       <p className="text-lg text-gray-700 leading-relaxed">
-                        Connected an Olympus OFP-2 flushing pump to the perfused phantom and recorded RGB
+                        Connected an Olympus OFP-2 flushing pump to the phantom and recorded RGB
                         video at both local (close, fine-detail) and global (wide, full-distribution)
                         camera views. The setup was extended to three additional custom phantoms with
                         unique tumor geometries, plus manual on-clamp procedures, producing 83 annotated
@@ -459,12 +468,12 @@ export default function AutonomousBleedingControl() {
                   </div>
                   <div className="space-y-4">
                     <div className="bg-white p-4 shadow-xl">
-                      <img src="/portfolio/lpn-5.png" alt="Blood-to-water ratio calibration test" className="w-full h-[200px] object-contain" />
-                      <p className="text-center mt-2 text-xs uppercase tracking-[0.12em] text-gray-500">Blood mixture calibration (11:10)</p>
+                      <img src="/portfolio/rapn-phantom-setup.png" alt="Data collection setup with pump" className="w-full h-[200px] object-contain" />
+                      <p className="text-center mt-2 text-xs uppercase tracking-[0.12em] text-gray-500">Phantom data collection setup</p>
                     </div>
                     <div className="bg-white p-4 shadow-xl">
-                      <img src="/portfolio/lpn-6.jpg" alt="Data collection setup with perfusion pump" className="w-full h-[200px] object-contain" />
-                      <p className="text-center mt-2 text-xs uppercase tracking-[0.12em] text-gray-500">Perfused phantom data collection setup</p>
+                      <img src="/portfolio/rapn-globalview-localview-data.png" alt="Examples of data collection from phantom showing global and local views" className="w-full h-[200px] object-contain" />
+                      <p className="text-center mt-2 text-xs uppercase tracking-[0.12em] text-gray-500">Global view (left) and local bleeding source (right)</p>
                     </div>
                   </div>
                 </div>

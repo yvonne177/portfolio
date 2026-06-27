@@ -37,7 +37,7 @@ export default function Portfolio() {
       title: "Autonomous Bleeding Control",
       subtitle:
         "Perfused hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in partial nephrectomy.",
-      image: "/portfolio/lpn-1.jpg",
+      image: "/portfolio/rapn-setup.png",
       skills: ["SolidWorks", "Surgical Robotics"],
       categories: ["Robotics", "Research"],
       slug: "autonomous-bleed-control",
