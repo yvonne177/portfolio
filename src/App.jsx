@@ -57,7 +57,7 @@ export default function Portfolio() {
       title: "Robot Localization Foundations",
       subtitle:
         "Implemented probabilistic localization systems Extended Kalman Filter and Particle Filter.",
-      image: "/portfolio/ekf-localization.png",
+      image: "/portfolio/localization-ekf.png",
       skills: ["C++ / ROS2", "Probabilistic Inference"],
       categories: ["Robotics", "Controls"],
       slug: "robot-localization",
@@ -67,7 +67,7 @@ export default function Portfolio() {
       title: "UR5 Manipulation Foundations",
       subtitle:
         "Built the mathematical foundations for autonomous robot manipulation: kinematics, hand-eye calibration, and collision-free path planning.",
-      image: "/portfolio/car_mesh.png",
+      image: "/portfolio/ur5-car-mesh.png",
       skills: ["C++ / ROS2", "Simulation to Hardware"],
       categories: ["Robotics", "Controls"],
       slug: "ur5-manipulation",
@@ -77,7 +77,7 @@ export default function Portfolio() {
       title: "UR5e Robotic Arm Controls",
       subtitle:
         "Comparison of Resolved-Rate and Inverse Kinematics control methods for a UR5e manipulator Push-and-Place task.",
-      image: "/portfolio/rdkdc-ur5e.png",
+      image: "/portfolio/ur5e-rdkdc.png",
       skills: ["MATLAB", "ROS2", "Kinematics", "Controls"],
       categories: ["Robotics", "Controls"],
       slug: "ur5e-controls",
@@ -87,7 +87,7 @@ export default function Portfolio() {
       title: "Stereotactic Navigation System",
       subtitle:
         "Developed a surgical navigation pipeline for solving rigid-body registration, EM distortion correction, and surface alignment.",
-      image: "/portfolio/pa3-icp.jpg",
+      image: "/portfolio/stereo-pa3-icp.jpg",
       skills: ["MATLAB", "Linear Algebra", "Algorithm Design"],
       categories: ["Robotics"],
       slug: "computer-integrated-surgery",
@@ -97,7 +97,7 @@ export default function Portfolio() {
       title: "Hapkit Bilateral Teleoperation",
       subtitle:
         "Dual-Hapkit bilateral teleoperation system implementing position exchange, position scaling, and force scaling.",
-      image: "/portfolio/hapkit.png",
+      image: "/portfolio/hapkit-device.png",
       skills: ["Arduino / C++", "PD Control", "Force Feedback"],
       categories: ["Robotics", "Controls"],
       slug: "hapkit",
@@ -107,7 +107,7 @@ export default function Portfolio() {
       title: "World Models in Autonomous Driving",
       subtitle:
         "Controlled comparison of TD-MPC2 and DreamerV3 in CARLA examining sample-efficient learning and safety-relevant decision.",
-      image: "/portfolio/carla-world-model.png",
+      image: "/portfolio/world-model.png",
       skills: ["World Models", "Reinforcement Learning"],
       categories: ["Robotics", "Research"],
       slug: "world-model-driving",
@@ -117,7 +117,7 @@ export default function Portfolio() {
       title: "Autonomous Maze-Solving Rover",
       subtitle:
         "Autonomous localization and block retrieval in predefined maze environment.",
-      image: "/portfolio/autonomous-rover-cad.jpeg",
+      image: "/portfolio/rover-cad.jpeg",
       skills: ["SolidWorks", "Arduino", "Python"],
       categories: ["Robotics", "Mechanical Design", "Electronics"],
       slug: "autonomous-rover",

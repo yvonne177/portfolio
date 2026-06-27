@@ -147,7 +147,7 @@ export default function HapticsTeleoperation() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
                 <div className="bg-gray-100 flex items-center justify-center">
                   <img
-                    src="/portfolio/hapkit.png"
+                    src="/portfolio/hapkit-device.png"
                     alt="Hapkit bilateral teleoperation setup"
                     className="w-full h-[420px] object-contain"
                   />

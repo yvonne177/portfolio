@@ -166,7 +166,7 @@ export default function AutonomousRover() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
 
                 <img
-                  src="/portfolio/Rover_FullBody.png"
+                  src="/portfolio/rover-full-body.png"
                   alt="Autonomous Rover"
                   className="w-full h-[420px] object-contain"
                 />
@@ -447,8 +447,8 @@ export default function AutonomousRover() {
             <div className="grid md:grid-cols-2 gap-8">
 
               {[
-                "/portfolio/autonomous-rover-cad.jpeg",
-                "/portfolio/Rover_FullBody.png"
+                "/portfolio/rover-cad.jpeg",
+                "/portfolio/rover-full-body.png"
               ].map((image, idx) => (
 
                 <div
@@ -516,7 +516,7 @@ export default function AutonomousRover() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/TopPower.png"
+                  src="/portfolio/rover-top-power.png"
                   alt="Top Electronics Layout"
                   className="w-full h-[320px] object-contain"
                 />
@@ -526,7 +526,7 @@ export default function AutonomousRover() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/BottomPower.png"
+                  src="/portfolio/rover-bottom-power.png"
                   alt="Bottom Electronics Layout"
                   className="w-full h-[320px] object-contain"
                 />
@@ -563,7 +563,7 @@ export default function AutonomousRover() {
             <div className="bg-white p-6 shadow-xl mb-12">
 
               <img
-                src="/portfolio/control_architecture.png"
+                src="/portfolio/rover-control-architecture.png"
                 alt="Rover control architecture"
                 className="w-full max-w-4xl mx-auto object-contain"
               />
@@ -587,7 +587,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/side_sensor_angle.png"
+                      src="/portfolio/rover-side-sensor-angle.png"
                       alt="Side sensor angle detection"
                       className="w-full h-[300px] object-contain"
                     />
@@ -595,7 +595,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/ultrasoundsensor_setup.png"
+                      src="/portfolio/rover-ultrasound-sensor-setup.png"
                       alt="Ultrasonic sensor setup"
                       className="w-full h-[300px] object-contain"
                     />
@@ -620,7 +620,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/maze_index_map.png"
+                      src="/portfolio/rover-maze-index-map.png"
                       alt="Maze map"
                       className="w-full h-[280px] object-contain"
                     />
@@ -628,7 +628,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/wall_blocking_pattern.png"
+                      src="/portfolio/rover-wall-blocking-pattern.png"
                       alt="Wall patterns"
                       className="w-full h-[280px] object-contain"
                     />
@@ -639,7 +639,7 @@ export default function AutonomousRover() {
                 <div className="bg-white p-4 shadow-xl max-w-2xl mx-auto">
 
                   <img
-                    src="/portfolio/Histogram.png"
+                    src="/portfolio/rover-histogram.png"
                     alt="Histogram localization"
                     className="w-full h-[320px] object-contain"
                   />
@@ -663,7 +663,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/tof_sensor_setup.png"
+                      src="/portfolio/rover-tof-sensor-setup.png"
                       alt="TOF sensor setup"
                       className="w-full h-[300px] object-contain"
                     />
@@ -671,7 +671,7 @@ export default function AutonomousRover() {
 
                   <div className="bg-white p-4 shadow-xl">
                     <img
-                      src="/portfolio/scanning_area.png"
+                      src="/portfolio/rover-scanning-area.png"
                       alt="Scanning area"
                       className="w-full h-[300px] object-contain"
                     />

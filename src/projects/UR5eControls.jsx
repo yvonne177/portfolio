@@ -162,7 +162,7 @@ export default function UR5eControls() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
 
                 <img
-                  src="/portfolio/rdkdc-ur5e.png"
+                  src="/portfolio/ur5e-rdkdc.png"
                   alt="UR5e Manipulator"
                   className="w-full h-[420px] object-contain"
                 />

@@ -91,7 +91,7 @@ export default function UR5ManipulationFoundations() {
             <div className="relative flex justify-center">
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
                 <img
-                  src="/portfolio/car_mesh.png"
+                  src="/portfolio/ur5-car-mesh.png"
                   alt="UR5 robot arm"
                   className="w-full h-[420px] object-contain"
                 />
@@ -329,7 +329,7 @@ export default function UR5ManipulationFoundations() {
             {/* RIGHT: image placeholder */}
             <div className="bg-[#EFEAE0] border border-[#D9D3C7] p-4 min-h-[320px] flex items-center justify-center">
             <img
-                src="/portfolio/car_mesh.png"
+                src="/portfolio/ur5-car-mesh.png"
                 alt="Car mesh visualization"
                 className="max-h-[300px] w-auto object-contain"
             />

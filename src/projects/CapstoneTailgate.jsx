@@ -166,7 +166,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
 
                 <img
-                  src="/portfolio/tailgate_prototype_integration.png"
+                  src="/portfolio/tailgate-prototype-integration.png"
                   alt="Tailgate Prototype"
                   className="w-full h-[420px] object-cover"
                 />
@@ -316,7 +316,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/tailgate_configs.png"
+                  src="/portfolio/tailgate-configs.png"
                   alt="Tailgate Concepts"
                   className="w-full h-[320px] object-contain"
                 />
@@ -326,7 +326,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/tailgatecad_configs.png"
+                  src="/portfolio/tailgate-cad-configs.png"
                   alt="Tailgate CAD Concepts"
                   className="w-full h-[320px] object-contain"
                 />
@@ -493,10 +493,10 @@ export default function CapstoneTailgate() {
             <div className="grid md:grid-cols-2 gap-8">
 
               {[
-                "/portfolio/guide_rails.png",
-                "/portfolio/double_post_system.png",
-                "/portfolio/constant_force_springs.png",
-                "/portfolio/sideview_tabs.png"
+                "/portfolio/tailgate-guide-rails.png",
+                "/portfolio/tailgate-double-post-system.png",
+                "/portfolio/tailgate-constant-force-springs.png",
+                "/portfolio/tailgate-sideview-tabs.png"
               ].map((image, idx) => (
 
                 <div
@@ -578,7 +578,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/fea_double_post.png"
+                  src="/portfolio/tailgate-fea-double-post.png"
                   alt="FEA Double Post"
                   className="w-full h-[320px] object-contain"
                 />
@@ -588,7 +588,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/fea_hinges.png"
+                  src="/portfolio/tailgate-fea-hinges.png"
                   alt="FEA Hinges"
                   className="w-full h-[320px] object-contain"
                 />
@@ -631,7 +631,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/tailgate_prototype_integration.png"
+                  src="/portfolio/tailgate-prototype-integration.png"
                   alt="Prototype Integration"
                   className="w-full h-[320px] object-contain"
                 />
@@ -641,7 +641,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/spring_installation.png"
+                  src="/portfolio/tailgate-spring-installation.png"
                   alt="Spring Installation"
                   className="w-full h-[320px] object-contain"
                 />
@@ -684,7 +684,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/latching_system.png"
+                  src="/portfolio/tailgate-latching-system.png"
                   alt="Latching System"
                   className="w-full h-[320px] object-contain"
                 />
@@ -694,7 +694,7 @@ export default function CapstoneTailgate() {
               <div className="bg-white p-4 shadow-xl">
 
                 <img
-                  src="/portfolio/tailgatecad_configs.png"
+                  src="/portfolio/tailgate-cad-configs.png"
                   alt="Future CAD"
                   className="w-full h-[320px] object-contain"
                 />

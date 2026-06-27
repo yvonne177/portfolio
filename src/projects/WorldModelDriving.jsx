@@ -127,8 +127,8 @@ export default function WorldModelsAutonomousDriving() {
               </div>
 
               <div className="text-blue-100 text-lg">
-                <span className="font-semibold text-white">Authors:</span>{" "}
-                Yvonne Zhang, Asma Almutairi (LCSR, Johns Hopkins University)
+                <span className="font-semibold text-white">Project Duration:</span>{" "}
+                April to May 2026
               </div>
 
             </div>

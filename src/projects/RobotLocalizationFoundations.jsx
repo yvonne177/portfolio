@@ -157,7 +157,7 @@ export default function RobotLocalizationProject() {
                             w-72 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
                   <img
-                    src="/portfolio/ekf-localization.png"
+                    src="/portfolio/localization-ekf.png"
                     alt="Extended Kalman Filter"
                     className="w-full h-72 object-cover"
                   />
@@ -173,7 +173,7 @@ export default function RobotLocalizationProject() {
                             w-72 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
                   <img
-                    src="/portfolio/particle-filter-localization.png"
+                    src="/portfolio/localization-particle-filter.png"
                     alt="Particle Filter"
                     className="w-full h-72 object-cover"
                   />

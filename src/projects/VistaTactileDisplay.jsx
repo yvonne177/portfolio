@@ -314,7 +314,7 @@ export default function VistaTactileDisplay() {
               <div className="bg-white p-4 shadow-xl max-w-md w-full">
 
                 <img
-                  src="/portfolio/haptics-reno.jpeg"
+                  src="/portfolio/vista-haptics-reno.jpeg"
                   alt="Haptics Symposium 2026 presentation"
                   className="w-full h-[280px] object-cover"
                 />
@@ -489,8 +489,8 @@ export default function VistaTactileDisplay() {
               {[
                 "/portfolio/vista-cad.jpeg",
                 "/portfolio/vista-key.jpeg",
-                "/portfolio/VISTA Cam System.jpeg",
-                "/portfolio/VISTA Silicone Overlay.jpeg"
+                "/portfolio/vista-cam-system.jpeg",
+                "/portfolio/vista-silicone-overlay.jpeg"
               ].map((image, idx) => (
 
                 <div

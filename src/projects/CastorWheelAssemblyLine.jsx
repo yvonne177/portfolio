@@ -127,8 +127,8 @@ export default function AutomatedChairCasterAssembly() {
               </div>
 
               <div className="text-blue-100 text-lg">
-                <span className="font-semibold text-white">Group 3:</span>{" "}
-                Amanda Jiang, Jennifer Wu, Lucshme Singh, Sofia Gonzalez Martinez, Yvonne Zhang
+                <span className="font-semibold text-white">Project Duration:</span>{" "}
+                September to December 2023
               </div>
 
             </div>
