@@ -116,7 +116,7 @@ export default function WorldModelsAutonomousDriving() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                {["TD-MPC2", "DreamerV3", "CARLA", "CarDreamer"].map((skill, idx) => (
+                {["World Models", "Reinforcement Learning"].map((skill, idx) => (
                   <span
                     key={idx}
                     className="text-[11px] uppercase tracking-[0.18em] border border-white/30 text-blue-100 px-4 py-2"

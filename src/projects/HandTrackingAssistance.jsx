@@ -133,7 +133,7 @@ export default function HandTrackingProject() {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 {[
-                  "Computer Vision", "ROS2", "Python"
+                  "SolidWorks", "Computer Vision", "ROS2", "Python"
                 ].map((skill, idx) => (
                   <span
                     key={idx}

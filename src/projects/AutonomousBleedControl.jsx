@@ -114,7 +114,7 @@ export default function AutonomousBleedingControl() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                {["Hydrogel Phantoms", "3D-Printed Molds", "Perfusion Systems", "Surgical Simulation"].map((skill, idx) => (
+                {["SolidWorks", "Surgical Robotics"].map((skill, idx) => (
                   <span
                     key={idx}
                     className="text-[11px] uppercase tracking-[0.18em] border border-white/30 text-blue-100 px-4 py-2"

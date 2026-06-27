@@ -116,7 +116,7 @@ export default function AutomatedChairCasterAssembly() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8">
-                {["Pallet Conveyors", "Vibratory Feeders", "Positioner Design", "Cost Analysis"].map((skill, idx) => (
+                {["Manufacturing", "Cost Analysis"].map((skill, idx) => (
                   <span
                     key={idx}
                     className="text-[11px] uppercase tracking-[0.18em] border border-white/30 text-blue-100 px-4 py-2"

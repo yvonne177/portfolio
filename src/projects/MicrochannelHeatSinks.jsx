@@ -133,7 +133,7 @@ export default function HeatSinkProject() {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 {[
-                  "Additive Manufacturing", "Materials Engineering", "Thermal Design"
+                  "Advanced Manufacturing", "Materials Engineering", "Thermal Design"
                 ].map((skill, idx) => (
                   <span
                     key={idx}

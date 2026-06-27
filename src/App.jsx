@@ -38,7 +38,7 @@ export default function Portfolio() {
       subtitle:
         "Perfused hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in partial nephrectomy.",
       image: "/portfolio/lpn-1.jpg",
-      skills: ["SolidWorks", "Robotics", "Computer Vision"],
+      skills: ["SolidWorks", "Surgical Robotics"],
       categories: ["Robotics", "Research"],
       slug: "autonomous-bleed-control",
     },
@@ -453,7 +453,7 @@ export default function Portfolio() {
                   className="absolute top-10 right-6 bg-white p-3 shadow-2xl rotate-[6deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer"
                 >
                   <img
-                    src="/portfolio/vista-cad-v1.jpeg"
+                    src="/portfolio/benchy.jpeg"
                     alt=""
                     className="w-full h-56 object-cover"
                   />
@@ -471,7 +471,7 @@ export default function Portfolio() {
                   className="absolute bottom-16 left-0 bg-white p-3 shadow-2xl rotate-[4deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer block"
                 >
                   <img
-                    src="/portfolio/autonomous-rover-cad.jpeg"
+                    src="/portfolio/iron-ring.png"
                     alt=""
                     className="w-full h-56 object-cover"
                   />
@@ -487,7 +487,7 @@ export default function Portfolio() {
                 >
 
                   <img
-                    src="/portfolio/tailgate-cad.png"
+                    src="/portfolio/swiss-alps.png"
                     alt=""
                     className="w-full h-52 object-cover"
                   />
