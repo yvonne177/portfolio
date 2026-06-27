@@ -38,7 +38,7 @@ export default function Portfolio() {
       subtitle:
         "Perfused hydrogel kidney phantom platform and vision-based perception pipeline for autonomous bleeding detection in partial nephrectomy.",
       image: "/portfolio/lpn-1.jpg",
-      skills: ["SolidWorks", "Surgical Robotics", "Computer Vision"],
+      skills: ["SolidWorks", "Robotics", "Computer Vision"],
       categories: ["Robotics", "Research"],
       slug: "autonomous-bleed-control",
     },
@@ -128,7 +128,7 @@ export default function Portfolio() {
       subtitle:
         "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.",
       image: "/portfolio/franka-dual-mount.png",
-      skills: ["Computer Vision", "ROS2", "Python"],
+      skills: ["SolidWorks", "Computer Vision", "ROS2", "Python"],
       categories: ["Robotics", "Research"],
       slug: "hand-tracking-assistance",
     },
@@ -176,7 +176,7 @@ export default function Portfolio() {
       subtitle:
         "Fully automated mass-production workcell for assembling 2-inch chair casters, covering sorting, orientation, positioner design, fixturing, and quality control.",
       image: "/portfolio/castor-wheel-assembly.png",
-      skills: ["Pallet Conveyors", "Vibratory Feeders", "Positioner Design", "Cost Analysis"],
+      skills: ["Manufacturing", "Cost Analysis"],
       categories: ["Mechanical Design"],
       slug: "castor-wheel-assembly",
     },
