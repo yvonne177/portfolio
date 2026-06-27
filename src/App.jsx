@@ -175,7 +175,7 @@ export default function Portfolio() {
       title: "Automated Chair Caster Assembly System",
       subtitle:
         "Fully automated mass-production workcell for assembling 2-inch chair casters, covering sorting, orientation, positioner design, fixturing, and quality control.",
-      image: "/portfolio/castor-wheel-assembly.png",
+      image: "/portfolio/caster-workcell.png",
       skills: ["Manufacturing", "Cost Analysis"],
       categories: ["Mechanical Design"],
       slug: "castor-wheel-assembly",

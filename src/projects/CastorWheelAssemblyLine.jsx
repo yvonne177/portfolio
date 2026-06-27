@@ -176,14 +176,14 @@ export default function AutomatedChairCasterAssembly() {
               <div className="bg-white p-4 shadow-2xl rotate-[3deg] max-w-md">
                 <div className="bg-gray-100 flex items-center justify-center">
                   <img
-                    src="/portfolio/caster-hero.png"
+                    src="/portfolio/caster-workcell.png"
                     alt="Assembled 2-inch chair caster"
                     className="w-full h-[420px] object-contain"
                   />
                 </div>
 
                 <p className="text-center mt-4 text-sm tracking-wide text-gray-700">
-                  Fully assembled 2-inch chair caster
+                  Fully automated assembly line
                 </p>
               </div>
             </div>
@@ -259,29 +259,30 @@ export default function AutomatedChairCasterAssembly() {
               </h2>
             </div>
 
-            <div className="max-w-4xl space-y-6 text-lg leading-relaxed text-gray-700">
-              <p>
-                The brief was to design the automatic assembly process for a 2-inch chair
-                caster made up of six parts: a housing, two wheel orientations, an axel, a
-                bolt, a washer, and a nut. The entire process had to be fully automated, and no
-                part of the chair caster could be modified to simplify assembly. Suggestions
-                for redesigning the part itself were instead reserved for future iterations.
-              </p>
-              <p>
-                Given these constraints, the workcell layout and process plan were driven by
-                minimizing cost while maintaining the consistency and speed required of a
-                mass-produced product. Space was assumed not to be a limiting factor.
-              </p>
-            </div>
-
-            {/* Figure 1 — exploded view of the six caster parts */}
-            <div className="max-w-3xl mt-12">
-              <PhotoSpot
-                src="/portfolio/caster-parts.png"
-                alt="Chair Caster Parts"
-                caption="The six parts of the 2-inch chair caster: housing, two wheels, axel, bolt, washer, and nut."
-                ratio="aspect-[3/2]"
-              />
+            <div className="grid lg:grid-cols-[1fr_0.8fr] gap-12 items-start">
+              <div className="space-y-6 text-lg leading-relaxed text-gray-700">
+                <p>
+                  The brief was to design the automatic assembly process for a 2-inch chair
+                  caster made up of six parts: a housing, two wheel orientations, an axel, a
+                  bolt, a washer, and a nut. The entire process had to be fully automated, and no
+                  part of the chair caster could be modified to simplify assembly. Suggestions
+                  for redesigning the part itself were instead reserved for future iterations.
+                </p>
+                <p>
+                  Given these constraints, the workcell layout and process plan were driven by
+                  minimizing cost while maintaining the consistency and speed required of a
+                  mass-produced product. Space was assumed not to be a limiting factor.
+                </p>
+              </div>
+              {/* Figure 1 — exploded view of the six caster parts */}
+              <div>
+                <PhotoSpot
+                  src="/portfolio/caster-parts.png"
+                  alt="Chair Caster Parts"
+                  caption="The six parts of the 2-inch chair caster: housing, two wheels, axel, bolt, washer, and nut."
+                  ratio="aspect-[3/2]"
+                />
+              </div>
             </div>
 
           </section>
@@ -305,7 +306,7 @@ export default function AutomatedChairCasterAssembly() {
             </div>
 
             {/* Figure 2 — annotated workcell layout */}
-            <div className="mb-16">
+            <div className="max-w-4xl mx-auto mb-16">
               <PhotoSpot
                 src="/portfolio/caster-workcell.png"
                 alt="Workcell Layout"
@@ -314,62 +315,14 @@ export default function AutomatedChairCasterAssembly() {
               />
             </div>
 
-            {/* Process flow */}
-            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 text-center mb-14">
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Compound A
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Bolt + Washer + Nut
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Compound B
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  + Housing
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Compound C
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  Wheel 2A + Axel
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Compound D
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  B + C Combined
-                </p>
-              </div>
-
-              <span className="text-3xl text-[#2A5C52] -mt-2">→</span>
-
-              <div className="bg-white border border-[#D9D3C7] shadow-lg px-5 py-5 w-[170px]">
-                <h3 className="text-lg font-['Cormorant_Garamond'] text-[#18342E] mb-2 leading-tight">
-                  Final Part
-                </h3>
-                <p className="text-gray-600 text-[11px] uppercase tracking-[0.12em] leading-relaxed">
-                  + Wheel 2B, QC, Pack
-                </p>
-              </div>
-
+            {/* Process flow — replaced with workflow image */}
+            <div className="max-w-4xl mx-auto mb-14">
+              <PhotoSpot
+                src="/portfolio/caster-written-workcell.png"
+                alt="Caster Assembly Process Flow"
+                caption="Assembly process flow from Compound A through Final Part."
+                ratio="aspect-[16/9]"
+              />
             </div>
 
             <div className="grid lg:grid-cols-2 gap-10">
@@ -611,19 +564,23 @@ export default function AutomatedChairCasterAssembly() {
             </div>
 
             {/* Figures 7 & Appendix — representative positioner configurations */}
-            <div className="grid sm:grid-cols-2 gap-6 mt-12 max-w-3xl">
-              <PhotoSpot
-                src="/portfolio/caster-positioner-2dof.png"
-                alt="2-DOF Positioner"
-                caption="Two-DOF positioner that lowers along Z to pick up the washer and reaches along X to place it."
-                ratio="aspect-[3/4]"
-              />
-              <PhotoSpot
-                src="/portfolio/caster-positioner-3dof.png"
-                alt="3-DOF Positioner"
-                caption="Three-DOF positioner with an added rotation axis for the nut and Compound A screwing steps."
-                ratio="aspect-[3/4]"
-              />
+            <div className="flex justify-center gap-6 mt-12 max-w-4xl mx-auto">
+              <div className="max-w-sm">
+                <PhotoSpot
+                  src="/portfolio/caster-positioner-2dof.png"
+                  alt="2-DOF Positioner"
+                  caption="Two-DOF positioner that lowers along Z to pick up the washer and reaches along X to place it."
+                  ratio="aspect-[3/4]"
+                />
+              </div>
+              <div className="max-w-sm">
+                <PhotoSpot
+                  src="/portfolio/caster-positioner-3dof.png"
+                  alt="3-DOF Positioner"
+                  caption="Three-DOF positioner with an added rotation axis for the nut and Compound A screwing steps."
+                  ratio="aspect-[3/4]"
+                />
+              </div>
             </div>
 
           </section>
@@ -735,13 +692,13 @@ export default function AutomatedChairCasterAssembly() {
               </h2>
             </div>
 
-            <div className="space-y-10">
+            <div className="grid lg:grid-cols-[1fr_0.9fr] gap-12 items-start">
+              <div className="space-y-10">
 
-              <div className="grid lg:grid-cols-[0.3fr_1.7fr] gap-6 items-start border-l-4 border-[#2A5C52] pl-6">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">
-                  Combine Bolt, Washer, Nut & Housing
-                </h3>
-                <div>
+                <div className="border-l-4 border-[#2A5C52] pl-6">
+                  <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
+                    Combine Bolt, Washer, Nut & Housing
+                  </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     Merging these four parts into a single asymmetrical housing unit would
                     eliminate Section 1 of the assembly process along with its associated
@@ -750,13 +707,11 @@ export default function AutomatedChairCasterAssembly() {
                     height adjustability that the bolt-and-housing connection currently allows.
                   </p>
                 </div>
-              </div>
 
-              <div className="grid lg:grid-cols-[0.3fr_1.7fr] gap-6 items-start border-l-4 border-[#2A5C52] pl-6">
-                <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E]">
-                  Combine Axel with One Wheel
-                </h3>
-                <div>
+                <div className="border-l-4 border-[#2A5C52] pl-6">
+                  <h3 className="text-2xl font-['Cormorant_Garamond'] text-[#18342E] mb-3">
+                    Combine Axel with One Wheel
+                  </h3>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     Integrating the axel into one of the wheels would remove Section 3 of the
                     assembly process and make sorting parts 2A and 2B easier, since the wheel
@@ -766,22 +721,22 @@ export default function AutomatedChairCasterAssembly() {
                     higher-strength plastic is used.
                   </p>
                 </div>
+
               </div>
 
-            </div>
-
-            {/* Figures 11-12 — redesign concepts */}
-            <div className="grid sm:grid-cols-2 gap-6 mt-14">
-              <PhotoSpot
-                src="/portfolio/caster-housing-redesign.png"
-                alt="Housing Redesign"
-                caption="Housing redesign combining the bolt, washer, nut, and housing into one part."
-              />
-              <PhotoSpot
-                src="/portfolio/caster-wheel-redesign.png"
-                alt="Wheel Redesign"
-                caption="Wheel redesign integrating the axel into a single wheel."
-              />
+              {/* Figures 11-12 — redesign concepts */}
+              <div className="space-y-6 max-w-xs">
+                <PhotoSpot
+                  src="/portfolio/caster-housing-redesign.png"
+                  alt="Housing Redesign"
+                  caption="Housing redesign combining the bolt, washer, nut, and housing into one part."
+                />
+                <PhotoSpot
+                  src="/portfolio/caster-wheel-redesign.png"
+                  alt="Wheel Redesign"
+                  caption="Wheel redesign integrating the axel into a single wheel."
+                />
+              </div>
             </div>
 
           </section>
