@@ -117,11 +117,9 @@ export default function HandTrackingProject() {
               </p>
 
               <h1 className="text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-8 font-['Cormorant_Garamond']">
-                Hand Tracking
+                Gesture-Based
                 <br />
-                for Gesture-Based
-                <br />
-                Robot Interaction
+                Surgical Robot Assistance
               </h1>
 
               <p className="text-xl text-blue-100 leading-relaxed max-w-2xl mb-10 font-light">

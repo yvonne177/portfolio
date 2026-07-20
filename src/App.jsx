@@ -124,7 +124,7 @@ export default function Portfolio() {
     },
 
     {
-      title: "Hand Tracking Surgical Robotic Assistance System",
+      title: "Gesture-Based Surgical Robot Assistance",
       subtitle:
         "ROS2 + MediaPipe integration developed for real-time hand gesture recognition and tracking system using computer vision for robotic control.",
       image: "/portfolio/franka-dual-mount.png",
@@ -320,7 +320,7 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <a
-                  href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+                  href="/portfolio/YvonneZhang_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hidden md:block text-sm uppercase tracking-[0.2em] text-gray-700 hover:text-[#2A5C52] transition-colors"
@@ -465,7 +465,7 @@ export default function Portfolio() {
 
                 {/* RESUME */}
                 <a
-                  href="/portfolio/YvonneZhang_CV_Jan2026.pdf"
+                  href="/portfolio/YvonneZhang_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute bottom-16 left-0 bg-white p-3 shadow-2xl rotate-[4deg] w-52 hover:scale-105 transition-all duration-300 cursor-pointer block"
